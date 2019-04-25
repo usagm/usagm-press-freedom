@@ -1,0 +1,34 @@
+/* Responsive youtube embeds */
+.embed-container {
+	background-color: #F1F1F1;
+	height: 0; 
+	overflow: hidden; 
+	padding-bottom: 56.25%; 
+	position: relative; 
+	max-width: 100%;
+	width: 100%;
+	z-index: 999999;
+}
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+	height: 100%; 
+	position: absolute;
+		top: 0;
+		left: 0;
+	width: 100%;
+}
+
+@media only screen and (min-width: 992px) {
+	.usagm__photo--inset {
+		float: right;
+		margin-left: 10px;
+		width: 50%;
+	}
+}
+
+.usagm__story {
+	.embed-container {
+		margin: 40px auto;
+	}
+}

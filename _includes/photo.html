@@ -1,0 +1,23 @@
+{% if include.kicker %}
+<h3 class="usagm__label" style="margin-top: 80px;">{{ include.kicker }}</h3>
+{% endif %}
+<div class="usagm__photo__container">
+
+	{% if include.file contains "https://gdb.voanews.com/" %}
+
+		<picture>
+			<source srcset="{{ include.file | replace: '_w1023', '_w740' }}" media="(min-width: 992px)">
+			<source srcset="{{ include.file | replace: '_w1023', '_w640' }}" media="(min-width: 420px)">
+			<img src="{{ include.file | replace: '_w1023', '_w420_h420' }}" alt="{{ include.alt }}" style="display: block; width: 100%; max-width: none;" />
+		</picture>
+
+
+	{% else %}
+		<img src="{{ site.url_base }}{{ include.file }}" alt="{{ include.alt }}" class="{{ include.custom_class }}" style="width: 100%;"/>
+	{% endif %}
+
+	{% if include.caption || include.credit %}
+	<p class="usagm__cutline" style="margin-top: 5px; padding-bottom: 0;">{{ include.caption }}</p>
+	{% endif %}
+</div>
+

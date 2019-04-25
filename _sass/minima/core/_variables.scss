@@ -1,0 +1,59 @@
+// FONTS
+
+$font__sansDisplay:   Arial, Helvetica,sans-serif; // SkolarSans-BdCond_Cyr-Ltn, Arial, sans-serif; // !important;
+$font__sans:          Arial, Helvetica,sans-serif; // !important;
+$font__serif:         "Merriweather-Light",Georgia,Times,"Times New Roman",serif;;
+
+
+
+// COLORS
+
+$color__usagm-red:              #CB131A;
+$color__usagm-blue:             #1330bf;
+$color__usagm-red--dark:        #990000;
+$color__usagm-blue-light:       #a9bfe2;
+
+
+$color__usagm-gray-lightest:    #F1F1F1;
+$color__usagm-gray-lighter:     #CCCCCC;
+$color__usagm-gray-light:       #999999; 
+$color__usagm-gray-medium:      #666666;
+$color__usagm-gray-dark:        #333333;
+
+
+
+// MEDIA QUERIES
+
+$media__small:                 420px;//400px;
+$media__medium:                640px;
+$media__medium-large:          780px;
+$media__large:                 992px;
+$media__extra-large:          1280px;
+$max-width:                   $media__extra-large;
+
+// bracketing sizes for media queries
+
+$media__small--:              $media__small - 1;
+$media__medium--:             $media__medium - 1;
+$media__medium-large--:       $media__medium-large - 1;
+$media__large--:              $media__large - 1;
+$media__extra-large--:        $media__extra-large - 1;
+
+
+
+// BORDERS
+$border-radius:                  4px;
+$border__solid-light:		1px solid #CCC;
+$border__dotted-light:		1px dotted #CCC;
+$border__solid-dark:		1px solid #333;
+$border__dotted-dark:		1px dotted #333;
+
+$icon__size:                    40px;
+
+
+
+// ANIMATION TIME
+
+$animation__step1:     5s;// 1s;//5s;
+$animation__step2:     10s;// 2s;//10s;
+$animation__step3:     14s;// 3s;//14s;

@@ -1,0 +1,49 @@
+/* Twitter styles */
+.usagm__twitter {
+	margin: 0;
+
+	&.inset {
+		border-radius: 5px;
+		background-color: #FFF;
+		box-shadow: 1px 1px 5px #999;
+		padding: 30px;
+
+		@media only screen and (min-width: $media__medium) {
+			.usagm__twitter__attribution {
+				margin: 10px auto;
+				max-width: 60%;
+			}
+		}
+	}
+
+	.usagm__twitter__tweet {
+		font-family: serif;
+		font-size: 170%;
+		line-height: 1.1;
+	}
+
+	.usagm__twitter__tweet a {
+		color: $color__usagm-blue;
+		text-decoration: none;
+	}
+
+	.usagm__twitter__tweet a:hover {
+		text-decoration: underline;
+	}
+
+	.usagm__twitter__attribution {
+		display: block;
+		margin-top: 20px;
+	}
+
+	.usagm__twitter__attribution .usagm__mugshot--circle {
+		margin-left: 0;
+	}
+
+	.usagm__project .usagm__twitter__timestamp {
+		color: #999;
+		font-weight: normal;
+		margin-top: 5px;
+	}
+
+}

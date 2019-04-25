@@ -1,0 +1,55 @@
+/* Country flags */
+.usagm__flag {
+	background-image: url(../img/flags/flag__china.jpg);
+	background-size: cover;
+	display: inline-block;
+	height: 30px;
+	margin-right: 5px;
+	vertical-align: middle;
+	width: 48px;
+}
+
+
+.usagm__flag.brunei {
+	background-image: url(../img/flags/flag__brunei.png);
+}
+
+.usagm__flag.china {
+	background-image: url(../img/flags/flag__china.jpg);
+}
+
+.usagm__flag.indonesia {
+	background-image: url(../img/flags/flag__indonesia.png);
+	border: 1px solid $color__usagm-gray-lighter;
+}
+
+.usagm__flag.japan {
+	background-image: url(../img/flags/flag__japan.png);
+	border: 1px solid $color__usagm-gray-lighter;
+}
+
+.usagm__flag.north-korea {
+	background-image: url(../img/flags/flag__north-korea.png);
+}
+
+.usagm__flag.south-korea {
+	background-image: url(../img/flags/flag__south-korea.jpg);
+	border: 1px solid $color__usagm-gray-lighter;
+}
+
+.usagm__flag.malaysia {
+	background-image: url(../img/flags/flag__malaysia.png);
+}
+
+.usagm__flag.philippines {
+	background-image: url(../img/flags/flag__philippines.png);
+	border-left: 1px solid $color__usagm-gray-lighter;
+}
+
+.usagm__flag.taiwan {
+	background-image: url(../img/flags/flag__taiwan.png);
+}
+
+.usagm__flag.vietnam {
+	background-image: url(../img/flags/flag__vietnam.png);
+}

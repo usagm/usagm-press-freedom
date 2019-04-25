@@ -1,0 +1,216 @@
+---
+layout: default
+---
+
+{% if page.language %}
+
+	{% assign site_info = site.site_info__object[page.language] %}
+	{% assign current_language = page.language %}
+
+
+{% else %}
+
+	{% assign site_info = site.site_info__object.english %}
+	{% assign current_language = "english" %}
+
+{% endif %}
+{% assign random = site.time | date: "%s%N" %}
+
+
+{% if page.includeTweets %}
+<script sync src="https://platform.twitter.com/widgets.js"></script>
+{% endif %}
+
+{% if page.window_image %}
+<style type="text/css">
+.usagm__window-background.show.loaded {
+	background-image: url({{ site.url_base }}/img/{{ page.window_image }});
+}
+</style>
+{% endif %}
+
+<script src="https://hammerjs.github.io/dist/hammer.js"></script>
+
+
+<article class="post usagm__grid__full usagm__content usagm__wiki__bio" itemscope itemtype="http://schema.org/BlogPosting" style="margin-bottom: 0;">
+
+	<section class="usagm__section__full-width">
+
+		<div class="usagm__grid__full usagm__border-sides" style="padding-bottom: 0;">
+
+				<div class="usagm__grid__full" style="margin-bottom: 0; margin-top: 40px;">
+
+
+
+
+{% if page.youtube %}
+
+					<div class='embed-container' style="background-color: #F1F1F1;"><iframe src="https://www.youtube.com/embed/{{ page.youtube }}" frameborder="0" allowfullscreen></iframe></div>
+					<div class="usagm__grid white" style="">
+						<p class="usagm__credit">{{ page.credit }}</p>
+					</div>
+
+					<div class="usagm__grid__full ">
+
+{% elsif page.image %}
+
+	
+						<div style="position: relative;">
+		{% if page.image contains "https://gdb.voanews.com/" %}
+							<picture>
+								<source srcset="{{ page.image | replace: '_w1023', '_w1280_h480' }}" media="(min-width: 992px)">
+								<source srcset="{{ page.image | replace: '_w1023', '_w992_h400' }}" media="(min-width: 640px)">
+								<source srcset="{{ page.image | replace: '_w1023', '_w640_h480' }}" media="(min-width: 420px)">
+								<img src="{{ page.image | replace: '_w1023', '_w420_h420' }}" alt="{{ page.alt }}" style="display: block; width: 100%; max-width: none;" />
+							</picture>
+
+		{% else %}
+							<img src="{{ page.image }}" alt="{{ page.alt }}" style="display: block; max-width: none; width: 100%;"/>
+		{% endif %}
+
+		{% if page.cutline %}
+							<p class="usagm__cutline usagm__hide-mobile usagm__cutline--reversed">{{ page.cutline }} ({{ page.credit }})</p>
+		{% elsif page.credit %}
+							<p class="usagm__cutline usagm__cutline--reversed" style="background-color: transparent; width: auto;">{{ page.credit}}</p>
+		{% endif %}
+						</div>
+
+
+{% endif %}
+
+					</div>
+
+
+					<div class="usagm__grid__full" >
+
+{% assign obituaryClass = "" %}
+{% if page.image %}
+	{% assign obituaryClass = "include-photo" %}
+{% endif %}
+
+						<div class="usagm__obituary usagm__grid {{ obituaryClass }}">
+
+									<div class="usagm__obituary__mini-bio">
+
+										<img src="{{ page.mugshot }}" class="usagm__wiki__bio__mugshot">
+
+										<div class="usagm__wiki__bio__head-text" style="">
+
+											<h1 class="usagm__obituary__name" style="text-align: left;">{{ page.title }}</h1>
+{% if page.entity %}
+											<h4 class="usagm__obituary__entity">{{ page.entity }}</h4>
+{% endif %}
+
+{% assign label="Killed" %}
+{% if page.categories.last == "missing"%}
+	{% assign label="Missing" %}
+{% elsif page.categories.last == "jailed" %}
+	{% assign label="Jailed" %}
+{% endif %}
+
+											<p class="font-family: Arial, sans-serif; color: #999;"><strong>{{ label }}:</strong> {{ page.date | date: "%B %-d, %Y" }}</p>
+										</div>
+
+									</div>
+
+									<div class="usagm__obituary__story">
+
+									{{ content 
+										| replace: '$DATELINE$', dateline
+										| replace: 'LANGUAGEREPLACE', current_language
+										| replace: '...', site.url_base
+									}}
+
+
+
+										<p class="usagm__tagline">
+
+	{% if page.tagline %}
+									{{ page.tagline }}
+
+	{% else %}
+
+		{% if page.original-link %}
+									This story originally appeared on <a href="{{ page.original-link }}">USAGM.gov</a>.
+		{% endif %}
+
+	{% endif %}	
+
+										</p>
+									</div>
+
+						</div>
+
+						<div class="usagm__grid__full">
+							<div id="map" class="map__container" style="position: relative;"></div>
+						</div>
+					</div><!-- .usagm__grid__full -->
+
+
+			</div>
+
+	</section>
+
+</article>
+
+
+<script type="text/javascript">
+		var mode = "editing";//"editing"; //"production";
+{% if page.coordinates %}
+	{% assign coordinates = page.coordinates | split: ", " %}
+		var coordinates = [{{ coordinates[0] }}, {{ coordinates[1] }}];
+	{% if page.location %}
+		var mapLocation = "{{ page.location }}";
+	{% endif %} 
+{% endif %}
+		var journalistName = "{{ page.title | replace: ' ', '' }}";
+		var zoom = {{ page.zoom | default: 6}};
+
+
+var mapMarkerData = [
+{% assign sorted-posts = site.posts | where: "categories","obituary" %}
+{% assign sorted-posts-language = sorted-posts | where: "categories",current_language %}
+{% for post in sorted-posts %}{% assign coordinates = post.coordinates | split: ", " %}{
+		"name": "{{ post.title }}",
+		"nameShort": "{{ post.title | replace: ' ', '' }}",
+		"mugshot": "{{ post.mugshot }}",// "mugshot__{{ post.title | replace: ' ','-' | downcase }}.jpg",
+		"coordinates": [{{ coordinates[0] }}, {{ coordinates[1] }}],
+		"zoom": {{ post.zoom | default: 6}},
+		"type": "Killed",
+		"date": "{{ post.date | date: '%B %Y' }}",
+		"link": "{{ site.url_base }}/english/journalist/obituary/{{ post.title | replace: ' ','-' | downcase }}.html"
+	},{% endfor %}
+{% assign sorted-posts = site.posts | where: "categories","jailed" %}
+{% assign sorted-posts-language = sorted-posts | where: "categories",current_language %}
+{% for post in sorted-posts %}{% assign coordinates = post.coordinates | split: ", " %}{
+		"name": "{{ post.title }}",
+		"nameShort": "{{ post.title | replace: ' ', '' }}",
+		"mugshot": "{{ post.mugshot }}",// "mugshot__{{ post.title | replace: ' ','-' | downcase }}.jpg",
+		"coordinates": [{{ coordinates[0] }}, {{ coordinates[1] }}],
+		"zoom": {{ post.zoom | default: 6}},
+		"type": "Jailed",
+		"date": "{{ post.date | date: '%B %Y' }}",
+		"link": "{{ site.url_base }}/english/journalist/jailed/{{ post.title | replace: ' ','-' | downcase }}.html"
+	},{% endfor %}
+{% assign sorted-posts = site.posts | where: "categories","missing" %}
+{% assign sorted-posts-language = sorted-posts | where: "categories",current_language %}
+{% for post in sorted-posts %}{% assign coordinates = post.coordinates | split: ", " %}{
+		"name": "{{ post.title }}",
+		"nameShort": "{{ post.title | replace: ' ', '' }}",
+		"mugshot": "{{ post.mugshot }}",// "mugshot__{{ post.title | replace: ' ','-' | downcase }}.jpg",
+		"coordinates": [{{ coordinates[0] }}, {{ coordinates[1] }}],
+		"zoom": {{ post.zoom | default: 6}},
+		"type": "Missing",
+		"date": "{{ post.date | date: '%B %Y' }}",
+		"link": "{{ site.url_base }}/english/journalist/missing/{{ post.title | replace: '(','' | replace: ')','' | replace: ' ','-' | downcase }}.html"
+	},{% endfor %}
+
+]
+</script>
+
+<link rel="stylesheet" type="text/css" href="https://projects.voanews.com/js/resources/leaflet/css/leaflet.css">
+<script type="text/javascript" src="https://projects.voanews.com/js/resources/leaflet/js/leaflet.js"></script>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script type="text/javascript" src="https://projects.voanews.com/js/resources/jquery.smartmenus.min.js"></script>
+<script type="text/javascript" src="{{site.url_base}}/js/scripts-obituary.js?{{ random }}"></script>

@@ -1,0 +1,397 @@
+---
+layout: default
+date: 2018-10-22
+---
+
+{% if page.language %}
+
+	{% assign site_info = site.site_info__object[page.language] %}
+	{% assign current_language = page.language %}
+
+{% else %}
+
+	{% assign site_info = site.site_info__object.english %}
+	{% assign current_language = "english" %}
+
+{% endif %}
+{% assign random = site.time | date: "%s%N" %}
+
+<style type="text/css">
+	.twitter-tweet {
+		margin: 0 auto 20px auto !important;
+	}
+</style>
+
+
+
+<script sync src="https://platform.twitter.com/widgets.js"></script>
+<script type="text/javascript">
+	var includeTweets = true;
+</script>
+
+
+<link href="https://fonts.googleapis.com/css?family=Fugaz+One" rel="stylesheet">
+
+
+
+{% assign sorted-posts = site.posts | where: "categories","intro" %}
+{% assign sorted-posts-language = sorted-posts | where: "categories",current_language %}
+{% for post in sorted-posts-language limit: 1 %}
+
+		<section class="usagm__section usagm__border-sides" style="">
+
+			<div class="usagm__grid__full ">
+				<div class="usagm__content-width" style="margin-top: 60px;">
+
+					<div class="usagm__grid__full"> 
+
+						<div class="usagm__grid" style="text-align: center;">
+							<h1 class="usagm__project-title">{% if site_info.title_short_pretty %}{{ site_info.title_short_pretty }}{% else %}{{ site_info.title_short }}{% endif %}</h1>
+							<div class="usagm__project-intro">
+								
+								{{ post.content }}
+
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</section>
+
+{% endfor %}
+
+
+
+{% assign featured = "" %}
+
+	<section class="usagm__section usagm__border-sides" style="padding-bottom: 40px;">
+			<div class="usagm__grid__full">
+					
+				<div class="usagm__story__featured">
+				
+{% assign toggle = "FALSE" %}
+{% assign currentEntity = "" %}
+{% for entity in site.entities %}
+	{% assign stories = site.data[current_language].stories | reverse %}
+	{% for story in stories %}
+			{% if story.publish == "TRUE" and toggle == "FALSE" and story.featured == "TRUE" %}
+				{% assign toggle = "TRUE" %}
+				{% assign featured = story.entity %}
+				{% assign currentEntity = story.entity %}
+
+				{% assign verb = "Read it" %}
+				{% if story.type == "video"%}{% assign verb = "Watch the video" %}
+				{% elsif story.type == "project" %}{% assign verb = "Explore the project" %}
+				{% elsif story.type == "documentary" %}{% assign verb = "Watch the documentary" %}
+				{% endif %}
+					<a href="{{ story.link }}" style="text-decoration: none;">
+						<picture>
+							<source srcset="{{ story.image | replace: '_w1023', '_w1280_h720'}}" media="(min-width: 992px)">
+							<source srcset="{{ story.image | replace: '_w1023', '_w920_h640'}}" media="(min-width: 640px)">
+							<source srcset="{{ story.image | replace: '_w1023', '_w640_h640'}}" media="(min-width: 420px)">
+							<img src="{{ story.image | replace: '_w1023', '_w420_h500'}}" style="margin-bottom: 20px;">
+						</picture>
+
+						<div class="usagm__content-width">
+							<div class="usagm__grid__full">
+								<div class="usagm__grid">
+									<h3 class="usagm__label small">{{ story.country }}</h3>
+									<h2 class="usagm__story__featured__headline">{{ story.title }}</h2>
+									<p>{{ story.description }} |  <span style="">{{ verb }} on {{ site.entities[currentEntity].urlPretty }}</span></p>
+								</div>
+							</div>
+						</div>
+					</a>
+			{% endif %}
+	{% endfor %}
+{% endfor %}
+				</div>
+
+			</div>
+
+		<div class="usagm__content-width">
+
+			<div class="usagm__grid__full">
+
+				<div class="usagm__grid">
+
+					<div class="usagm__secondary-stories">
+						
+
+					<!--
+
+{% for entity in site.entities %}
+{% assign currentEntity = entity[0] %}
+{% assign toggle = "FALSE" %}
+	{% if site.entities[currentEntity].include %}
+
+				{% assign stories = site.data.english.stories | reverse %}
+				{% for story in stories %}
+
+						{% if story.publish == "TRUE" and toggle == "FALSE" and currentEntity != featured and story.entity == currentEntity  %}
+							{% assign toggle = "TRUE" %}
+							{% assign verb = "Read it" %}
+							{% if story.type == "video"%}
+								{% assign verb = "Watch the video" %}
+							{% elsif story.type == "project" %}
+								{% assign verb = "Explore the project" %}
+							{% elsif story.type == "documentary" %}
+								{% assign verb = "Watch the documentary" %}
+							{% endif %}
+
+							--><div class="usagm__story__secondary">
+								<a href="{{ story.link }}" class="usagm__story__secondary__link">
+									{% if story.country != "" %}
+									<h3 class="usagm__label small">{{ story.country }}</h3>
+									{% else %}
+									<h3 class="usagm__label small">{{ story.region }}</h3>
+									{% endif %}
+
+									<picture>
+										<source srcset="{{ story.image | replace: '_w1023', '_w420_h240'}}" media="(min-width: 992px)">
+										<source srcset="{{ story.image | replace: '_w1023', '_w320_h240'}}" media="(min-width: 640px)">
+										<img src="{{ story.image | replace: '_w1023', '_w240_h240'}}" style="">
+									</picture>
+
+
+									<h3 class="usagm__story__secondary__headline" style="font-size: 17px;">{{ story.title }}</h3>
+								{% if story.link contains "https:" %}
+									<p>{{ story.description }}</p>
+									<p class="usagm__story__secondary__read-more">{{ verb }} on {{ site.entities[currentEntity].urlPretty }}</p>
+								{% else %}
+									<p>{{ story.description }} <span style="color: #999;">({{ site.entities[currentEntity].namePretty }})</span></p>
+								{% endif %}
+									
+								</a>
+							</div><!--
+						{% endif %}
+				{% endfor %}
+	{% endif %}
+{% endfor %}
+				-->
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+
+
+
+{% assign sorted-posts = site.posts | where: "categories","blog" %}
+{% assign sorted-posts-language = sorted-posts | where: "categories",current_language %}
+{% if sorted-posts.size > 0 %}
+	<section class="usagm__section__full-width ">
+
+		<div class="usagm__grid__full usagm__border-sides white">
+			
+			<div class="usagm__content-width">
+
+				<div class="usagm__grid__full">
+					
+					<div class="usagm__grid">
+						<div class="usagm__grid__full usagm__border-top" style="padding-top: 40px;">
+							
+							<div class="usagm__grid__two-thirds border-right" style="border-right: none; padding-bottom: 20px;">
+								<div class="usagm__blogpost">
+{% for post in sorted-posts %}
+									<h3 class="usagm__label small">Press freedom blog</h3>
+									<a href="{{ site.url_base }}{{ post.url | relative }}">
+										<picture>
+											<source srcset="{{ post.image | replace: '_w1023', '_w740_h416'}}" media="(min-width: 992px)">
+											<source srcset="{{ post.image | replace: '_w1023', '_w740_h518'}}" media="(min-width: 800px)">
+											<source srcset="{{ post.image | replace: '_w1023', '_w640_h640'}}" media="(min-width: 420px)">
+											<img src="{{ post.image | replace: '_w1023', '_w420_h420'}}" style="max-width: none; width: 100%;">
+										</picture>
+										<div class="usagm__blogpost__text">
+											<h2>{{ post.title }}</h2>
+											<p>{{ post.excerpt }}</p>
+										</div>
+									</a>
+								</div>
+{% endfor %}
+							</div><!--
+							--><div class="usagm__grid__one-third" style="margin-right: 0;">
+								{% include tweet-embed.html 
+
+									tweet="1109081794740211715"
+
+								%}
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+	</section>
+{% endif %}
+
+
+	<section class="usagm__section usagm__border-sides">
+
+{% assign sorted-posts = site.posts | where: "categories","profile" %}
+{% assign sorted-posts-language = sorted-posts | where: "categories",current_language %}
+{% for post in sorted-posts limit: 1 %}
+
+		<div class="usagm__grid__full">
+			{% include video.html 
+				youtube= post.youtube
+			%}
+		</div>
+
+		<div class="usagm__story__featured">
+			
+			<div class="usagm__content-width" style="padding-top: 20px; padding-bottom: 20px;">
+				<div class="usagm__grid__full">
+					<div class="usagm__grid">
+						<h3 class="usagm__label small">The front line</h3>
+						<h2>{{ post.title }}</h2>
+						<p style="font-family: Arial, sans-serif; color: #444; margin-top: 5px;">{{ post.excerpt | remove: '<p>' | remove: '</p>'}} {% if post.link-project %}<span>Explore the project in <a href="{{ post.link-project }}">{{ post.link-project-language |default: "EnglishXXXX"}}</a>{% if post.link-project-translation %} | <a href="{{ post.link-project-translation }}">{{ post.link-project-translation-language | default: "translation"}}</a>{% endif %}</span>{%endif%}</p>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+{% endfor %}
+
+	</section>
+
+
+
+	<section class="usagm__section__full-width gradient" style="">
+		<div class="usagm__grid__full usagm__border-sides white" style="border-top: 1px solid #F1F1F1; padding-top: 20px;padding-bottom: 40px;">
+
+			<div class="usagm__content-width">
+
+				<div class="usagm__grid__full">
+					<div class="usagm__grid">
+						<p>USAGM journalists reporting in hostile areas have been threatened, arrested, tortured and killed doing their jobs. Some of their stories are below.</p>
+					</div>
+				</div>
+
+				<div class="usagm__grid__full">
+					
+					<div class="usagm__grid">
+						<div class="usagm__grid__full usagm__border-top" style="margin-top: 20px;">
+							<div style="text-align: center; margin: 0 auto;">
+								<h3 id="missing" class="usagm__kicker small">JAILED</h3>
+							</div>
+						</div>
+					</div>
+					<div class="usagm__grid"><!--
+
+{% assign sorted-posts = site.posts | where: "categories","jailed" %}
+{% assign sorted-posts-language = sorted-posts | where: "categories",current_language %}
+{% for post in sorted-posts %}
+						--><div class="usagm__grid__one-half usagm__journalist">
+							<a href="{{ site.url_base }}/english/journalist/jailed/{{ post.title | replace: ' ','-' | downcase }}.html">
+								<img class="usagm__journalist__mugshot" src="{{post.mugshot}}"/>
+								<h4 class="usagm__journalist__name">{{ post.title }}</h4>
+								<h5 class="usagm__journalist__entity">{{ post.entity }}</h5>
+								<p>{{ post.excerpt | truncatewords: 40 | remove: '<p>' | remove: '</p>' }}</p>
+							</a>
+						</div><!--
+{% endfor %}
+-->
+					</div>
+				</div>
+			</div>
+
+
+			<div class="usagm__content-width">
+
+				<div class="usagm__grid__full">
+					
+					<div class="usagm__grid">
+						<div class="usagm__grid__full usagm__border-top" style="margin-top: 40px;">
+							<div style="text-align: center; margin: 0 auto;">
+								<h3 id="missing" class="usagm__kicker small">MISSING</h3>
+							</div>
+						</div>
+					</div>
+					<div class="usagm__grid"><!--
+{% assign sorted-posts = site.posts | where: "categories","missing" %}
+{% assign sorted-posts-language = sorted-posts | where: "categories",current_language %}
+{% for post in sorted-posts %}
+						--><div class="usagm__grid__one-half usagm__journalist">
+							<a href="{{ site.url_base }}/english/journalist/missing/{{ post.title | replace: '(','' | replace: ')','' | replace: ' ','-' | downcase }}.html">
+								<img class="usagm__journalist__mugshot" src="{{post.mugshot}}"/>
+								<h4 class="usagm__journalist__name">{{ post.title }}</h4>
+								<h5 class="usagm__journalist__entity">{{ post.entity }}</h5>
+								<p>{{ post.excerpt | truncatewords: 40 | remove: '<p>' | remove: '</p>' }}</p>
+							</a>
+						</div><!--
+{% endfor %}
+-->
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+	</section>
+
+
+	<section class="usagm__section__full-width dark" style="padding: 0;">
+		<div class="usagm__grid__full usagm__border-sides" style="padding-top: 20px; padding-bottom: 40px; border-color: #222;">
+			
+
+			<div class="usagm__content-width">
+				
+				<div class="usagm__grid__full" style="padding-top: 30px; padding-bottom: 20px;">
+
+					<div class="usagm__grid">
+						<h3 id="fallen" class="usagm__label" style="margin-bottom: 0; color: #F1F1F1">FALLEN JOURNALISTS</h3>
+						<p style="font-family: Arial, sans-serif; color: #999; margin-top: 5px;">In honor of the USAGM journalists who gave their lives to bring vital news and information to people around the world.</p>
+					</div>
+
+					<div class="usagm__grid__full--mobile">
+
+					<!--
+					{% assign sorted-posts = site.posts | where: "categories","obituary" %}
+					{% assign sorted-posts-language = sorted-posts | where: "categories",current_language %}
+					{% for post in sorted-posts %}
+							--><div class="usagm__grid__profile-mugshot">
+								<a href="{{ site.url_base }}{{ post.url | relative }}">
+									<img class="" src="{{ post.mugshot }}" />
+									<div class="usagm__grid__profile__text">
+										<h4 class="usagm__grid__profile__name" style="">{{ post.title }}</h4>
+										<p style="">{{ post.entity }}</p>
+									</div>
+								</a>
+							</div><!--
+					{% endfor %}
+					-->
+					</div>
+					<!--
+					<div style="margin-top: 30px; padding-top: 20px;text-align: center;">
+						<h4 style="color: #777; font-size: 20px; font-weight: normal; margin-bottom: 10px;">“Where press is free … all is safe.”</h4>
+						<h5 style="color: #666; font-weight: normal;" >— Thomas Jefferson</h5>
+					</div>
+					-->
+
+				</div>
+
+			</div>
+		</div>
+
+	</section>
+
+
+
+<link rel="stylesheet" type="text/css" href="{{site.url_base}}/assets/main.css?{{ random }}">
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script type="text/javascript" src="https://projects.voanews.com/js/resources/jquery.smartmenus.min.js"></script>
+<script type="text/javascript" src="{{site.url_base}}/js/scripts.js?{{ random }}"></script>
+
+

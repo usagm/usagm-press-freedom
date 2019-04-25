@@ -1,0 +1,49 @@
+{% if page.language %}
+
+	{% assign site_info = site.site_info__object[page.language] %}
+	{% assign current_language = page.language %}
+
+
+{% else %}
+
+	{% assign site_info = site.site_info__object.english %}
+	{% assign current_language = "english" %}
+
+{% endif %}
+
+<footer class="usagm__section__full-width usagm__footer dark" style="padding-top: 0;">
+
+	<div class="usagm__grid__full" style="margin-bottom: 0; padding-top: 40px; background-color: #222; border-color: #222;">
+		<div class="usagm__content-width">
+			<div class="usagm__grid__full">
+				
+				<div class="usagm__grid">
+
+					<div class="usagm__grid__one-half border-right">
+
+						<img src="{{ site.url_base }}/img/logo__usagm--white_medium.png" style="float: left; margin-right: 5px; width: 80px;">
+						<div style="padding-left: 80px;">
+							<h3>USAGM</h3>
+							<p>The U.S. Agency for Global Media oversees five U.S. government-funded civilian news agencies in its mission to inform, engage and connect people around the world in support of freedom and democracy. The combined weekly audience exceeds 278 million.</p>
+						</div>
+
+					</div><!--
+
+					--><!--
+
+					--><div class="usagm__grid__one-half " >
+
+						<h3>{{ site_info.dictionary.label_about_the_project | default: "About the project"}}</h3>
+						<p>'Assault on the Press' highlights coverage of journalists, news media and the global environment for press freedom as reported by USAGM sister news organizations. It is a joint initiative of Radio Free Europe/Radio Liberty, Middle East Broadcasting Networks, Voice of America, Radio Free Asia and the Office of Cuba Broadcasting. Send tips or comments to info@usagm.gov.  </p>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</footer><!-- .usagm__footer -->

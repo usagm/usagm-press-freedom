@@ -1,0 +1,1364 @@
+// Put project-specific CSS here.
+
+/*
+#content .container {
+	max-width: none;
+}
+
+#content {
+	max-width: 1280px;
+	margin-left: auto;
+	margin-right: auto;
+}
+*/
+
+body.no-scroll {
+	overflow-y: hidden;
+}
+
+#article-content p a.usagm__show-candidate,
+.pg-section .usagm__project p a.usagm__show-candidate{
+	font-weight: bold;
+
+	&:hover {
+		background-color: yellow;
+	}
+}
+
+
+.usagm__screen {
+	display: none;
+
+	&.show {
+		animation: fade-in-modal 1s forwards;
+		background-color: rgba(20,20,20,0);
+		display: block;
+
+		height: 100%;
+		pointer-events: auto;
+		position: fixed;
+			top: 0;
+			left: 0;
+		width: 100%; 
+		z-index: 9999999; 
+
+	}
+
+	&.hide {
+		animation: fade-out-modal 1s forwards;
+		background-color: rgba(20,20,20,0);
+		display: block;
+		height: 100%;
+		pointer-events: none;
+		position: fixed; 
+			top: 0;
+			left: 0;
+		width: 100%; 
+		z-index: 9999999; 
+	}
+
+	@keyframes fade-in-modal {
+	    from { background-color: rgba(20,20,20,0); }
+	    to   { background-color: rgba(20,20,20,.8);; }
+	}
+	@keyframes fade-out-modal {
+	    from { background-color: rgba(20,20,20,.8); }
+	    to   { background-color: rgba(20,20,20,0);; }
+	}
+}
+
+.usagm__project,
+.pg-section .usagm__project {
+
+
+	.usagm__project-title {
+		font-family:'Fugaz One', Arial, sans-serif;
+		font-size: 42px;
+		line-height: 1;
+		text-transform: uppercase;
+		@media only screen and (min-width: $media__small) {
+			font-size: 54px;
+		}
+		@media only screen and (min-width: $media__medium) {
+			font-size: 72px;//60px;
+		}
+		@media only screen and (min-width: $media__medium-large) {
+			font-size: 84px;//66px;
+		}
+		@media only screen and (min-width: $media__large) {
+			font-size: 124px;//96px;
+			margin-top: 20px;
+		}
+	}
+	.usagm__project-intro {
+		p {
+			color: #999;
+			font-size: 16px;
+			margin-top: 10px;
+
+			@media only screen and (min-width: $media__small) {
+				font-size: 18px;
+			}
+			@media only screen and (min-width: $media__medium) {
+				font-size: 19px;
+				line-height: 1.5;
+				margin-top: 5px;
+			}
+			@media only screen and (min-width: $media__medium-large) {
+				font-size: 22px;
+				margin-top: 0;
+			}
+			@media only screen and (min-width: $media__large) {
+				font-size: 26px;
+			}
+		}
+
+	}
+
+	.usagm__story__featured__headline {
+			@media only screen and (min-width: $media__large) {
+				font-size: 54px;
+			}
+	}
+
+	.usagm__byline {
+		font-size: 14px;
+		
+		@media only screen and (min-width: $media__medium) {
+			font-size: 16px;
+		}
+	}
+
+	.usagm__content-width {
+		max-width: 1080px;
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+	.usagm__featured__headline {
+		font-size: 30px;
+		line-height: 1.1;
+
+		@media only screen and (min-width: $media__small) {
+			font-size: 42px;
+		}
+		@media only screen and (min-width: $media__medium) {
+			font-size: 48px;
+		}
+		@media only screen and (min-width: $media__medium-large) {
+			font-size: 54px;
+		}
+	}
+
+	h2 {
+		font-size: 24px;
+		font-weight: bold;
+		line-height: 1.1;
+
+		@media only screen and (min-width: $media__small) {
+			font-size: 30px;
+		}
+		@media only screen and (min-width: $media__medium) {
+		}
+		@media only screen and (min-width: $media__medium-large) {
+			font-size: 36px;
+		}
+	}
+
+	.usagm__preloader {
+		&.show{
+			background-image: url(https://projects.voanews.com/muslim-candidates/img/loading.gif);
+			background-repeat: no-repeat;
+			background-position: center;
+			height: 100%;
+			position: absolute;
+				top: 0;
+			width: 100%;
+			z-index: 99999;
+		}
+	}
+
+	.usagm__card {
+		p, a, ul, li {
+			font-family: $font__sans;
+		}
+
+		ul {
+			font-size: 14px;
+			list-style: none;
+			padding-left: 0;
+		}
+	}
+
+
+	.usagm__modal {
+		.usagm__card__label {
+			background-color: #EF5C2C;
+			border-radius: 3px 3px 0 0;
+			color: #FFF;
+			padding: 5px 20px;
+			width: 100%;
+
+			a.usagm__button__close {
+				color: #FFF !important;
+			}
+		}
+
+		.usagm__profile__photo {
+			float: left; 
+			margin-right: 10px; 
+			width: 150px;  
+			max-width: 33%;
+		}
+
+		.usagm__card__content {
+			padding: 20px 20px 10px 20px;
+		}
+	}
+
+
+	.usagm__modal__container {
+
+		&.show {
+			.usagm__modal {
+				display: block;
+				opacity: 0;
+				animation: fade-in-modal-window 1s forwards;
+				z-index: 99999999;
+			}
+		}
+
+		@keyframes fade-in-modal-window {
+		    from { opacity: 0; }
+		    to   { opacity: 1; }
+		}
+		@keyframes fade-out-modal-window {
+		    from { opacity: 1; }
+		    to   { opacity: 0; }
+		}
+
+		.usagm__modal {
+			background-color: #FFF;
+			border-radius: 4px;
+			display: none;
+			margin: 5% auto; /* Will not center vertically and won't work in IE6/7. */
+			max-height: 90%;
+			max-width: 800px;
+			overflow-y: auto;
+			padding: 0;
+			position: fixed;
+				top: 2%;
+				right: 0;
+				left: 0;
+			width: 90%;
+			z-index: 0;
+			
+			@media only screen and (min-width: $media__medium) {
+				width: 80%;
+			}
+
+			@media only screen and (min-height: $media__small) {
+				top: 3%;
+			}
+			@media only screen and (min-height: $media__medium) {
+				top: 5%;
+			}
+			@media only screen and (min-height: 920px) {
+				top: 15%;
+			}
+
+
+			@media only screen and (max-height: $media__small) {
+				overflow-y: scroll;
+			}
+
+			.usagm__modal__card {
+				padding: 5%;
+			}
+
+			.usagm__profile__intro {
+				margin-bottom: 5px;
+
+				h3.usagm__label {
+					&.loading {
+						background-color: #CCC;
+						display: initial;
+						height: 24px;
+						padding-left: 35%;
+						width: 50%;
+					}
+				}
+
+				&:before,
+				&:after {
+					content: " ";
+					display: table;
+				}
+
+				&:after {
+					clear: both;
+				}
+			}
+			.usagm__profile__photo {
+				float: left; 
+				margin-right: 10px; 
+				width: 150px;  
+				max-width: 33%;
+			}
+
+			.usagm__profile__name {
+				font-weight: bold;
+
+				@media only screen and (min-width: $media__small) {
+					font-size: 30px;//24px;
+				}
+				@media only screen and (min-width: $media__medium-large) {
+					font-size: 36px;//30px;
+				}
+				@media only screen and (min-width: $media__large) {
+					font-size: 42px;//36px;
+				}
+			}
+
+			.usagm__label--bullet {
+				font-weight: bold;
+				text-transform: uppercase;
+			}
+
+			.usagm__profile__office {
+				color: #999;
+				font-weight: normal;
+				margin-top: 5px;
+				margin-bottom: 10px;
+				text-transform: uppercase;
+			}
+			.usagm__profile__description {
+				font-size: 14px;
+				margin-top: 10px;
+				margin-bottom: 40px;
+
+				&.loading {
+					background-color: #F1F1F1;
+					color: #F1F1F1;
+					display: inline;
+					margin-top: 10px;
+				}
+
+				@media only screen and (min-width: $media__medium) {
+					font-size: 15px;
+					line-height: 1.3;
+					margin-bottom: 20px;
+				}
+
+
+				&.show {
+					opacity: 0;
+					animation: fade-in-description 1s forwards;
+				}
+
+				@keyframes fade-in-description {
+				    from { opacity: 0; }
+				    to   { opacity: 1; }
+				}
+			}
+
+			.usagm__profile__quotation {
+				display: none;
+				/*
+				font-size: 14px;
+				font-weight: bold;
+				line-height: 1.4;
+				margin-top: 20px;
+				margin-bottom:20px;
+				padding-top: 20px;
+				@media only screen and (max-width: $media__medium--) and (max-height: $media__medium--) {
+					display: none !important;
+				}
+				@media only screen and (min-width: $media__medium) and (min-height: $media__medium) {
+					border-top: 1px dotted #CCC;
+					display: block;
+
+					&.show {
+						opacity: 0;
+						animation: fade-in-description 1s forwards;
+						animation-delay: .1s;
+					}
+
+					@keyframes fade-in-description {
+					    from { opacity: 0; }
+					    to   { opacity: 1; }
+					}
+				}
+				*/
+			}
+
+			.usagm__button__close {
+				color: #999;
+				float: right;
+				font-family: Arial, sans-serif;
+				font-size: 13px;
+				//margin-right: 15px;
+				text-decoration: none;
+
+				&:hover {
+					color: blue;
+					text-decoration: underline;
+				}
+			}
+
+
+			.flexbox-container {
+				.usagm__modal__card {
+					padding: 5%;
+					position: relative;
+				}
+
+				@media only screen and (max-width: $media__medium--) {
+					.usagm__modal__secondary {
+						display: none;
+						/*
+						border-top: 1px solid #CCC;
+						border-radius: 0 0 6px 6px;
+						height: 200px;
+						*/
+					}
+
+				}
+				@media only screen and (min-width: $media__medium) {
+
+					display: -ms-flex;
+					display: -webkit-flex;
+					display: flex;
+
+
+					.usagm__modal__card {
+						padding: 5%;
+						//width: 66%;
+					}
+
+					.usagm__modal__secondary {
+						display: none;
+						/*
+						border-left: 1px solid #CCC;
+						border-radius: 0 6px 6px 0;
+						width: 44%;
+						*/
+					}
+				}
+			}
+
+
+			.usagm__buttons--bottom {
+				border-top: 1px solid #CCC;
+				padding-top: 12px;
+
+				p {
+					font-size: 14px;
+					margin-bottom: 0;
+
+					a {
+						font-weight: bold;
+					}
+					@media only screen and (min-width: $media__medium) {
+						font-size: 15px;
+					}
+
+				}
+
+			}
+
+
+			// inset map
+
+			path.state.leaflet-interactive.selected {
+				stroke: #999;
+				stroke-width: 3px;
+				fill-opacity: .8;
+			}
+			path.leaflet-interactive.selected-district {
+				fill-opacity: 1;
+				opacity: 1;
+				stroke-opacity: 1;
+				stroke-width: 3px;
+			}
+			path.leaflet-interactive.selected-district:hover {
+				stroke-width: 4px;
+			}
+
+
+		}
+
+	}
+
+	.usagm__journalist {
+		a {
+			color: #000;
+			text-decoration: none;
+
+			.usagm__journalist__mugshot {
+				 float: left; 
+				 margin-right: 3%; 
+				 max-width: 31%;
+				@media only screen and (min-width: $media__medium) {
+					max-width: 50%;
+				}
+				@media only screen and (min-width: $media__medium-large) {
+					max-width: 40%;
+				}
+				@media only screen and (min-width: $media__large) {
+					max-width: 31%;
+				}
+			}
+
+			.usagm__journalist__name {
+				@media only screen and (min-width: $media__small) {
+					font-size: 18px;
+				}
+				@media only screen and (min-width: $media__medium) {
+					font-size: 16px;
+				}
+				@media only screen and (min-width: $media__medium-large) {
+					font-size: 22px;
+				}
+
+			}
+
+			.usagm__journalist__entity {
+				color: #999;
+				font-weight: normal;
+				margin-top: 0;
+			}
+
+			p {
+				color: #444;
+				@media only screen and (min-width: $media__medium) {
+					padding-right: 2%;
+				}
+			}
+
+			&:hover {
+				.usagm__journalist__name {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+
+	.usagm__obituary {
+
+		.usagm__obituary__mini-bio {
+
+			margin-top: 20px;
+
+			img {
+				float: left;
+				margin-right: 10px;
+				max-width: 50%;
+			}
+
+			.usagm__obituary__name {
+				font-size: 24px;
+			}
+
+			.usagm__obituary__entity {
+				font-weight: normal;
+				color: #888;
+				margin-top: 5px;
+			}
+
+			@media only screen and (min-width: $media__medium) {
+				display: inline-block;
+				margin-right: 2%;
+				vertical-align: top;
+				width: 25%;
+
+				img {
+					outline: 6px solid #FFF;
+					float: none;
+					margin-right: 0;
+					margin-bottom: 15px;
+					max-width: none;
+					position: relative;
+					width: 100%;
+					z-index: 9999;
+				}
+
+				.usagm__obituary__name {
+					font-size: 24px;
+				}
+			}
+
+			@media only screen and (min-width: $media__large) {
+				img {
+					outline: 12px solid #FFF;
+				}
+
+				.usagm__obituary__name {
+					font-size: 30px;
+				}
+			}
+		}
+
+		.usagm__obituary__story {
+			@media only screen and (min-width: $media__medium) {
+				display: inline-block;
+			    max-width: 640px;
+				padding-bottom: 20px;
+				width: 72%;
+
+				p {
+					line-height: 1.6;
+
+					&:first-of-type {
+						font-weight: bold;
+						margin-top: 20px;
+					}
+				}
+			}
+			@media only screen and (min-width: $media__large) {
+				padding-top: 20px;
+				padding-bottom: 40px;
+			}
+		}
+
+		&.include-photo {
+
+			.usagm__obituary__mini-bio {
+
+				margin-top: 20px;
+
+				@media only screen and (min-width: $media__medium) {
+					margin-top: -50px;
+
+					img {
+					}
+				}
+
+				@media only screen and (min-width: $media__large) {
+					margin-top: -80px;
+
+					img {
+					}
+				}
+			}
+
+			.usagm__obituary__story {
+				@media only screen and (min-width: $media__medium) {
+				}
+			}
+
+		}
+	}
+
+	/* Dropdown Button (the alternate select button) */
+
+	.usagm__dropdown {
+		display: none;
+		margin-top: -20px;
+		margin-bottom: 40px;
+		position: relative;
+
+		.usagm__dropdown__button {
+			background-color: #3498DB;
+			background-image: url(../img/icons/button__select.png);
+			background-repeat: no-repeat;
+			background-size: 15px auto;
+			background-position: right 10px center;
+			border: none;
+			color: white;
+			cursor: pointer;
+			display: block;
+			font-size: 16px;
+			margin: 0 auto;
+			padding: 16px 30px 16px 16px;
+			width: 235px;
+
+			/* Dropdown button on hover & focus */
+			&:hover, &:focus {
+				background-color: #2980B9;
+			}
+
+		}
+
+
+
+		/* Dropdown Content (Hidden by Default) */
+		.usagm__dropdown-content {
+			background-color: #f1f1f1;
+			box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+			display: none;
+			margin: 0 auto;
+			min-width: 160px;
+			width: 235px;
+			z-index: 1;
+
+			/* Links inside the dropdown */
+			a {
+				color: black;
+				display: block;
+				font-family: Arial, sans-serif;
+				padding: 12px 16px;
+				text-decoration: none;
+			}
+
+			/* Change color of dropdown links on hover */
+			a:hover {
+				background-color: #ddd
+			}
+
+		}
+
+
+		/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+		.show {display:block;}
+
+	}
+
+
+	@media only screen and (min-width: 420px) {
+		.usagm__dropdown {
+			display: block;
+		}
+
+		#dropdown {
+			display: none !important;
+		}
+	}
+
+
+
+
+
+
+	.usagm__select-box {
+		display: block;
+		@media only screen and (min-width: $media__medium) {
+			display: none;
+		}
+
+		#religionSelect {
+			border-color: #CCC;
+			font-size: 16px;
+			height: 29px;
+			padding: 5px;
+		}
+	}
+
+	.usagm__select-list {
+		display: none;
+		@media only screen and (min-width: $media__medium) {
+			display: block;
+		}
+
+		.filterReligion {
+			border: 1px solid #FFF;
+			border-radius: 4px;
+			color: #999;
+			padding: 5px;
+			text-decoration: none;
+
+			&:hover {
+				border: 1px solid #CCC;
+				color: #666;
+
+				&.selected {
+					border: 1px solid #FFF;
+				}
+			}
+			&.selected {
+				background-color: #AED779;
+				color: #000;
+			}
+		}
+
+	}
+
+
+	.usagm__page__title {
+		font-family: Arial, sans-serif;
+		font-size: 30px;
+		margin-bottom: 10px;
+
+		@media only screen and (min-width: $media__small) {
+			font-size: 42px;
+		}
+		@media only screen and (min-width: $media__medium) {
+			font-size: 54px;
+		}
+		@media only screen and (min-width: $media__medium-large) {
+			font-size: 60px;
+			margin-bottom: 15px;
+		}
+		@media only screen and (min-width: $media__large) {
+			font-size: 80px;
+		}
+
+	}
+
+	.usagm__page__summary {
+		font-weight: normal;
+
+		@media only screen and (min-width: $media__medium) {
+			font-weight: bold;
+		}
+	}
+
+
+
+
+
+	p {
+		font-family: $font__sans;
+	}
+
+	.usagm__story__featured {
+		//padding-bottom: 20px;
+		width: 100%;
+
+		p {
+			span {
+				color: #999;
+			}
+			a {
+				color: #888;
+				text-decoration: underline;
+
+				&:hover {
+					color: rgb(43, 123, 185);
+				}
+			}
+		}
+
+		a {
+			color: #222;
+			text-decoration: none;
+
+			.usagm__story__featured__headline {
+
+				@media only screen and (min-width: $media__medium) {
+					margin-bottom: 10px;
+				}
+			}
+
+			p {
+				color: #333; 
+				font-family: Arial, sans-serif; 
+				font-size: 15px;
+				line-height: 1.2;
+				margin: 5px 0 0 0;
+
+				span {
+					color: #999;
+				}
+				@media only screen and (min-width: $media__medium) {
+					font-size: 16px;
+					line-height: 1.4;
+					margin: 0;
+				}
+			}
+
+			&:hover {
+				.usagm__story__featured__headline {
+
+				}
+
+				p {
+					span {
+						color: rgb(43, 123, 185);
+						text-decoration: underline;
+					}
+				}
+
+			}
+		}
+
+		@media only screen and (min-width: $media__medium) {
+
+		}
+
+	}
+
+
+	.usagm__story__secondary {
+		margin-bottom: 20px;
+		width: 100%;
+
+		padding-bottom: 20px;
+		border-bottom: 1px dotted #CCC;
+
+		&:last-of-type{
+			border-bottom: none;
+		}
+
+		img {
+			float: left;
+			margin-right: 10px;
+			max-width: 33%;
+
+			@media only screen and (min-width: $media__small) {
+				max-width: 40%;
+			}
+			@media only screen and (min-width: $media__medium) {
+				float: none;
+				margin-bottom: 10px;
+				max-width: none;
+				width: 100%;
+			}
+
+		}
+
+		a {
+			color: #222;
+			text-decoration: none;
+
+			.usagm__story__secondary__headline {
+				font-size: 17px;
+			}
+
+			h3.usagm__label {
+				float: right;
+				width: 65%;
+				width: calc(67% - 10px);
+
+				@media only screen and (min-width: $media__small) {
+					width: 60%;
+					width: calc(60% - 10px);
+				}
+				@media only screen and (min-width: $media__medium) {
+					float: none;
+					margin-bottom: 10px;
+					width: 100%;
+				}
+			}
+
+			p {
+				color: #333; 
+				font-family: Arial, sans-serif; 
+				font-size: 15px;
+				line-height: 1.2;
+				margin: 10px 0 0 0;
+
+				&.usagm__story__secondary__read-more {
+					color: #999;
+					margin-top: 5px;
+				}
+				@media only screen and (min-width: $media__medium) {
+					font-size: 16px;
+
+
+					&.usagm__story__secondary__read-more {
+						margin-top: 10px;
+					}
+				}
+
+			}
+
+			&:hover {
+				img {
+					outline: 4px solid #000;
+				}
+
+				.usagm__story__secondary__headline {
+
+				}
+
+				p {
+					&.usagm__story__secondary__read-more {
+						color: rgb(43, 123, 185);
+						text-decoration: underline;
+					}
+				}
+
+			}
+		}
+
+		@media only screen and (min-width: $media__medium) {
+			border-bottom: 0;
+			display: inline-block;
+			margin-right: 2%;
+			padding-bottom: 0;
+			vertical-align: top;
+			width: 32%;
+
+			&:nth-of-type(3n){
+				margin-right: 0;
+			}
+		}
+
+	}
+
+	.usagm__secondary-stories {
+		border-top: 1px dotted #CCC;
+		margin-top: 10px;
+		padding-top: 30px;
+
+		@media only screen and (min-width: $media__medium) {
+			border-top: 1px dotted #CCC;
+			margin-top: 20px;
+			padding-top: 40px;
+		}
+	}
+
+	.usagm__blogpost {
+		a {
+			color: #333;
+			text-decoration: none;
+
+			p {
+				color: #333;
+				span {
+					color: #999;
+				}
+			}
+
+			&:hover {
+				p {
+					span {
+						color: rgb(43, 123, 185);
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+		text-align: center;
+
+		.usagm__label {
+			margin-bottom: 10px;
+		}
+
+		.usagm__blogpost__text {
+			padding-right: 5%;
+			padding-left: 5%; 
+		}
+	}
+
+
+	.usagm__story__secondary:before,
+	.usagm__story__secondary:after {
+		content: " ";
+		display: table;
+	}
+
+	.usagm__story__secondary:after {
+		clear: both;
+	}
+
+
+	.usagm__grid__profile-mugshot {
+		@extend .usagm__clear;
+		width: 100%;
+
+		border-bottom: 1px solid #444;
+
+		&:first-of-type {
+			border-top: 1px solid #444;
+		}
+
+		a {
+			color: #000;
+			text-decoration: none;
+
+			&:hover {
+				.usagm__grid__profile__name {
+					color: #FFF;
+				}
+				img {
+					-webkit-filter: none;
+					filter: none;
+				}
+
+				@media only screen and (min-width: $media__small) {
+
+					img {
+						opacity: 1;
+						-webkit-filter: none;
+						filter: none;
+						transition: 1s;
+					}
+				}
+			}
+
+			img {
+				float: left;
+				margin-right: 7px;
+				width: 80px;
+
+				-webkit-filter: saturate(10%);
+				filter: saturate(10%);
+
+
+				@media only screen and (min-width: $media__small) {
+					float: none;
+					margin-right: 0;
+					width: 100%;
+
+					-webkit-filter: saturate(10%) alpha(opacity=70);
+					opacity: 0.7;
+					filter: saturate(10%) alpha(opacity=70);
+				}
+			}
+
+			.usagm__grid__profile__text {
+				padding-top: 20px;
+
+				@media only screen and (min-width: $media__small) {
+					padding-top: 0;
+				}
+			}
+
+			.usagm__grid__profile__name {
+				color: #999;
+				font-size: 15px;
+				@media only screen and (min-width: $media__small) {
+					text-align: center;
+				}
+			}
+
+			p {
+				color: #777; 
+				font-family: Arial, sans-serif;
+				font-size: 14px; 
+				margin: 0;
+				padding: 0 0 5px 0;
+
+				@media only screen and (min-width: $media__small) {
+					padding: 0;
+					text-align: center;
+				}
+			}
+		}
+
+		@media only screen and (min-width: $media__small) {
+			border: none;
+			display: inline-block;
+			margin-right: 1.5%;
+			margin-bottom: 15px;
+			vertical-align: top;
+			width: 32%;
+
+			&:nth-of-type(2n){
+				margin-right: 1.5%;
+			}
+			&:nth-of-type(3n){
+				margin-right: 0%;
+			}
+		}
+
+		@media only screen and (min-width: $media__medium) {
+			margin-right: 1.3%;
+			margin-bottom: 20px;
+			width: 24%;
+
+			&:nth-of-type(2n),
+			&:nth-of-type(3n){
+				margin-right: 1.3%;
+			}
+			&:nth-of-type(4n){
+				margin-right: 0%;
+			}
+		}
+
+		@media only screen and (min-width: $media__medium-large) {
+			margin-right: 1.25%;
+			width: 19%;
+
+			&:nth-of-type(2n),
+			&:nth-of-type(3n),
+			&:nth-of-type(4n){
+				margin-right: 1.25%;
+			}
+			&:nth-of-type(5n){
+				margin-right: 0%;
+			}
+		}
+
+		@media only screen and (min-width: $media__large) {
+			margin-right: 1.4%;
+			width: 15.5%;
+
+			&:nth-of-type(2n),
+			&:nth-of-type(3n),
+			&:nth-of-type(4n),
+			&:nth-of-type(5n){
+				margin-right: 1.4%;
+			}
+			&:nth-of-type(6n){
+				margin-right: 0%;
+			}
+		}
+	}
+
+
+
+	.usagm__story {
+
+		margin: 0 auto;
+		max-width: 720px;
+
+		h2, h3 {
+			margin-bottom: 20px;
+		}
+
+		p {
+			font-family: $font__serif;
+			font-size: 16px;
+			line-height: 1.4;
+			margin-top: 0;
+			margin-bottom: 20px;
+
+			@media only screen and (min-width: $media__medium-large) {
+				font-size: 18px;
+				line-height: 1.7;
+			}
+
+			&.usagm__credit,
+			&.usagm__cutline {
+				font-family: $font__sans;
+				font-size: 13px;
+			}
+
+			&.usagm__graphic {
+				font-family: $font__sans;
+				font-size: 14px;
+			}
+
+			&.usagm__interview__q {
+				font-family: Arial, sans-serif;
+				font-weight: bold;
+				margin-top: 30px;
+
+				&::before {
+					content: "ALHURRA: ";
+				}
+				
+				@media only screen and (min-width: $media__medium) {
+					margin-top: 40px;
+				}
+			}
+		}
+		ul, li {
+			font-family: $font__serif;
+			font-size: 16px;
+			line-height: 1.4;
+
+			@media only screen and (min-width: $media__medium-large) {
+				font-size: 18px;
+				line-height: 1.7;
+			}
+		}
+
+
+	}
+
+
+	.usagm__key {
+		display: block;
+		margin-bottom: 5px;
+
+		.usagm__key__swatch {
+			border-radius: 2px;
+			color: #FFF;
+			display: inline-block;
+			font-size: 14px;
+			height: 20px;
+			margin-right: 3px;
+			padding-top: 1px;
+			text-align: center;
+			width: 20px;
+
+			&.democrats {
+				background-color: #5381B0;
+			}
+			&.republicans {
+				background-color: #96070B;
+			}
+			&.independent {
+				background-color: #AED779;
+			}
+		}
+		.usagm__key__label {
+			color: #333;
+			display: inline-block;
+			font-family: $font__sans;
+			font-size: 14px;
+			font-weight: bold;
+			text-align: center;
+			text-transform: uppercase;
+			vertical-align: middle;
+		}
+
+		@media only screen and (min-width: $media__medium) {
+			display: inline-block;
+			margin-right: 5%;
+		}
+
+	}
+
+
+
+	.usagm__inline-square {
+		background-color: #F15C28; 
+		display: inline-block; 
+		height: 15px; 
+		margin-right: 3px;
+		margin-left: 3px;
+		width: 15px; 
+	}
+
+	.usagm__promo {
+		position: relative;
+
+		a {
+			color: #333;
+			font-family: $font__sans;
+			text-decoration: none;
+
+			&:hover {
+				.usagm__promo__text {
+					p {
+						strong {
+							text-decoration: underline;
+						}
+					}
+				}
+			}
+			.usagm__promo__text {
+				p {
+					margin-bottom: 0;
+
+					strong {
+						color: #1330bf;
+					}
+				}
+				
+
+				@media only screen and (min-width: $media__medium) {
+					position: absolute;
+						bottom: 0; 
+					width: 100%; 
+
+					p {
+						color: #FFF;
+
+						strong {
+							color: #FFF;
+						}
+					}
+
+				}
+
+				@media only screen and (max-width: $media__medium--) {
+					.usagm__grid {
+						padding-right: 0;
+						padding-left: 0;
+					}
+				}
+
+			}
+
+		}
+
+	}
+
+}				
+

@@ -1,0 +1,140 @@
+# Welcome to Jekyll!
+# Site settings
+
+
+# EDIT FOR DEPLOYING IN A SUB FOLDER
+# (USE THE PATH WHERE IT'LL BE HOSTED)
+url_base: ""
+# url_base: "usagm.github.io/usagm-press-freedom"
+# url_base: "https://pressfreedom.news"
+
+
+# ADD A WARNING FLAG AND DISABLE METRICS
+development_mode: true
+development_warning: This site is currently under active development.
+
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - Gemfile
+  - Gemfile.lock
+  - ai2html
+  - README.md
+  - graphics_raw
+  - ap
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - ai2html
+  - README.md
+  - research
+  - download-spreadsheet-data-app
+sass:
+  style: compressed
+repository: "usagm/usagm-press-freedom"
+
+
+
+# permalink: /:title:output_ext
+permalink: /:categories/:title:output_ext
+
+
+banner: https://gdb.voanews.com/26CB75C5-2A2A-4164-9F84-2E6B0FC68AE3_w1280_h720_s.jpg
+credit_default: (VOA News)
+
+
+# This site_info_object is used for labels, site-wide content, and analytics.
+# It's baked out from a couple of Google Spreadsheets using "config-oven"
+
+site_info__object:
+  english:
+    title: Assault on the Press | Coming soon
+    title_short: Assault on the Press
+    title_short_pretty: Assault</br>on the Press
+    title_tagline: Coming soon
+    navbar_label: Press Freedom
+    language_analytics: english
+    keywords: press freedom, journalism, media, censorship, journalists
+    service_name: VOA News
+    twitter_handle: VOAnews
+    dictionary:
+      label_share: Share 
+      label_twitter: Share on Twitter 
+      label_facebook: Share on Facebook 
+      label_translations: Translations 
+      label_learn_more: Read more…
+      label_show_all: Show all
+    analytics:
+      language: English
+      language_service: VOA English
+      service: English
+      division: ENG
+      lang: ENG
+      abbreviation: en
+      id: 600
+      direction: ltr
+      website: https://www.voanews.com
+      language_label: 
+
+entities:
+  voa:
+    name: voa
+    namePretty: VOA
+    nameSheet: VOA
+    nameFull: Voice of America
+    include: true
+    logo: /img/logo__voa.png
+    twitter: VOAnews
+    url: https://www.voanews.com
+    urlPretty: voanews.com
+    description: >
+      <a href="https://www.voanews.com/">Voice of America</a> provides trusted and objective news and information in 45 languages to a measured weekly audience of more than 236.8 million people around the world.  For over 75 years, VOA journalists have told American stories and supplied content that many people cannot get locally: objective news and information about the US, their specific region and the world.
+  rferl: 
+    name: rferl
+    namePretty: RFE/RL
+    nameSheet: RFERL
+    nameFull: Radio Free Europe / Radio Liberty
+    include: true
+    logo: /img/logo__rferl.png
+    twitter: RFERL
+    url: https://www.rferl.org/
+    urlPretty: rferl.org
+    urlPressFreedom: https://pressroom.rferl.org/journalists-in-trouble
+    description: >
+      RFE/RL’s mission is to promote democratic values and institutions by reporting the news in countries where a free press is banned by the government or not fully established. Our journalists provide what many people cannot get locally: uncensored news, responsible discussion, and open debate.
+  rfa:
+    name: rfa
+    namePretty: RFA
+    nameSheet: RFA
+    nameFull: Radio Free Asia
+    include: true
+    logo: /img/logo__rfa.png
+    twitter: RadioFreeAsia
+    url: https://www.rfa.org
+    urlPretty: rfa.org
+    description: <a href="https://www.rfa.org/">Radio Free Asia</a> brings award-winning, domestic journalism and uncensored content to people in six Asian countries that restrict free speech, freedom of the press, and access to reliable information beyond their borders. RFA also provides educational and cultural programming, as well as forums for audiences to engage in open dialogue and freely express opinions.
+  martí:
+    name: martí
+    namePretty: Martí Noticias
+    nameSheet: Martí
+    nameFull: Martí Noticias
+    include: false
+    logo: /img/logo__ocb.png
+    twitter: martinoticias
+    url: https://www.martinoticias.com
+    urlPretty: martinoticias.com
+    description: >
+      Radio and Television Martí and <a href="https://www.martinoticias.com/">martinoticias.com</a> are overseen by the Office of Cuba Broadcasting, whose mission is to promote freedom and democracy by providing the people of Cuba with objective news and information programming.
+  mbn:
+    name: mbn
+    namePretty: MBN
+    nameSheet: mbn
+    nameFull: Middle East Broadcasting Network
+    include: true
+    logo: /img/logo__mbn.png
+    twitter: AlhurraNews
+    url: https://www.alhurra.com
+    urlPretty: alhurra.com
+    description: Middle East Broadcasting Networks is the non-profit news organization that operates <a href="https://www.alhurra.com/">Alhurra Television</a>, <a href="https://www.radiosawa.com/">Radio Sawa</a> and MBN Digital reaching audiences in 22 countries across the Middle East and North Africa.

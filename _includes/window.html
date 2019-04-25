@@ -1,0 +1,27 @@
+<div class="usagm__photo__container--large">
+	<div class="usagm__photo__container__shell">
+		<div>
+
+			<picture>
+				<source srcset="{{ site.url_base }}/img/rectangle__5x9.png" media="(min-width: 640px)" />
+				<source srcset="{{ site.url_base }}/img/rectangle__1x1.png" media="(min-width: 420px)" />
+				<source srcset="{{ site.url_base }}/img/rectangle__9x5.png" media="(min-width: 100px)" />
+				<img src="{{ site.url_base }}/img/rectangle__1x1.png" style="display: block; width: 100%; max-width: none; box-shadow: inset 0 -15px 20px rgba(20,20,20,.5); border-bottom: 1px solid #555;" />
+			</picture>
+
+		</div>
+
+		{% if include.quotation %}
+		<h3 class="usagm__photo__pullquote usagm__hide-mobile {{ include.quotePosition }}">{{ include.quotation }} {% if include.quotation_attribution %}<span style="display: inline-block; font-size: 16px; font-weight: normal;">— {{ include.quotation_attribution }}</span>{% endif %}</h3>
+		{% endif %}
+
+		{% if include.caption_reversed %}
+			<p class="usagm__cutline" style="position: absolute; top: 0; left: 0; width: 25%; min-width: 320px; color: #FFF; padding: 20px; background-color: rgba(20,20,20,.8); z-index: 99999;">{{ include.caption_reversed}}</p>
+		{% endif %}
+	</div>
+{% if include.add_padding %} <div class="usagm__grid__full white" style="height: 30px;"></div> {% endif %}
+
+{% if include.caption || include.credit %}
+	<p class="usagm__cutline large">{{ include.caption }} {{ include.credit | default: site.credit_default }}</p>
+{% endif %}
+</div>

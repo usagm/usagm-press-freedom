@@ -1,0 +1,32 @@
+<div class="usagm__photo__container--large">
+	<div class="usagm__photo__container__shell">
+		<div {% if include.add_padding %} class="add-padding" {% endif %}>
+
+{% if include.file contains "https://gdb.voanews.com/" %}
+			<picture>
+				<source srcset="{{ include.file | replace: '_w1023', '_w1280' }}" media="(min-width: 992px)">
+				<source srcset="{{ include.file | replace: '_w1023', '_w992' }}" media="(min-width: 640px)">
+				<source srcset="{{ include.file | replace: '_w1023', '_w640_h640' }}" media="(min-width: 420px)">
+				<img src="{{ include.file | replace: '_w1023', '_w420_h420' }}" alt="{{ include.alt }}" style="display: block; width: 100%; max-width: none; border-bottom: 1px solid #999;" />
+			</picture>
+
+{% else %}
+			<img src="{{ site.url_base }}{{ include.file }}" alt="{{ include.alt }}" style="display: block; width: 100%; max-width: none; border-bottom: 1px solid #999;" />
+{% endif %}
+
+		</div>
+
+		{% if include.quotation %}
+		<h3 class="usagm__photo__pullquote usagm__hide-mobile {{ include.quotePosition }}">{{ include.quotation }} {% if include.quotation_attribution %}<span style="display: inline-block; font-size: 16px; font-weight: normal;">— {{ include.quotation_attribution }}</span>{% endif %}</h3>
+		{% endif %}
+
+		{% if include.caption_reversed %}
+			<p class="usagm__cutline usagm__hide-mobile usagm__cutline__reversed {{ include.caption_style }}" style="">{{ include.caption_reversed }}</p>
+		{% endif %}
+	</div>
+{% if include.add_padding %} <div class="usagm__grid__full white" style="height: 30px;"></div> {% endif %}
+
+{% if include.caption || include.credit %}
+	<p class="usagm__cutline large {{ include.caption_style }}">{{ include.caption }} {{ include.credit }}</p>
+{% endif %}
+</div>

@@ -1,0 +1,29 @@
+---
+layout: default
+date: 2018-10-22
+---
+
+{% if page.language %}
+
+	{% assign site_info = site.site_info__object[page.language] %}
+	{% assign current_language = page.language %}
+
+{% else %}
+
+	{% assign site_info = site.site_info__object.english %}
+	{% assign current_language = "english" %}
+
+{% endif %}
+{% assign random = site.time | date: "%s%N" %}
+
+<style type="text/css">
+</style>
+
+{% include card-profile.html %}
+
+<link rel="stylesheet" type="text/css" href="{{site.url_base}}/assets/main.css?{{ random }}">
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="{{ site.url_base }}/js/scripts.js?{{ random }}"></script>
+<script type="text/javascript" src='https://projects.voanews.com/js/resources/tabletop.js'></script>
+
+

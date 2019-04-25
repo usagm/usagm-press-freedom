@@ -1,0 +1,106 @@
+<!DOCTYPE html>{% if page.language %}
+
+	{% assign site_info = site.site_info__object[page.language] %}
+	{% assign current_language = page.language %}
+
+
+{% else %}
+
+	{% assign site_info = site.site_info__object.english %}
+	{% assign current_language = "english" %}
+
+{% endif %}
+{% assign random = site.time | date: "%s%N" %}
+<html lang="{{ site_info.analytics.abbreviation }}">
+{% include head.html %}
+
+	<body class="pg-section {{ page.language | default: 'english'}}">
+
+
+	{% if development_mode == false %}
+		<script type="text/javascript">
+			var Infographics = "";
+
+			var utag_data = {
+				entity:"VOA",
+				language:"{{ current_language }}",
+				language_service:"{{ site_info.analytics.language_service }}",
+				short_language_service:"{{ site_info.analytics.lang }}",
+				property_id:"{{ site_info.analytics.id }}",
+				platform:"Responsive",
+				platform_short:"R",
+				runs_js:"Yes",
+				section:"Special Projects",
+				english_section:"special-projects",
+				page_title:"{% if page.title %}{{ site_info.title_short }} | {{ page.title }}{% else %}{{ site_info.title }}{% endif %}",
+				page_type:"interactive",
+				page_name:"{% if page.title %}{{ site_info.title_short }} | {{ page.title }}{% else %}{{ site_info.title }}{% endif %}",
+				short_headline:"{% if page.title %}{{ page.title }}{% else %}{{ site_info.title_short }}{% endif %}",
+				long_headline:"{% if page.title %}{{ site_info.title_short }} | {{ page.title }}{% else %}{{ site_info.title }}{% endif %}",
+				headline:"{% if page.title %}{{ site_info.title_short }} | {{ page.title }}{% else %}{{ site_info.title }}{% endif %}",
+				content_type:"interactive",
+				pub_year:"{{ page.date | date: "%Y" | default: 2018 }}",
+				pub_month:"{{ page.date | date: "%m" | default: '12' }}",
+				pub_day:"{{ page.date | date: "%d" | default: '14' }}",
+				pub_weekday:"{{ page.date | date: "%A" | default: 'Friday' }}",
+				byline:"{{ page.metrics-byline | default: 'Masood, Farivar' }}",
+				slug:"russia-investigation"
+			}
+
+		</script>
+
+
+		<script type="text/javascript">
+		(function(a,b,c,d){
+		a='//tags.tiqcdn.com/utag/bbg/voa-nonpangea/prod/utag.js';
+		b=document;c='script';d=b.createElement(c);d.src=a;d.type='text/java'+c;d.async=true;
+		a=b.getElementsByTagName(c)[0];a.parentNode.insertBefore(d,a);
+		})();
+		</script>
+	{% endif %}
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+	var language = "{{current_language}}";
+	var projectPrefix = "{{ site.url_base }}";
+	var mode = "editing";
+	var loadDataFromSheets = false; // use google sheets or has data already been baked.
+</script>
+
+<div class="usagm__project usagm__animate-intro">
+
+{% include header.html %}
+
+
+
+{{ content }}
+
+
+
+{% include footer.html %}
+
+</div><!--.usagm__project-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</body>
+
+</html>

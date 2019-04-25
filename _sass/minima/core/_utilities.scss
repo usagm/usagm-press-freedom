@@ -1,0 +1,63 @@
+// utility classes
+
+.usagm__project {
+	.usagm__clear:before,
+	.usagm__clear:after {
+		content: " ";
+		display: table;
+	}
+
+	.usagm__clear:after {
+		clear: both;
+	}
+
+	.usagm__rule {
+		@media only screen and (min-width: 640px) {
+			&.wide-right {
+				border-right: $border__solid-light;
+				padding-right: 30px; 
+			}
+			&.wide-left {
+				border-left: $border__solid-light;
+				padding-left: 30px; 
+			}
+		}
+	}
+
+	@media only screen and (max-width: $media__medium) {
+		.usagm__no-mobile {
+			display: none;
+		}
+	}
+
+	@media only screen and (max-width: $media__medium) , screen and (max-height: 475px) {
+		.usagm__no-mobile {
+			display: none;
+		}
+	}
+
+
+
+	@media only screen and (min-width: $media__medium-large) and (max-width: $media__large--) {
+		.usagm__no-tablet {
+			display: none;
+		}
+	}
+
+	.usagm__hide-mobile {
+		@media only screen and (max-width: $media__medium) {
+			display: none;
+		}
+	}
+	.usagm__show-mobile {
+		display: block;
+		@media only screen and (min-width: $media__medium) {
+			display: none;
+		}
+	}
+
+	.usagm__no-break {
+		white-space: nowrap;
+	}
+
+}

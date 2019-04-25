@@ -1,0 +1,50 @@
+.usagm__rss {
+	margin-top: 0;
+	padding-left: 0;
+}
+.usagm__rss li{
+	border-bottom: $border__dotted-light;
+	font-size: 16px;
+	margin-bottom: 10px;
+	padding-bottom: 10px;
+	list-style: none;
+
+	&:last-of-type{
+		border-bottom: none !important;
+	}
+
+}
+
+.usagm__rss li:last-of-type{
+	border-bottom: none;
+}
+
+.usagm__rss li a{
+	color: #333;
+	text-decoration: none;
+}
+
+.usagm__rss li a:hover {
+	color: $color__usagm-blue;
+	text-decoration: underline;
+}
+
+.usagm__footer.dark {
+	.usagm__rss li{
+		border-bottom: #666 solid 1px;
+	}
+}
+
+.usagm__rss.dark {
+	li {
+		border-bottom-color: #444;
+	}
+
+	li a {
+		color: #999;
+
+		&:hover {
+			color: orange;
+		}
+	}
+}

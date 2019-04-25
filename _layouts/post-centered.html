@@ -1,0 +1,169 @@
+---
+layout: default
+---
+
+{% if page.language %}
+
+	{% assign site_info = site.site_info__object[page.language] %}
+	{% assign current_language = page.language %}
+
+{% else %}
+
+	{% assign site_info = site.site_info__object.english %}
+	{% assign current_language = "english" %}
+
+{% endif %}
+
+
+
+<link rel="stylesheet" type="text/css" href="{{site.url_base}}/assets/main.css?{{ random }}">
+
+
+
+{% if page.window_image %}
+<style type="text/css">
+	{% if page.window_image contains "https://gdb.voanews.com/" %}
+		.usagm__window-background.show.loaded {
+			background-image: url({{ page.window_image | replace: '_w1023', '_w1280' }});
+		}
+	{% else %}
+		.usagm__window-background.show.loaded {
+			background-image: url({{ site.url_base }}/img/{{ page.window_image }});
+		}
+	{% endif %}
+</style>
+{% endif %}
+
+
+
+<article class="post usagm__grid__full usagm__content" itemscope itemtype="http://schema.org/BlogPosting" style="margin-bottom: 0;">
+
+	<section class="usagm__section__full-width">
+
+		<div class="usagm__grid__full usagm__border-sides" style="padding-bottom: 0;">
+
+				<div class="usagm__grid__full" style="margin: 0;">
+
+
+
+
+
+{% if page.image %}
+
+	{% if page.image contains "https://gdb." %}
+							<picture>
+								<source srcset="{{ page.image | replace: '_w1023', '_w1280' }}" media="(min-width: 992px)">
+								<source srcset="{{ page.image | replace: '_w1023', '_w992' }}" media="(min-width: 640px)">
+								<source srcset="{{ page.image | replace: '_w1023', '_w640' }}" media="(min-width: 420px)">
+								<img src="{{ page.image | replace: '_w1023', '_w420_h420' }}" alt="{{ page.alt }}" style="display: block; width: 100%; max-width: none;" />
+							</picture>
+	{% else %}
+							<img src="{{ site.url_base }}{{ page.image }}" alt="{{ page.alt }}" style="display: block; max-width: none; width: 100%;"/>
+	{% endif %}
+
+
+	{% if page.cutline %}
+						<div class="usagm__grid__full white">
+							<div class="usagm__grid">
+								<p class="usagm__cutline">{{ page.cutline }} ({{ page.credit }})</p>
+							</div>
+						</div>
+	{% elsif page.credit %}
+						<div class="usagm__grid__full white">
+							<div class="usagm__grid">
+								<p class="usagm__credit" style="font-size: 12px; margin-top: 2px; color: #999;">{{ page.credit }}</p>
+							</div>
+						</div>
+	{% endif %}
+
+{% endif %}
+
+					</div>
+
+
+
+
+
+					<div class="usagm__grid__full" >
+
+							<div class="usagm__story__centered">
+
+								<div class="usagm__story">
+
+
+{% assign page_label = page.categories.last %}
+
+									<h3 class="usagm__kicker" style="text-align: center;">{{ page_label }}</h3>
+
+									<h1 class="usagm__featured__headline{% if current_language == 'english' %} balance-text{% endif %}" style="margin: 10px 0 30px 0;">{{ page.title }}</h1>
+{% if page.summary %}
+									<h3 class="usagm__featured__summary">{{ page.summary }}</h3>
+{% endif %}
+
+
+{% if page.twitter %}
+									<p class="usagm__byline">{% if current_language == "english" %}By {% endif %}<a href="https://twitter.com/{{ page.twitter }}" style="font-weight: bold;">{{ page.byline }}</a> | {{ site.entities[page.entity].namePretty | default: "USAGM" }}
+	{% if page.translation %}
+										<br/><span style="color: #666;"><a href="{{ site.url_base }}{{ page.translation }}">{% if current_language == "khmer" %}{{ site.site_info__object.english.dictionary.label_read_the_translation }}{% else %}{{ site.site_info__object.khmer.dictionary.label_read_the_translation }}{% endif %}</a></span>
+	{% endif %}
+									</p>
+{% else %}
+									<p class="usagm__byline" style="font-family: Arial, sans-serif;">{% if page.byline %}{% if current_language == "english" %}By {% endif %}<span style="font-weight: bold;">{{ page.byline }}</span> |{% endif %} {{ site.entities[page.entity].namePretty | default: "USAGM" }}
+									</p>
+
+{% endif %}
+
+
+
+
+{% if page.dateline %}
+
+									{% assign datelineStart = '<span class="usagm__dateline">' %}
+									{% assign datelineEnd = '</span>' %}
+
+									{% assign dateline = datelineStart | append: page.dateline | append: datelineEnd  %}
+{% else %}
+									{% assign dateline = "" %}
+{% endif %}
+
+
+									{{ content 
+										| replace: '$DATELINE$', dateline
+
+										| replace: 'LANGUAGEREPLACE', current_language
+										| replace: '...', site.url_base
+									}}
+
+
+
+{% if page.tagline or page.original-link %}
+									<p class="usagm__tagline">
+
+	{% if page.tagline %}
+									{{ page.tagline }}
+	{% endif %}	
+
+	{% if page.original-link %}
+									This story originally appeared on <a href="{{ page.original-link }}">{{ site.entities[page.entity].urlPretty | default: "voanews.comz" }}</a>. ({{ page.date | date: '%B %-d, %Y' }})
+	{% endif %}
+									</p>
+{% endif %}
+
+
+
+								</div>
+
+							</div>
+
+					</div><!-- .usagm__grid__full -->
+
+
+			</div>
+
+	</section>
+
+</article>
+
+<script type="text/javascript">
+	var mode = "production";//"editing"; //"production";
+</script>

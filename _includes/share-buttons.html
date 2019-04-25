@@ -1,0 +1,23 @@
+{% if page.language %}
+
+	{% assign site_info = site.site_info__object[page.language] %}
+	{% assign current_language = page.language %}
+
+
+{% else %}
+
+	{% assign site_info = site.site_info__object.english %}
+	{% assign current_language = "english" %}
+
+{% endif %}
+
+
+
+<div class="usagm__share__container">
+	<div class="usagm__share-box">
+		<h5 style="font-size: 11px; margin-bottom: 5px; text-transform: uppercase;">{{ site_info.dictionary.label_share }}</h5>
+		<a title="{{ site_info.dictionary.label_twitter }}" class="social-share-link twitter" href="https://twitter.com/intent/tweet?text={{ site_info.title_short | url_encode }}{{ ': ' | url_encode }}{{ page.summary | default: site_info.description_short | url_encode }}&amp;url={{ site.url_base | url_encode }}{{ page.url | replace:'index.html','' | url_encode }}&amp;via={{ site_info.twitter_handle }}&amp;hashtags={{ site_info.hashtags | url_encode }}"><div class="usagm__share-box__icon twitter"></div></a>
+
+		<a title="{{ site_info.dictionary.label_facebook }}" class="social-share-link twitter" href="https://www.facebook.com/sharer/sharer.php?u={{ site.url_base | url_encode}}{{ page.url | replace:'index.html','' | url_encode}}"><div class="usagm__share-box__icon facebook"></div></a>
+	</div>
+</div>

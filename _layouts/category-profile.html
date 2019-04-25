@@ -1,0 +1,115 @@
+---
+layout: default
+---
+{% if page.language %}
+
+	{% assign site_info = site.site_info__object[page.language] %}
+	{% assign current_language = page.language %}
+
+{% else %}
+
+	{% assign site_info = site.site_info__object.english %}
+	{% assign current_language = "english" %}
+
+{% endif %}
+
+
+
+
+<div class="category usagm__content" style="position: relative; z-index: 9999;">
+	<div class="usagm__grid__full usagm__border-sides" style="padding-top: 45px; background-color: #FFF;">
+
+
+
+
+	{% assign counter = 0 %}
+	{% assign sorted-posts = site.posts | where: "categories",page.category %}
+	{% assign sorted-posts-language = sorted-posts | where: "categories",current_language %}
+	{% for post in sorted-posts-language %}
+
+		{% if counter == 0 %}
+		<div class="usagm__grid" style="margin: 0 auto 10px auto;">
+			<div class="usagm__featured-post">
+				
+				<a class="post-link" href="{{ site.url_base }}{{ post.url | relative_url }}" style=" text-decoration: none;">
+
+			{% if post.image %}
+
+				{% if page.image contains "https://gdb" %}
+					<picture>
+						<source srcset="{{ page.image | replace: '_w1023', '_w1280_h720' }}" media="(min-width: 992px)">
+						<source srcset="{{ page.image | replace: '_w1023', '_w992_h558' }}" media="(min-width: 640px)">
+						<source srcset="{{ page.image | replace: '_w1023', '_w640' }}" media="(min-width: 420px)">
+						<img src="{{ page.image | replace: '_w1023', '_w420_h420' }}" alt="{{ page.alt }}" style="display: block; width: 100%; max-width: none;" />
+					</picture>
+
+				{% else %}
+
+					<img src="{{ site.url_base }}{{ post.image }}" alt="{{ post.cutline }}" style="max-width: none; width: 100%;">
+
+				{% endif %}
+
+			{% else %}
+					<img src="https://placehold.it/1280x720">
+			{% endif %}
+
+					<h2 class="usagm__featured-post__title">
+					  {{post.title }}
+					</h2>
+				</a>
+				<p style="">{{post.summary | strip_html }}</p>
+			</div>
+		</div>
+
+		{% elsif counter == 1 %}
+
+		<div class="usagm__grid usagm__portfolio-grid">
+			<div class="usagm__grid__element usagm__portfolio-grid__item">
+				<a class="post-link" href="{{ site.url_base }}{{ post.url | relative_url }}">
+			{% if post.thumbnail %}
+					<img src="{{ site.url_base }}/img/{{ post.thumbnail }}" alt="{%if post.cutline%}{{ post.cutline }} {% endif %}" style="max-width: none; width: 100%;"/>
+			{% else %}
+					<img src="{{ site.url_base }}{{ post.mugshot }}" style="max-width: none; width: 100%;"/>
+			{% endif %}
+					<h3>{{ post.title | escape }} </h3>
+				</a>
+				<p>{{ post.summary }}</p>
+			</div><!--
+
+		{% else %}
+
+			--><div class="usagm__grid__element usagm__portfolio-grid__item">
+				<a class="post-link" href="{{ site.url_base }}{{ post.url | relative_url }}">
+			{% if post.thumbnail %}
+					<img src="{{ site.url_base }}/img/{{ post.thumbnail }}" alt="{%if post.cutline%}{{ post.cutline }} {% endif %}"/>
+			{% else %}
+					<img src="{{ site.url_base }}{{ post.mugshot }}" style="max-width: none; width: 100%;"/>
+			{% endif %}
+					<h3>{{ post.title | escape }} </h3>
+				</a>
+				<p>{{ post.summary }}</p>
+			</div><!--
+
+		{% endif %}
+		
+		{% assign counter = counter | plus: 1 %}
+
+	{% endfor %}
+		--></div>
+
+
+
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+	var mode = "production";//"editing"; //"production";
+</script>
+
+{% include footer.html %}

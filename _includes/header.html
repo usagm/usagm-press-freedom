@@ -1,0 +1,63 @@
+{% if page.language %}
+
+	{% assign site_info = site.site_info__object[page.language] %}
+	{% assign current_language = page.language %}
+
+
+{% else %}
+
+	{% assign site_info = site.site_info__object.english %}
+	{% assign current_language = "english" %}
+
+{% endif %}
+
+
+
+<header class="site-header" role="banner">
+
+		<div class="usagm__navbar white transparent show-nav">
+			<div class="usagm__grid__full">
+				<div class="usagm__grid">
+					<!--<a href="{{ site.url_base }}/{% if page.language and page.language != 'english' %}{{ page.language }}/{% endif %}" class="usagm__navbar__title">{{ site_info.navbar_label }}</a>-->
+
+					<a href="{{ site.url_base }}/{% if page.language and page.language != 'english' %}{{ page.language }}/{% endif %}" class="usagm__navbar__title" style="padding: 0 20px 0 0; border-left: 1px solid #CCC;"><img src="{{ site.url_base }}/img/logo__usagm--white.png" style="float: left; height: 41px; border-right: 1px solid #ab3636"/><span style="padding-top: 11px; display: inline-block;  padding-left: 14px;">{{ site_info.navbar_label }}</span></a>
+
+
+					<div id="menuButton" class="usagm__navbar__toggle"></div>
+
+					<nav id="main-nav" role="navigation" class="main-menu-nav">
+						<ul id="main-menu" class="sm sm-clean" data-smartmenus-id="14762810590939192">
+
+							<li class="usagm__navbar__comparison"><a href="javascript:void(0);" class="has-submenu" id="sm-14762810590939192-1" aria-haspopup="true" aria-controls="sm-14762810590939192-2" aria-expanded="false"><span class="sub-arrow">+</span>Networks</a>
+
+								<ul id="sm-14762810590939192-2" role="group" aria-hidden="true" aria-labelledby="sm-14762810590939192-1" aria-expanded="false">
+
+								{% for entity in site.entities %}
+
+									{% assign entityAbbreviation = entity[0] %}
+
+									{% if site.entities[entityAbbreviation].include %}
+
+										{% assign link = site.entities[entityAbbreviation].url %}
+										{% if site.entities[entityAbbreviation].urlPressFreedom %}
+											{% assign link = site.entities[entityAbbreviation].urlPressFreedom %}
+										{% endif %}
+										<li><a href="{{ link }}">{{ site.entities[entityAbbreviation].nameFull }}</a></li>
+
+									{% endif %}
+									
+								{% endfor %}
+
+								</ul>
+
+							</li>
+
+
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+
+</header>
+
