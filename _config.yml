@@ -41,7 +41,7 @@ permalink: /:categories/:title:output_ext
 
 
 banner: https://gdb.voanews.com/2DFACF50-D168-4DAD-97D0-EE416F9A9F27_cy4_w1280_h720_s.jpg
-credit_default: (VOA News)
+credit_default: (AP)
 
 
 # This site_info_object is used for labels, site-wide content, and analytics.
@@ -53,12 +53,13 @@ site_info__object:
     title_short: The Fight For Press Freedom
     title_short_pretty: The Fight For <span class="usagm__no-break--medium ">Press Freedom</span>
     title_tagline: USAGM Covers Mounting Threats to News Media Worldwide
+    description_short: Highlighting coverage of journalists, news media and the global environment for press freedom as reported by VOA, RFE/RL, RFA, MBN and OCB.
     about: <a href="__site-url__/">'The Fight for Press Freedom'</a> highlights coverage of journalists, news media and the global environment for press freedom as reported by USAGM sister news organizations. It is a joint initiative of Radio Free Europe/Radio Liberty, Middle East Broadcasting Networks, Voice of America, Radio Free Asia and the Office of Cuba Broadcasting. Send tips or comments to info@usagm.gov.
     navbar_label: Press Freedom
     language_analytics: english
     keywords: press freedom, journalism, media, censorship, journalists
-    service_name: VOA News
-    twitter_handle: VOAnews
+    service_name: USAGM
+    twitter_handle: USAGMgov
     dictionary:
       label_share: Share 
       label_twitter: Share on Twitter 
