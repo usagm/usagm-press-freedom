@@ -3,6 +3,11 @@
 	min-height: 300px;
 	width: 100%;
 
+	&.full-screen {
+		min-height: 100%;
+		height: 100%;
+	}
+
 	img {
 		max-width: none;
 	}
@@ -10,6 +15,10 @@
 	.leaflet-tile-pane {
 		-webkit-filter: saturate(10%);
 		filter: saturate(10%);
+
+		-webkit-filter: saturate(0%) brightness(110%);
+		filter: saturate(0%), brightness(110%);
+
 	}
 }
 
@@ -53,4 +62,213 @@
 .leaflet-popup-content {
 	max-width: 120px !important;
 	width: 120px;
+}
+
+
+
+
+.usagm__card-map {
+	.usagm__kicker {
+		//border-radius: 3px 3px 0 0;
+		text-align: center;
+		width: 100%;
+	}
+
+	.usagm__card-map__country {
+		font-family: 'Yanone Kaffeesatz', Arial, sans-serif;
+		font-size: 48px !important;
+		line-height: .9;
+		margin-top: 10px;
+		text-align: center;     
+		text-transform: uppercase;
+	}
+
+	table.usagm__card-map__comparison__age {
+		margin-top: 10px; 
+
+		tr:first-of-type td {
+			color: #900;// #4a1486; 
+			font-weight: bold;
+			font-size: 36px;
+
+		}
+
+		tr td {
+			border-top: none !important;
+			text-align: center !important;
+
+			&:first-of-type {
+				border-right: 1px solid #CCC;
+			}
+		}
+	}
+	table.usagm__regional-comparison tbody tr:hover {
+		background-color: #F1F1F1;
+		cursor: pointer;
+	}
+}
+.map__inset {
+	background-color: #FFF;
+	border: 1px solid #F1F1F1;
+	border-radius: 3px;
+	box-shadow: 0 0 3px rgba(20,20,20,.3);
+	height: 100%;
+	overflow-y: auto;
+	position: absolute;
+		top: 0;
+		right: -95%;
+	width: 95%;
+	z-index: 999999;
+
+	transition-property: right;
+	transition-duration: .5s;
+
+	&.show {
+		right: 0%;
+	}
+
+
+	@media only screen and (min-width: $media__medium) {
+		border-radius: 0;
+		border-right: none;
+		height: 100%;
+		top: 0;
+		right: -100%;
+		width: 50%;
+
+		transition-property: right;
+		transition-duration: .5s;
+
+		&.show {
+			right: 0%;
+		}
+	}
+	@media only screen and (min-width: $media__medium-large) {
+		width: 33%;
+	}
+
+	.map__inset__text {
+		padding: 20px;
+
+		.usagm__card-map__country  {
+
+		}
+	}
+
+}
+.map__inset__close-button {
+	color: #888;
+	font-family: Arial, sans-serif;
+	position: absolute;
+		top: 45px;
+		right: 5px;
+}
+
+
+path.leaflet-interactive.selected {
+	stroke: #FFF !important;
+	stroke-width: 6px !important;
+}
+
+path.leaflet-interactive.country {
+	&.high {
+		fill: $color__data__high !important;
+	}
+	&.medium-high {
+		fill: $color__data__medium-high !important;
+	}
+	&.medium {
+		fill: $color__data__medium !important;
+	}
+	&.medium-low {
+		fill: $color__data__medium-low !important;
+	}
+	&.low {
+		fill: $color__data__low !important;
+	}
+
+}
+
+table.usagm__map-key__table__labels {
+	td {
+		border-top: none !important;
+		text-align: center !important;
+	}
+}
+
+table.usagm__map-key__table__swatches {
+	td {
+		border-right: 1px solid #FFF;
+		width: 20%;
+
+		&.high {
+			background-color: $color__data__high;
+		}
+		&.medium-high {
+			background-color: $color__data__medium-high;
+		}
+		&.medium {
+			background-color: $color__data__medium;
+		}
+		&.medium-low {
+			background-color: $color__data__medium-low;
+		}
+		&.low {
+			background-color: $color__data__low;
+		}
+	}
+}
+
+.usagm__map__title-card__container {
+	background-color: #FFF; 
+	box-shadow: 0px 5px 10px rgba(20,20,20,.3); 
+	display: none;
+	max-width: 1280px; 
+	position: fixed; 
+		top: 20%; 
+	width: 100%; 
+	z-index: 99999;
+
+	&.show {
+		display: block;
+	}
+
+	@media only screen and (min-width: $media__medium) {
+		top: 40%; 
+	}
+
+	.usagm__map__title-card {
+		margin: 0 auto;
+		padding: 20px 30px;
+		position: relative;
+		width: 100%;
+
+		.map__inset__close-button {
+			top: 10px;
+			right: 10px;
+		}
+
+		h1 {
+			font-family: 'Yanone Kaffeesatz', Arial, sans-serif;
+			font-size: 42px;
+			line-height: .9;
+			text-align: center;
+			text-transform: uppercase; 
+
+			@media only screen and (min-width: $media__medium) {
+				font-size: 54px;
+			}
+			@media only screen and (min-width: $media__medium-large) {
+				font-size: 66px;
+			}
+		}
+
+		h3 {
+			font-weight: normal;
+			margin-top: 5px;
+			text-align: center;
+		}
+	}
+
+
 }

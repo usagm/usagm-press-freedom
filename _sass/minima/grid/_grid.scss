@@ -11,6 +11,28 @@
 		&.white {
 			background-color: #FFF;
 		}
+
+		&.dark {
+			background-color: #333;
+
+			div {
+				border-color: #444 !important;
+			}
+
+			p {
+				color: #999;
+			}
+
+			.usagm__kicker {
+				background-color: #111;
+				color: #CCC;
+				margin-bottom: 0;
+
+				@media only screen and (min-width: $media__medium) {
+					border-radius: 3px 3px 0 0;
+				}
+			}
+		}
 	}
 
 	.usagm__grid__full {

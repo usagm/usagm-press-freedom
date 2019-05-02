@@ -60,4 +60,10 @@
 		white-space: nowrap;
 	}
 
+	.usagm__no-break--medium {
+		@media only screen and (min-width: $media__small) {
+			white-space: nowrap;
+		}
+	}
+
 }
