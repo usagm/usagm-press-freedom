@@ -1,0 +1,6 @@
+---
+title: The Changing Map of Press Freedom
+summary: Select a country to see change in press freedom and how neighbors compare.
+exportMapData: false
+layout: map
+---
