@@ -1,0 +1,117 @@
+---
+layout: default
+---
+{% if page.language %}
+
+	{% assign site_info = site.site_info__object[page.language] %}
+	{% assign current_language = page.language %}
+
+{% else %}
+
+	{% assign site_info = site.site_info__object.english %}
+	{% assign current_language = "english" %}
+
+{% endif %}
+
+
+
+
+<div class="category usagm__content" style="position: relative; z-index: 9999;">
+	<div class="usagm__grid__full usagm__border-sides" style="padding-top: 45px; background-color: #FFF;">
+
+
+{% assign page_label = "USAGM" %}
+{% if page.entity-short %}
+	{% assign page_label = site.entities[ page.entity-short].nameFull %}
+{% endif %}
+
+	<div class="usagm__grid" style="padding-bottom: 0;">
+		<h3 class="usagm__label" style="margin: 15px 0 10px 0; text-align: center;">{{ page_label }}</h3>
+	</div>
+
+{% assign counter = 0 %}
+
+{% assign currentEntity = page.entity-short %}
+{% assign stories = site.data[current_language].stories | reverse %}
+{% for story in stories %}
+	
+	{% if story.publish == "TRUE" and story.entity == currentEntity %}
+
+
+		{% if counter == 0 %}
+		<div class="usagm__grid" style="margin: 0 auto 10px auto;">
+			<div class="usagm__featured-post">
+				
+				<a class="post-link" href="{{ story.link }}" style=" text-decoration: none;">
+
+			{% if story.image %}
+				{% if story.image contains "https://gdb" %}
+					<picture>
+						<source srcset="{{ story.image | replace: '_w1023', '_w1280_h720' }}" media="(min-width: 992px)">
+						<source srcset="{{ story.image | replace: '_w1023', '_w992_h558' }}" media="(min-width: 640px)">
+						<source srcset="{{ story.image | replace: '_w1023', '_w640' }}" media="(min-width: 420px)">
+						<img src="{{ story.image | replace: '_w1023', '_w420_h420' }}" style="display: block; width: 100%; max-width: none;" />
+					</picture>
+
+				{% else %}
+
+					<img src="{{ story.image }}" style="max-width: none; width: 100%;">
+
+				{% endif %}
+			{% else %}
+					<img src="https://placehold.it/1280x720">
+			{% endif %}
+
+					<h2 class="usagm__featured-post__title">{{ story.title }}</h2>
+				</a>
+				<p style="">{{ story.description }}</p>
+			</div>
+		</div>
+		{% elsif counter == 1 %}
+		<div class="usagm__grid usagm__portfolio-grid">
+			<div class="usagm__grid__element usagm__portfolio-grid__item">
+				<a class="post-link" href="{{ story.link }}">
+					{% if story.image contains "https://gdb" %}
+					<img src="{{ story.image | replace: '_w1023', '_w640' }}" />
+					{% elsif story.thumbnail != "" %}
+					<img src="{{site.url_base}}{{ story.thumbnail }}" />
+					{% else %}
+					<img src="{{ story.image }}" />
+					{% endif %}
+					<h3>{{ story.title }}</h3>
+				</a>
+			</div><!--
+		{% else %}
+			--><div class="usagm__grid__element usagm__portfolio-grid__item">
+				<a class="post-link" href="{{ story.link }}">
+					{% if story.image contains "https://gdb" %}
+					<img src="{{ story.image | replace: '_w1023', '_w640' }}" />
+					{% elsif story.thumbnail != "" %}
+					<img src="{{site.url_base}}{{ story.thumbnail }}" />
+					{% else %}
+					<img src="{{ story.image }}" />
+					{% endif %}
+					<h3>{{ story.title }}</h3>
+				</a>
+			</div><!--
+
+		{% endif %}
+		
+		{% assign counter = counter | plus: 1 %}
+
+
+	{% endif %}
+
+{% endfor %}
+
+-->
+		</div>
+	</div>
+
+<script type="text/javascript">
+	var mode = "production";//"editing"; //"production";
+</script>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script type="text/javascript" src="https://projects.voanews.com/js/resources/jquery.smartmenus.min.js"></script>
+<script type="text/javascript" src="{{site.url_base}}/js/scripts-basic.js?{{ random }}"></script>

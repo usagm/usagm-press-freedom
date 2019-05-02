@@ -11,30 +11,58 @@
 
 {% endif %}
 
-<footer class="usagm__section__full-width usagm__footer dark" style="padding-top: 0;">
+<footer class="usagm__section__full-width usagm__footer dark" style="padding-top: 0; {% if page.layout == 'home' %} background-color: #CCC;{% endif %}">
 
 	<div class="usagm__grid__full" style="margin-bottom: 0; padding-top: 40px; background-color: #222; border-color: #222;">
+
+	{% if page.entity-short && if page.entity-short != "" %}
+		<div class="usagm__grid">
+
+			<div class="usagm__grid__one-third border-right">
+				<h3>The U.S. Agency for Global Media</h3>
+
+				<div>
+					<a href="https://www.usagm.gov"><img src="{{ site.url_base }}/img/logo__usagm--white_medium.png" style="float: left; margin-right: 0px; width: 80px;"></a>
+					<p style="padding-left: 80px;">The <a href="https://www.usagm.gov">USAGM</a> oversees five U.S. government-funded civilian news agencies in its mission to inform, engage and connect people around the world in support of freedom and democracy. The combined weekly audience exceeds 278 million.</p>
+				</div>
+
+			</div><!--
+
+			--><div class="usagm__grid__one-third border-right">
+				<h3>{{ site_info.dictionary.label_about_the_project | default: "About the project"}}</h3>
+				<p>{{ site_info.about | replace: "__site-url__", site.url_base }}</p>
+
+			</div><!--
+
+			--><div class="usagm__grid__one-third " >
+
+				<h3>{{ site.entities[page.entity-short].nameFull }}</h3>
+				<p>{{ site.entities[page.entity-short].description }}</p>
+
+			</div>
+
+
+	{% else %}
 		<div class="usagm__content-width">
+
 			<div class="usagm__grid__full">
 				
 				<div class="usagm__grid">
 
 					<div class="usagm__grid__one-half border-right">
+						<h3>The U.S. Agency for Global Media</h3>
 
-						<img src="{{ site.url_base }}/img/logo__usagm--white_medium.png" style="float: left; margin-right: 5px; width: 80px;">
-						<div style="padding-left: 80px;">
-							<h3>USAGM</h3>
-							<p>The U.S. Agency for Global Media oversees five U.S. government-funded civilian news agencies in its mission to inform, engage and connect people around the world in support of freedom and democracy. The combined weekly audience exceeds 278 million.</p>
+						<div>
+							<a href="https://www.usagm.gov"><img src="{{ site.url_base }}/img/logo__usagm--white_medium.png" style="float: left; margin-right: 0px; width: 80px;"></a>
+							<p style="padding-left: 80px;">The <a href="https://www.usagm.gov">USAGM</a> oversees five U.S. government-funded civilian news agencies in its mission to inform, engage and connect people around the world in support of freedom and democracy. The combined weekly audience exceeds 278 million.</p>
 						</div>
 
 					</div><!--
 
-					--><!--
-
 					--><div class="usagm__grid__one-half " >
 
 						<h3>{{ site_info.dictionary.label_about_the_project | default: "About the project"}}</h3>
-						<p>'Assault on the Press' highlights coverage of journalists, news media and the global environment for press freedom as reported by USAGM sister news organizations. It is a joint initiative of Radio Free Europe/Radio Liberty, Middle East Broadcasting Networks, Voice of America, Radio Free Asia and the Office of Cuba Broadcasting. Send tips or comments to info@usagm.gov.  </p>
+						<p>{{ site_info.about | replace: "__site-url__", site.url_base }}</p>
 
 					</div>
 
@@ -46,4 +74,8 @@
 
 	</div>
 
+
+
+	{% endif %}
+</div>
 </footer><!-- .usagm__footer -->

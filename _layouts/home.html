@@ -27,6 +27,8 @@ date: 2018-10-22
 <script sync src="https://platform.twitter.com/widgets.js"></script>
 <script type="text/javascript">
 	var includeTweets = true;
+	var mode = "editing";
+	var loadDataFromSheets = false;
 </script>
 
 
@@ -40,22 +42,20 @@ date: 2018-10-22
 
 		<section class="usagm__section usagm__border-sides" style="">
 
-			<div class="usagm__grid__full ">
-				<div class="usagm__content-width" style="margin-top: 60px;">
+			<div class="usagm__grid__full " style="margin-top: 43px;">
 
-					<div class="usagm__grid__full"> 
+				<div class="usagm__grid__full"> 
 
-						<div class="usagm__grid" style="text-align: center;">
-							<h1 class="usagm__project-title">{% if site_info.title_short_pretty %}{{ site_info.title_short_pretty }}{% else %}{{ site_info.title_short }}{% endif %}</h1>
-							<div class="usagm__project-intro">
-								
-								{{ post.content }}
-
-							</div>
+					<div class="usagm__grid" style="text-align: center;">
+						<h1 class="usagm__project-title">{% if site_info.title_short_pretty %}{{ site_info.title_short_pretty }}{% else %}{{ site_info.title_short }}{% endif %}</h1>
+						<div class="usagm__project-intro">
+							
+							{{ post.content }}
 
 						</div>
 
 					</div>
+
 
 				</div>
 
@@ -201,8 +201,8 @@ date: 2018-10-22
 							
 							<div class="usagm__grid__two-thirds border-right" style="border-right: none; padding-bottom: 20px;">
 								<div class="usagm__blogpost">
-{% for post in sorted-posts %}
-									<h3 class="usagm__label small">Press freedom blog</h3>
+{% for post in sorted-posts limit: 1 %}
+									<h3 class="usagm__label small">Press freedom notebook</h3>
 									<a href="{{ site.url_base }}{{ post.url | relative }}">
 										<picture>
 											<source srcset="{{ post.image | replace: '_w1023', '_w740_h416'}}" media="(min-width: 992px)">
@@ -219,7 +219,7 @@ date: 2018-10-22
 {% endfor %}
 							</div><!--
 							--><div class="usagm__grid__one-third" style="margin-right: 0;">
-								{% include tweet-embed.html 
+								{% include social-tweet-embed.html 
 
 									tweet="1109081794740211715"
 
@@ -269,22 +269,23 @@ date: 2018-10-22
 
 
 	<section class="usagm__section__full-width gradient" style="">
-		<div class="usagm__grid__full usagm__border-sides white" style="border-top: 1px solid #F1F1F1; padding-top: 20px;padding-bottom: 40px;">
+		<div class="usagm__grid__full dark" style="border-top: 1px solid #F1F1F1; padding-top: 40px;padding-bottom: 20px;">
 
 			<div class="usagm__content-width">
 
 				<div class="usagm__grid__full">
-					<div class="usagm__grid">
-						<p>USAGM journalists reporting in hostile areas have been threatened, arrested, tortured and killed doing their jobs. Some of their stories are below.</p>
+					<div class="usagm__grid usagm__journalists__memorial" style="text-align: center;">
+						<h3>Jailed, Missing and Fallen USAGM Journalists</h3>
+						<p>USAGM journalists reporting in hostile areas have been threatened, arrested, tortured and killed doing their jobs. </p>
 					</div>
 				</div>
 
 				<div class="usagm__grid__full">
 					
 					<div class="usagm__grid">
-						<div class="usagm__grid__full usagm__border-top" style="margin-top: 20px;">
-							<div style="text-align: center; margin: 0 auto;">
-								<h3 id="missing" class="usagm__kicker small">JAILED</h3>
+						<div class="usagm__grid__full" style="margin-top: 20px;">
+							<div class="usagm__kicker__container">
+								<h3 id="jailed" class="usagm__kicker small">JAILED JOURNALISTS</h3>
 							</div>
 						</div>
 					</div>
@@ -313,9 +314,9 @@ date: 2018-10-22
 				<div class="usagm__grid__full">
 					
 					<div class="usagm__grid">
-						<div class="usagm__grid__full usagm__border-top" style="margin-top: 40px;">
-							<div style="text-align: center; margin: 0 auto;">
-								<h3 id="missing" class="usagm__kicker small">MISSING</h3>
+						<div class="usagm__grid__full" style="margin-top: 40px;">
+							<div class="usagm__kicker__container">
+								<h3 id="missing" class="usagm__kicker small">MISSING JOURNALISTS</h3>
 							</div>
 						</div>
 					</div>
@@ -335,6 +336,7 @@ date: 2018-10-22
 -->
 					</div>
 				</div>
+
 			</div>
 
 		</div>
@@ -342,17 +344,24 @@ date: 2018-10-22
 	</section>
 
 
-	<section class="usagm__section__full-width dark" style="padding: 0;">
-		<div class="usagm__grid__full usagm__border-sides" style="padding-top: 20px; padding-bottom: 40px; border-color: #222;">
+	<section class="usagm__section__full-width" style="padding: 0; background-color: #CCC;">
+		<div class="usagm__grid__full dark usagm__border-sides" style="padding-bottom: 40px; border-color: #222;">
 			
 
 			<div class="usagm__content-width">
 				
 				<div class="usagm__grid__full" style="padding-top: 30px; padding-bottom: 20px;">
 
-					<div class="usagm__grid">
+					<!--<div class="usagm__grid">
 						<h3 id="fallen" class="usagm__label" style="margin-bottom: 0; color: #F1F1F1">FALLEN JOURNALISTS</h3>
 						<p style="font-family: Arial, sans-serif; color: #999; margin-top: 5px;">In honor of the USAGM journalists who gave their lives to bring vital news and information to people around the world.</p>
+					</div>-->
+					<div class="usagm__grid">
+						<div class="usagm__grid__full">
+							<div class="usagm__kicker__container">
+								<h3 id="fallen" class="usagm__kicker small" style="margin-bottom: 0;">FALLEN JOURNALISTS</h3>
+							</div>
+						</div>
 					</div>
 
 					<div class="usagm__grid__full--mobile">
@@ -366,7 +375,7 @@ date: 2018-10-22
 									<img class="" src="{{ post.mugshot }}" />
 									<div class="usagm__grid__profile__text">
 										<h4 class="usagm__grid__profile__name" style="">{{ post.title }}</h4>
-										<p style="">{{ post.entity }}</p>
+										<p style="">{{ post.date | date: '%B %d, %Y' }}<br/>{{ post.entity }}</p>
 									</div>
 								</a>
 							</div><!--
@@ -389,7 +398,6 @@ date: 2018-10-22
 
 
 
-<link rel="stylesheet" type="text/css" href="{{site.url_base}}/assets/main.css?{{ random }}">
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <script type="text/javascript" src="https://projects.voanews.com/js/resources/jquery.smartmenus.min.js"></script>
 <script type="text/javascript" src="{{site.url_base}}/js/scripts.js?{{ random }}"></script>

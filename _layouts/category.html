@@ -20,11 +20,17 @@ layout: default
 	<div class="usagm__grid__full usagm__border-sides" style="padding-top: 45px; background-color: #FFF;">
 
 
-{% if page.category %}
+
+{% if page.entity-short %}
+
+	{% assign page_label = site.entities[ page.entity-short].nameFull %}
+	<div class="usagm__grid" style="padding-bottom: 0;">
+		<h3 class="usagm__label" style="margin: 15px 0 10px 0; text-align: center;">{{ page_label }}</h3>
+	</div>
 
 
 	{% assign counter = 0 %}
-	{% assign sorted-posts = site.posts | where: "categories",page.category %}
+	{% assign sorted-posts = site.posts | where: "categories",page.entity-short %}
 	{% assign sorted-posts-language = sorted-posts | where: "categories",current_language %}
 	{% for post in sorted-posts-language %}
 
@@ -35,12 +41,12 @@ layout: default
 				<a class="post-link" href="{{ site.url_base }}{{ post.url | relative_url }}" style=" text-decoration: none;">
 
 			{% if post.image %}
-				{% if page.image contains "https://gdb" %}
+				{% if post.image contains "https://gdb" %}
 					<picture>
-						<source srcset="{{ page.image | replace: '_w1023', '_w1280_h720' }}" media="(min-width: 992px)">
-						<source srcset="{{ page.image | replace: '_w1023', '_w992_h558' }}" media="(min-width: 640px)">
-						<source srcset="{{ page.image | replace: '_w1023', '_w640' }}" media="(min-width: 420px)">
-						<img src="{{ page.image | replace: '_w1023', '_w420_h420' }}" alt="{{ page.alt }}" style="display: block; width: 100%; max-width: none;" />
+						<source srcset="{{ post.image | replace: '_w1023', '_w1280_h720' }}" media="(min-width: 992px)">
+						<source srcset="{{ post.image | replace: '_w1023', '_w992_h558' }}" media="(min-width: 640px)">
+						<source srcset="{{ post.image | replace: '_w1023', '_w640' }}" media="(min-width: 420px)">
+						<img src="{{ post.image | replace: '_w1023', '_w420_h420' }}" alt="{{ post.alt }}" style="display: block; width: 100%; max-width: none;" />
 					</picture>
 
 				{% else %}
@@ -66,7 +72,11 @@ layout: default
 			{% if post.thumbnail %}
 					<img src="{{ site.url_base }}/img/{{ post.thumbnail }}" alt="{%if post.cutline%}{{ post.cutline }} {% endif %}"/>
 			{% else %}
+				{% if post.image contains "https://gdb" %}
+					<img src="{{ post.image | replace: '_w1023', '_w360' }}">
+				{% else %}
 					<img src="{{ site.url_base }}{{ post.image }}">
+				{% endif %}
 			{% endif %}
 					<h3>{{ post.title | escape }} </h3>
 				</a>
@@ -77,7 +87,11 @@ layout: default
 			{% if post.thumbnail %}
 					<img src="{{ site.url_base }}/img/{{ post.thumbnail }}" alt="{%if post.cutline%}{{ post.cutline }} {% endif %}"/>
 			{% else %}
+				{% if post.image contains "https://gdb" %}
+					<img src="{{ post.image | replace: '_w1023', '_w360' }}">
+				{% else %}
 					<img src="{{ site.url_base }}{{ post.image }}">
+				{% endif %}
 			{% endif %}
 					<h3>{{ post.title | escape }} </h3>
 				</a>
@@ -150,3 +164,7 @@ layout: default
 <script type="text/javascript">
 	var mode = "production";//"editing"; //"production";
 </script>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script type="text/javascript" src="https://projects.voanews.com/js/resources/jquery.smartmenus.min.js"></script>
+<script type="text/javascript" src="{{site.url_base}}/js/scripts-basic.js?{{ random }}"></script>

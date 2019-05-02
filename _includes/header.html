@@ -28,29 +28,24 @@
 					<nav id="main-nav" role="navigation" class="main-menu-nav">
 						<ul id="main-menu" class="sm sm-clean" data-smartmenus-id="14762810590939192">
 
+							<li><a href="{{ site.url_base }}/map.html">Map</a></li>
+
 							<li class="usagm__navbar__comparison"><a href="javascript:void(0);" class="has-submenu" id="sm-14762810590939192-1" aria-haspopup="true" aria-controls="sm-14762810590939192-2" aria-expanded="false"><span class="sub-arrow">+</span>Networks</a>
 
 								<ul id="sm-14762810590939192-2" role="group" aria-hidden="true" aria-labelledby="sm-14762810590939192-1" aria-expanded="false">
 
-								{% for entity in site.entities %}
-
-									{% assign entityAbbreviation = entity[0] %}
-
-									{% if site.entities[entityAbbreviation].include %}
-
-										{% assign link = site.entities[entityAbbreviation].url %}
-										{% if site.entities[entityAbbreviation].urlPressFreedom %}
-											{% assign link = site.entities[entityAbbreviation].urlPressFreedom %}
-										{% endif %}
-										<li><a href="{{ link }}">{{ site.entities[entityAbbreviation].nameFull }}</a></li>
-
-									{% endif %}
-									
-								{% endfor %}
+									<li><a href="https://www.voanews.com/p/7061.html?nocache=1&design=1&liveview=1&r=0.672366232746987">Voice of America</a></li>
+									<li><a href="https://pressroom.rferl.org/journalists-in-trouble">Radio Free Europe / Radio Liberty</a></li>
+									<li><a href="{{ site.url_base }}/english/rfa/">Radio Free Asia</a></li>
+									<li><a href="{{ site.url_base }}/english/mbn/">Middle East Broadcasting Network</a></li>
 
 								</ul>
 
 							</li>
+
+							<li><a id="shareTwitter" title="{{ site_info.dictionary.label_twitter }}" class="social-share-link twitter" href="https://twitter.com/intent/tweet?text={{ site_info.title_short | url_encode }}{{ ': ' | url_encode }}{{ page.summary | default: site_info.description_short | url_encode }}&amp;url={{ site.url_base | url_encode }}{{ page.url | replace:'index.html','' | url_encode }}&amp;via={{ site_info.twitter_handle }}&amp;hashtags={{ site_info.hashtags | url_encode }}"><div class="social-icon"></div><span class="social-share-text">{{ site_info.dictionary.label_twitter }}</span></a></li>
+
+							<li><a id="shareFacebook" title="{{ site_info.dictionary.label_facebook }}" class="social-share-link facebook" href="https://www.facebook.com/sharer/sharer.php?u={{ site.url_base | url_encode}}{{ page.url | replace:'index.html','' | url_encode}}"><div class="social-icon"></div><span class="social-share-text">{{ site_info.dictionary.label_facebook }}</span></a></li>
 
 
 						</ul>

@@ -1,0 +1,136 @@
+---
+layout: default
+---
+
+{% if page.language %}
+
+	{% assign site_info = site.site_info__object[page.language] %}
+	{% assign current_language = page.language %}
+
+{% else %}
+
+	{% assign site_info = site.site_info__object.english %}
+	{% assign current_language = "english" %}
+
+{% endif %}
+{% assign random = site.time | date: "%s%N" %}
+
+
+
+<script type="text/javascript">
+</script>
+
+
+<article class="post usagm__grid__full usagm__content" itemscope itemtype="http://schema.org/BlogPosting" style="margin-bottom: 0; height: 100%;">
+
+
+	<div id="mapTitleCard" class="usagm__map__title-card__container show">
+		
+		<div class="usagm__map__title-card">
+			
+			<a href="#" id="mapInsetCloseButton" class="map__inset__close-button">[X]</a>
+			<h1>{{ page.title }}</h1>
+			<h3> {{ page.summary }}</h3>
+		</div>
+
+	</div>
+
+
+	<section class="usagm__section white" style="padding-bottom: 0; height: 100%;">
+
+			<div class="usagm__grid__full" style="position: relative; overflow-y: hidden; height: 100%;">
+				<div class="usagm__grid__full" style="position: relative; overflow-x: hidden; overflow-y: hidden; height: 100%;">
+					<div id="map" class="map__container full-screen"></div>
+					<div id="mapInset" class="map__inset usagm__card-map">
+						<div style="position: relative; padding-top: 40px;">
+							<a href="#" id="mapInsetCloseButton" class="map__inset__close-button">[X]</a>
+							<div class="map__inset__text">
+								<h3 id="" class="usagm__label small" style="">Press Freedom Score</h3>
+
+								<div id="mapDescription" style="font-family: Arial, sans-serif; padding: 0; font-size: 15px; color: #666; margin-bottom: 20px;"><a href="https://freedomhouse.org/">Freedom House</a> rates countries on legal, political and economic freedoms. A total score of 0-30 is designated Free; 31 to 60 is Partly Free; and 61 to 100 indicates Not Free. Rankings are released annually.</div>
+
+								<div class="usagm__grid__full">
+
+										<div class="usagm__map__key__container" style="max-width: 720px; margin: 0 auto 20px auto; width: 100%; padding-bottom: 20px;border-bottom: 1px dotted #CCC; ">
+											<div>
+
+
+												<div>
+													<div class="" style="float: left; text-align: center; text-transform: uppercase; font-size: 12px; line-height: 1;"><strong><br/>Free</strong></div>
+													<div class="" style="float: right; text-transform: uppercase; font-size: 12px; line-height: 1;"><strong>Not<br/>Free</strong></div>
+												</div>
+
+												<table class="usagm__map-key__table__swatches" style="height: 10px; width: 100%; margin-bottom: 0;">
+													<tbody>
+														<tr>
+															<td class="low"></td>
+															<td class="medium-low"></td>
+															<td class="medium"></td>
+															<td class="medium-high"></td>
+															<td class="high"></td>
+														</tr>
+													</tbody>
+												</table>
+
+
+
+												<table class="usagm__map-key__table__labels" style="margin: 5px auto 15px auto; width: 87%; text-align: center; table-layout: fixed;">
+													<tbody>
+														<tr>
+															<td class="usagm__map-key__table__label">20<span class="usagm__map-key__label__metric"></span></td>
+															<td class="usagm__map-key__table__label">40<span class="usagm__map-key__label__metric"></span></td>
+															<td class="usagm__map-key__table__label">60<span class="usagm__map-key__label__metric"></span></td>
+															<td class="usagm__map-key__table__label">80<span class="usagm__map-key__label__metric"></span></td>
+														</tr>
+													</tbody>
+												</table>
+
+											</div>
+										</div>
+
+								</div>
+
+
+								<h3 id="mapInsetCountry" class="usagm__card-map__country"></h3>
+
+								<div style="text-align: center;	margin: 10px 0;"><div id="mapInsetCurrentScore" class="usagm__card-map__current-score"></div></div>
+
+								<div id="mapInsetTable" class="map__inset__table"></div>
+
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+	</section>
+
+
+</article>
+
+
+<script type="text/javascript">
+	var projectPrefix = "{{ site.url_base }}";
+	var mode = "{{ page.mode | default: 'production' }}"//"production";
+	var exportMapData = {{ page.exportMapData }}; // false -> load merged data. true -> load json/spreadsheet and merge with geojson
+	var tabletopWorking = {{ page.exportMapData }};
+</script>
+
+<script type="text/javascript" src="https://hammerjs.github.io/dist/hammer.js"></script>
+
+<link rel="stylesheet" type="text/css" href="https://projects.voanews.com/js/resources/leaflet/css/leaflet.css">
+<script type="text/javascript" src="https://projects.voanews.com/js/resources/leaflet/js/leaflet.js"></script>
+{% if page.exportMapData == true %}
+<script type="text/javascript" src='https://projects.voanews.com/js/resources/tabletop.js'></script>
+<script type="text/javascript" src="{{site.url_base}}/js/papaparse.min.js?{{ random }}"></script>
+{% endif %}
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script type="text/javascript" src="https://projects.voanews.com/js/resources/jquery.smartmenus.min.js"></script>
+<script type="text/javascript" src="{{site.url_base}}/js/scripts-map.js?{{ random }}"></script>
+
+
+

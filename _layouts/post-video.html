@@ -31,8 +31,6 @@ layout: default
 
 <script type="text/javascript">
 	var projectPrefix = "{{ site.url_base }}";
-	var pinCoordinates = [{{ page.coordinates | default: '11.655629, 104.935' }}];
-	var pinLocation = "{{ page.location | default: 'Cambodia'}}";
 </script>
 
 
@@ -62,24 +60,28 @@ layout: default
 
 									<div class="usagm__grid white">
 
-{% if current_language == "english" %}
-	{% assign page_label = "Video" %}
-{% else %}
-	{% assign page_label = "វីដេអូ" %}
+
+
+{% assign page_label = "USAGM" %}
+{% if page.entity-short %}
+
+	{% assign page_label = site.entities[ page.entity-short].namePretty %}
+
 {% endif %}
 
 
-										<h3 class="usagm__label" style="width: 100%; text-align: center;">{{ page_label }}</h3>
+										<h3 class="usagm__label" style="width: 100%; text-align: center;"><a href="{{ site.url_base }}/{{ current_language }}/{{ page.entity-short }}/">{{ page_label }}</a></h3>
 
 										<h1 class="usagm__video__headline balance-text" style="font-size: 36px;">{{ page.title }}</h1>
 									</div>
 
-
+									<div class="usagm__grid">
+										
 
 
 {% comment %}
 {% if page.summary %}
-									<h3 class="usagm__featured__summary">{{ page.summary }}</h3>
+										<h3 class="usagm__featured__summary">{{ page.summary }}</h3>
 {% endif %}
 
 {% endcomment %}
@@ -107,14 +109,9 @@ layout: default
 
 
 {% if page.link-project %}
-									<p class="usagm__tagline">
-
-	{% if page.link-project %}
-									Explore the project in <a href="page.link-project">{{ page.link-project-language | default: "English" }}</a> {% if page.link-project-translation-language %}| <a href="{{ page.link-project-translation }}">{{  page.link-project-translation-language }}</a>{% endif %}.
-	{% endif %}
-									</p>
-
+										<p class="usagm__tagline">Explore the project in <a href="page.link-project">{{ page.link-project-language | default: "English" }}</a> {% if page.link-project-translation-language %}| <a href="{{ page.link-project-translation }}">{{  page.link-project-translation-language }}</a>{% endif %}.</p>
 {% endif %}
+									</div>
 
 								</div>
 
@@ -133,4 +130,9 @@ layout: default
 
 <script type="text/javascript">
 	var mode = "editing";//"editing"; //"production";
+	{% if page.includeTweets %}var includeTweets = true;{% endif %}
 </script>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script type="text/javascript" src="https://projects.voanews.com/js/resources/jquery.smartmenus.min.js"></script>
+<script type="text/javascript" src="{{site.url_base}}/js/scripts-basic.js?{{ random }}"></script>

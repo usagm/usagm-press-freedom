@@ -16,8 +16,8 @@ layout: default
 
 
 
-<link rel="stylesheet" type="text/css" href="{{site.url_base}}/assets/main.css?{{ random }}">
 
+<script sync src="https://platform.twitter.com/widgets.js"></script>
 
 
 {% if page.window_image %}
@@ -86,10 +86,11 @@ layout: default
 
 					<div class="usagm__grid__full" >
 
-							<div class="usagm__story__centered">
+						<div class="usagm__story__centered">
 
-								<div class="usagm__story">
+							<div class="usagm__story">
 
+								<div class="usagm__grid">
 
 {% assign page_label = page.categories.last %}
 
@@ -101,17 +102,11 @@ layout: default
 {% endif %}
 
 
-{% if page.twitter %}
-									<p class="usagm__byline">{% if current_language == "english" %}By {% endif %}<a href="https://twitter.com/{{ page.twitter }}" style="font-weight: bold;">{{ page.byline }}</a> | {{ site.entities[page.entity].namePretty | default: "USAGM" }}
-	{% if page.translation %}
-										<br/><span style="color: #666;"><a href="{{ site.url_base }}{{ page.translation }}">{% if current_language == "khmer" %}{{ site.site_info__object.english.dictionary.label_read_the_translation }}{% else %}{{ site.site_info__object.khmer.dictionary.label_read_the_translation }}{% endif %}</a></span>
-	{% endif %}
-									</p>
-{% else %}
-									<p class="usagm__byline" style="font-family: Arial, sans-serif;">{% if page.byline %}{% if current_language == "english" %}By {% endif %}<span style="font-weight: bold;">{{ page.byline }}</span> |{% endif %} {{ site.entities[page.entity].namePretty | default: "USAGM" }}
+
+									<p class="usagm__byline" style="font-family: Arial, sans-serif;">{% if page.byline %}{% if current_language == "english" %}By {% endif %}<span style="font-weight: bold;">{% if page.byline %}{{ page.byline }} {% else %}{{ site.entities[page.entity].namePretty | default: "USAGM" }}{% endif %}</span> {% endif %}
 									</p>
 
-{% endif %}
+
 
 
 
@@ -149,13 +144,13 @@ layout: default
 									</p>
 {% endif %}
 
-
-
 								</div>
 
 							</div>
 
-					</div><!-- .usagm__grid__full -->
+						</div>
+
+				</div><!-- .usagm__grid__full -->
 
 
 			</div>
@@ -165,5 +160,10 @@ layout: default
 </article>
 
 <script type="text/javascript">
-	var mode = "production";//"editing"; //"production";
+	var mode = "production";
+	{% if page.includeTweets %}var includeTweets = true;{% endif %}
 </script>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script type="text/javascript" src="https://projects.voanews.com/js/resources/jquery.smartmenus.min.js"></script>
+<script type="text/javascript" src="{{site.url_base}}/js/scripts-basic.js?{{ random }}"></script>
