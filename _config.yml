@@ -10,7 +10,7 @@ url_base: ""
 
 
 # ADD A WARNING FLAG AND DISABLE METRICS
-development_mode: true
+development_mode: false
 
 
 # Build settings
