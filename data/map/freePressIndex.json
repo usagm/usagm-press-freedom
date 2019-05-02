@@ -1,0 +1,2002 @@
+{
+  "Afghanistan": {
+    "country": "Afghanistan",
+    "countryNameLegacy": "Afghanistan",
+    "Year": 2017,
+    "Legal": 17,
+    "Political": 27,
+    "Economic": 16,
+    "Total": 60,
+    "Status": "PF"
+  },
+  "Albania": {
+    "country": "Albania",
+    "countryNameLegacy": "Albania",
+    "Year": 2017,
+    "Legal": 15,
+    "Political": 19,
+    "Economic": 17,
+    "Total": 51,
+    "Status": "PF"
+  },
+  "Algeria": {
+    "country": "Algeria",
+    "countryNameLegacy": "Algeria",
+    "Year": 2017,
+    "Legal": 22,
+    "Political": 24,
+    "Economic": 19,
+    "Total": 65,
+    "Status": "NF"
+  },
+  "Andorra": {
+    "country": "Andorra",
+    "countryNameLegacy": "Andorra",
+    "Year": 2017,
+    "Legal": 2,
+    "Political": 5,
+    "Economic": 8,
+    "Total": 15,
+    "Status": "F"
+  },
+  "Angola": {
+    "country": "Angola",
+    "countryNameLegacy": "Angola",
+    "Year": 2017,
+    "Legal": 22,
+    "Political": 30,
+    "Economic": 21,
+    "Total": 73,
+    "Status": "NF"
+  },
+  "Antigua and Barbuda": {
+    "country": "Antigua and Barbuda",
+    "countryNameLegacy": "Antigua and Barbuda",
+    "Year": 2017,
+    "Legal": 8,
+    "Political": 15,
+    "Economic": 11,
+    "Total": 34,
+    "Status": "PF"
+  },
+  "Argentina": {
+    "country": "Argentina",
+    "countryNameLegacy": "Argentina",
+    "Year": 2017,
+    "Legal": 13,
+    "Political": 18,
+    "Economic": 15,
+    "Total": 46,
+    "Status": "PF"
+  },
+  "Armenia": {
+    "country": "Armenia",
+    "countryNameLegacy": "Armenia",
+    "Year": 2017,
+    "Legal": 20,
+    "Political": 23,
+    "Economic": 20,
+    "Total": 63,
+    "Status": "NF"
+  },
+  "Australia": {
+    "country": "Australia",
+    "countryNameLegacy": "Australia",
+    "Year": 2017,
+    "Legal": 6,
+    "Political": 9,
+    "Economic": 7,
+    "Total": 22,
+    "Status": "F"
+  },
+  "Austria": {
+    "country": "Austria",
+    "countryNameLegacy": "Austria",
+    "Year": 2017,
+    "Legal": 8,
+    "Political": 8,
+    "Economic": 6,
+    "Total": 22,
+    "Status": "F"
+  },
+  "Azerbaijan": {
+    "country": "Azerbaijan",
+    "countryNameLegacy": "Azerbaijan",
+    "Year": 2017,
+    "Legal": 29,
+    "Political": 39,
+    "Economic": 22,
+    "Total": 90,
+    "Status": "NF"
+  },
+  "Bahamas": {
+    "country": "Bahamas",
+    "countryNameLegacy": "Bahamas",
+    "Year": 2017,
+    "Legal": 5,
+    "Political": 11,
+    "Economic": 7,
+    "Total": 23,
+    "Status": "F"
+  },
+  "Bahrain": {
+    "country": "Bahrain",
+    "countryNameLegacy": "Bahrain",
+    "Year": 2017,
+    "Legal": 28,
+    "Political": 37,
+    "Economic": 22,
+    "Total": 87,
+    "Status": "NF"
+  },
+  "Bangladesh": {
+    "country": "Bangladesh",
+    "countryNameLegacy": "Bangladesh",
+    "Year": 2017,
+    "Legal": 19,
+    "Political": 27,
+    "Economic": 16,
+    "Total": 62,
+    "Status": "NF"
+  },
+  "Barbados": {
+    "country": "Barbados",
+    "countryNameLegacy": "Barbados",
+    "Year": 2017,
+    "Legal": 3,
+    "Political": 10,
+    "Economic": 6,
+    "Total": 19,
+    "Status": "F"
+  },
+  "Belarus": {
+    "country": "Belarus",
+    "countryNameLegacy": "Belarus",
+    "Year": 2017,
+    "Legal": 28,
+    "Political": 30,
+    "Economic": 25,
+    "Total": 83,
+    "Status": "NF"
+  },
+  "Belgium": {
+    "country": "Belgium",
+    "countryNameLegacy": "Belgium",
+    "Year": 2017,
+    "Legal": 3,
+    "Political": 3,
+    "Economic": 6,
+    "Total": 12,
+    "Status": "F"
+  },
+  "Belize": {
+    "country": "Belize",
+    "countryNameLegacy": "Belize",
+    "Year": 2017,
+    "Legal": 8,
+    "Political": 13,
+    "Economic": 6,
+    "Total": 27,
+    "Status": "F"
+  },
+  "Benin": {
+    "country": "Benin",
+    "countryNameLegacy": "Benin",
+    "Year": 2017,
+    "Legal": 13,
+    "Political": 11,
+    "Economic": 13,
+    "Total": 37,
+    "Status": "PF"
+  },
+  "Bhutan": {
+    "country": "Bhutan",
+    "countryNameLegacy": "Bhutan",
+    "Year": 2017,
+    "Legal": 18,
+    "Political": 20,
+    "Economic": 20,
+    "Total": 58,
+    "Status": "PF"
+  },
+  "Bolivia": {
+    "country": "Bolivia",
+    "countryNameLegacy": "Bolivia",
+    "Year": 2017,
+    "Legal": 16,
+    "Political": 23,
+    "Economic": 14,
+    "Total": 53,
+    "Status": "PF"
+  },
+  "Bosnia and Herz.": {
+    "country": "Bosnia and Herz.",
+    "countryNameLegacy": "Bosnia and Herzegovina",
+    "Year": 2017,
+    "Legal": 11,
+    "Political": 23,
+    "Economic": 17,
+    "Total": 51,
+    "Status": "PF"
+  },
+  "Botswana": {
+    "country": "Botswana",
+    "countryNameLegacy": "Botswana",
+    "Year": 2017,
+    "Legal": 12,
+    "Political": 19,
+    "Economic": 14,
+    "Total": 45,
+    "Status": "PF"
+  },
+  "Brazil": {
+    "country": "Brazil",
+    "countryNameLegacy": "Brazil",
+    "Year": 2017,
+    "Legal": 14,
+    "Political": 22,
+    "Economic": 11,
+    "Total": 47,
+    "Status": "PF"
+  },
+  "Brunei": {
+    "country": "Brunei",
+    "countryNameLegacy": "Brunei",
+    "Year": 2017,
+    "Legal": 28,
+    "Political": 25,
+    "Economic": 23,
+    "Total": 76,
+    "Status": "NF"
+  },
+  "Bulgaria": {
+    "country": "Bulgaria",
+    "countryNameLegacy": "Bulgaria",
+    "Year": 2017,
+    "Legal": 12,
+    "Political": 17,
+    "Economic": 13,
+    "Total": 42,
+    "Status": "PF"
+  },
+  "Burkina Faso": {
+    "country": "Burkina Faso",
+    "countryNameLegacy": "Burkina Faso",
+    "Year": 2017,
+    "Legal": 16,
+    "Political": 12,
+    "Economic": 13,
+    "Total": 41,
+    "Status": "PF"
+  },
+  "Burundi": {
+    "country": "Burundi",
+    "countryNameLegacy": "Burundi",
+    "Year": 2017,
+    "Legal": 25,
+    "Political": 37,
+    "Economic": 23,
+    "Total": 85,
+    "Status": "NF"
+  },
+  "Cambodia": {
+    "country": "Cambodia",
+    "countryNameLegacy": "Cambodia",
+    "Year": 2017,
+    "Legal": 24,
+    "Political": 27,
+    "Economic": 19,
+    "Total": 70,
+    "Status": "NF"
+  },
+  "Cameroon": {
+    "country": "Cameroon",
+    "countryNameLegacy": "Cameroon",
+    "Year": 2017,
+    "Legal": 22,
+    "Political": 23,
+    "Economic": 21,
+    "Total": 66,
+    "Status": "NF"
+  },
+  "Canada": {
+    "country": "Canada",
+    "countryNameLegacy": "Canada",
+    "Year": 2017,
+    "Legal": 5,
+    "Political": 7,
+    "Economic": 6,
+    "Total": 18,
+    "Status": "F"
+  },
+  "Cape Verde": {
+    "country": "Cape Verde",
+    "countryNameLegacy": "Cape Verde",
+    "Year": 2017,
+    "Legal": 6,
+    "Political": 9,
+    "Economic": 12,
+    "Total": 27,
+    "Status": "F"
+  },
+  "Central African Rep.": {
+    "country": "Central African Rep.",
+    "countryNameLegacy": "Central African Republic",
+    "Year": 2017,
+    "Legal": 21,
+    "Political": 28,
+    "Economic": 22,
+    "Total": 71,
+    "Status": "NF"
+  },
+  "Chad": {
+    "country": "Chad",
+    "countryNameLegacy": "Chad",
+    "Year": 2017,
+    "Legal": 22,
+    "Political": 30,
+    "Economic": 22,
+    "Total": 74,
+    "Status": "NF"
+  },
+  "Chile": {
+    "country": "Chile",
+    "countryNameLegacy": "Chile",
+    "Year": 2017,
+    "Legal": 8,
+    "Political": 13,
+    "Economic": 8,
+    "Total": 29,
+    "Status": "F"
+  },
+  "China": {
+    "country": "China",
+    "countryNameLegacy": "China",
+    "Year": 2017,
+    "Legal": 30,
+    "Political": 34,
+    "Economic": 23,
+    "Total": 87,
+    "Status": "NF"
+  },
+  "Colombia": {
+    "country": "Colombia",
+    "countryNameLegacy": "Colombia",
+    "Year": 2017,
+    "Legal": 13,
+    "Political": 26,
+    "Economic": 18,
+    "Total": 57,
+    "Status": "PF"
+  },
+  "Comoros": {
+    "country": "Comoros",
+    "countryNameLegacy": "Comoros",
+    "Year": 2017,
+    "Legal": 14,
+    "Political": 20,
+    "Economic": 15,
+    "Total": 49,
+    "Status": "PF"
+  },
+  "Congo": {
+    "country": "Congo",
+    "countryNameLegacy": "Congo (Brazzaville)",
+    "Year": 2017,
+    "Legal": 17,
+    "Political": 25,
+    "Economic": 18,
+    "Total": 60,
+    "Status": "PF"
+  },
+  "Dem. Rep. Congo": {
+    "country": "Dem. Rep. Congo",
+    "countryNameLegacy": "Congo (Kinshasa)",
+    "Year": 2017,
+    "Legal": 25,
+    "Political": 32,
+    "Economic": 25,
+    "Total": 82,
+    "Status": "NF"
+  },
+  "Costa Rica": {
+    "country": "Costa Rica",
+    "countryNameLegacy": "Costa Rica",
+    "Year": 2017,
+    "Legal": 4,
+    "Political": 6,
+    "Economic": 6,
+    "Total": 16,
+    "Status": "F"
+  },
+  "Cte d'Ivoire": {
+    "country": "Cte d'Ivoire",
+    "countryNameLegacy": "Côte d'Ivoire",
+    "Year": 2017,
+    "Legal": 14,
+    "Political": 19,
+    "Economic": 18,
+    "Total": 51,
+    "Status": "PF"
+  },
+  "Crimea": {
+    "country": "Crimea",
+    "countryNameLegacy": "Crimea",
+    "Year": 2017,
+    "Legal": 30,
+    "Political": 38,
+    "Economic": 26,
+    "Total": 94,
+    "Status": "NF"
+  },
+  "Croatia": {
+    "country": "Croatia",
+    "countryNameLegacy": "Croatia",
+    "Year": 2017,
+    "Legal": 9,
+    "Political": 17,
+    "Economic": 15,
+    "Total": 41,
+    "Status": "PF"
+  },
+  "Cuba": {
+    "country": "Cuba",
+    "countryNameLegacy": "Cuba",
+    "Year": 2017,
+    "Legal": 28,
+    "Political": 35,
+    "Economic": 28,
+    "Total": 91,
+    "Status": "NF"
+  },
+  "Cyprus": {
+    "country": "Cyprus",
+    "countryNameLegacy": "Cyprus",
+    "Year": 2017,
+    "Legal": 4,
+    "Political": 10,
+    "Economic": 9,
+    "Total": 23,
+    "Status": "F"
+  },
+  "Czech Rep.": {
+    "country": "Czech Rep.",
+    "countryNameLegacy": "Czech Republic",
+    "Year": 2017,
+    "Legal": 4,
+    "Political": 8,
+    "Economic": 9,
+    "Total": 21,
+    "Status": "F"
+  },
+  "Denmark": {
+    "country": "Denmark",
+    "countryNameLegacy": "Denmark",
+    "Year": 2017,
+    "Legal": 2,
+    "Political": 6,
+    "Economic": 4,
+    "Total": 12,
+    "Status": "F"
+  },
+  "Djibouti": {
+    "country": "Djibouti",
+    "countryNameLegacy": "Djibouti",
+    "Year": 2017,
+    "Legal": 24,
+    "Political": 29,
+    "Economic": 24,
+    "Total": 77,
+    "Status": "NF"
+  },
+  "Dominica": {
+    "country": "Dominica",
+    "countryNameLegacy": "Dominica",
+    "Year": 2017,
+    "Legal": 6,
+    "Political": 11,
+    "Economic": 8,
+    "Total": 25,
+    "Status": "F"
+  },
+  "Dominican Rep.": {
+    "country": "Dominican Rep.",
+    "countryNameLegacy": "Dominican Republic",
+    "Year": 2017,
+    "Legal": 8,
+    "Political": 21,
+    "Economic": 13,
+    "Total": 42,
+    "Status": "PF"
+  },
+  "Ecuador": {
+    "country": "Ecuador",
+    "countryNameLegacy": "Ecuador",
+    "Year": 2017,
+    "Legal": 23,
+    "Political": 27,
+    "Economic": 16,
+    "Total": 66,
+    "Status": "NF"
+  },
+  "Egypt": {
+    "country": "Egypt",
+    "countryNameLegacy": "Egypt",
+    "Year": 2017,
+    "Legal": 26,
+    "Political": 34,
+    "Economic": 17,
+    "Total": 77,
+    "Status": "NF"
+  },
+  "El Salvador": {
+    "country": "El Salvador",
+    "countryNameLegacy": "El Salvador",
+    "Year": 2017,
+    "Legal": 10,
+    "Political": 18,
+    "Economic": 13,
+    "Total": 41,
+    "Status": "PF"
+  },
+  "Eq. Guinea": {
+    "country": "Eq. Guinea",
+    "countryNameLegacy": "Equatorial Guinea",
+    "Year": 2017,
+    "Legal": 27,
+    "Political": 36,
+    "Economic": 28,
+    "Total": 91,
+    "Status": "NF"
+  },
+  "Eritrea": {
+    "country": "Eritrea",
+    "countryNameLegacy": "Eritrea",
+    "Year": 2017,
+    "Legal": 30,
+    "Political": 40,
+    "Economic": 24,
+    "Total": 94,
+    "Status": "NF"
+  },
+  "Estonia": {
+    "country": "Estonia",
+    "countryNameLegacy": "Estonia",
+    "Year": 2017,
+    "Legal": 5,
+    "Political": 4,
+    "Economic": 7,
+    "Total": 16,
+    "Status": "F"
+  },
+  "Ethiopia": {
+    "country": "Ethiopia",
+    "countryNameLegacy": "Ethiopia",
+    "Year": 2017,
+    "Legal": 29,
+    "Political": 38,
+    "Economic": 19,
+    "Total": 86,
+    "Status": "NF"
+  },
+  "Fiji": {
+    "country": "Fiji",
+    "countryNameLegacy": "Fiji",
+    "Year": 2017,
+    "Legal": 16,
+    "Political": 16,
+    "Economic": 12,
+    "Total": 44,
+    "Status": "PF"
+  },
+  "Finland": {
+    "country": "Finland",
+    "countryNameLegacy": "Finland",
+    "Year": 2017,
+    "Legal": 4,
+    "Political": 4,
+    "Economic": 4,
+    "Total": 12,
+    "Status": "F"
+  },
+  "France": {
+    "country": "France",
+    "countryNameLegacy": "France",
+    "Year": 2017,
+    "Legal": 6,
+    "Political": 13,
+    "Economic": 7,
+    "Total": 26,
+    "Status": "F"
+  },
+  "Gabon": {
+    "country": "Gabon",
+    "countryNameLegacy": "Gabon",
+    "Year": 2017,
+    "Legal": 24,
+    "Political": 25,
+    "Economic": 22,
+    "Total": 71,
+    "Status": "NF"
+  },
+  "Georgia": {
+    "country": "Georgia",
+    "countryNameLegacy": "Georgia",
+    "Year": 2017,
+    "Legal": 13,
+    "Political": 21,
+    "Economic": 16,
+    "Total": 50,
+    "Status": "PF"
+  },
+  "Germany": {
+    "country": "Germany",
+    "countryNameLegacy": "Germany",
+    "Year": 2017,
+    "Legal": 6,
+    "Political": 10,
+    "Economic": 4,
+    "Total": 20,
+    "Status": "F"
+  },
+  "Ghana": {
+    "country": "Ghana",
+    "countryNameLegacy": "Ghana",
+    "Year": 2017,
+    "Legal": 9,
+    "Political": 13,
+    "Economic": 11,
+    "Total": 33,
+    "Status": "PF"
+  },
+  "Greece": {
+    "country": "Greece",
+    "countryNameLegacy": "Greece",
+    "Year": 2017,
+    "Legal": 13,
+    "Political": 18,
+    "Economic": 13,
+    "Total": 44,
+    "Status": "PF"
+  },
+  "Grenada": {
+    "country": "Grenada",
+    "countryNameLegacy": "Grenada",
+    "Year": 2017,
+    "Legal": 9,
+    "Political": 12,
+    "Economic": 5,
+    "Total": 26,
+    "Status": "F"
+  },
+  "Guatemala": {
+    "country": "Guatemala",
+    "countryNameLegacy": "Guatemala",
+    "Year": 2017,
+    "Legal": 18,
+    "Political": 23,
+    "Economic": 17,
+    "Total": 58,
+    "Status": "PF"
+  },
+  "Guinea": {
+    "country": "Guinea",
+    "countryNameLegacy": "Guinea",
+    "Year": 2017,
+    "Legal": 20,
+    "Political": 29,
+    "Economic": 17,
+    "Total": 66,
+    "Status": "NF"
+  },
+  "Guinea-Bissau": {
+    "country": "Guinea-Bissau",
+    "countryNameLegacy": "Guinea-Bissau",
+    "Year": 2017,
+    "Legal": 17,
+    "Political": 24,
+    "Economic": 18,
+    "Total": 59,
+    "Status": "PF"
+  },
+  "Guyana": {
+    "country": "Guyana",
+    "countryNameLegacy": "Guyana",
+    "Year": 2017,
+    "Legal": 11,
+    "Political": 16,
+    "Economic": 11,
+    "Total": 38,
+    "Status": "PF"
+  },
+  "Haiti": {
+    "country": "Haiti",
+    "countryNameLegacy": "Haiti",
+    "Year": 2017,
+    "Legal": 17,
+    "Political": 17,
+    "Economic": 18,
+    "Total": 52,
+    "Status": "PF"
+  },
+  "Honduras": {
+    "country": "Honduras",
+    "countryNameLegacy": "Honduras",
+    "Year": 2017,
+    "Legal": 18,
+    "Political": 33,
+    "Economic": 15,
+    "Total": 66,
+    "Status": "NF"
+  },
+  "Hong Kong": {
+    "country": "Hong Kong",
+    "countryNameLegacy": "Hong Kong",
+    "Year": 2017,
+    "Legal": 13,
+    "Political": 20,
+    "Economic": 9,
+    "Total": 42,
+    "Status": "PF"
+  },
+  "Hungary": {
+    "country": "Hungary",
+    "countryNameLegacy": "Hungary",
+    "Year": 2017,
+    "Legal": 12,
+    "Political": 17,
+    "Economic": 15,
+    "Total": 44,
+    "Status": "PF"
+  },
+  "Iceland": {
+    "country": "Iceland",
+    "countryNameLegacy": "Iceland",
+    "Year": 2017,
+    "Legal": 4,
+    "Political": 5,
+    "Economic": 6,
+    "Total": 15,
+    "Status": "F"
+  },
+  "India": {
+    "country": "India",
+    "countryNameLegacy": "India",
+    "Year": 2017,
+    "Legal": 11,
+    "Political": 22,
+    "Economic": 10,
+    "Total": 43,
+    "Status": "PF"
+  },
+  "Indonesia": {
+    "country": "Indonesia",
+    "countryNameLegacy": "Indonesia",
+    "Year": 2017,
+    "Legal": 16,
+    "Political": 18,
+    "Economic": 15,
+    "Total": 49,
+    "Status": "PF"
+  },
+  "Iran": {
+    "country": "Iran",
+    "countryNameLegacy": "Iran",
+    "Year": 2017,
+    "Legal": 30,
+    "Political": 36,
+    "Economic": 24,
+    "Total": 90,
+    "Status": "NF"
+  },
+  "Iraq": {
+    "country": "Iraq",
+    "countryNameLegacy": "Iraq",
+    "Year": 2017,
+    "Legal": 23,
+    "Political": 32,
+    "Economic": 16,
+    "Total": 71,
+    "Status": "NF"
+  },
+  "Ireland": {
+    "country": "Ireland",
+    "countryNameLegacy": "Ireland",
+    "Year": 2017,
+    "Legal": 6,
+    "Political": 6,
+    "Economic": 6,
+    "Total": 18,
+    "Status": "F"
+  },
+  "Israel": {
+    "country": "Israel",
+    "countryNameLegacy": "Israel",
+    "Year": 2017,
+    "Legal": 8,
+    "Political": 14,
+    "Economic": 11,
+    "Total": 33,
+    "Status": "PF"
+  },
+  "Palestine": {
+    "country": "Palestine",
+    "countryNameLegacy": "West Bank and Gaza Strip",
+    "Year": 2017,
+    "Legal": 28,
+    "Political": 34,
+    "Economic": 22,
+    "Total": 84,
+    "Status": "NF"
+  },
+  "Italy": {
+    "country": "Italy",
+    "countryNameLegacy": "Italy",
+    "Year": 2017,
+    "Legal": 12,
+    "Political": 10,
+    "Economic": 9,
+    "Total": 31,
+    "Status": "PF"
+  },
+  "Jamaica": {
+    "country": "Jamaica",
+    "countryNameLegacy": "Jamaica",
+    "Year": 2017,
+    "Legal": 3,
+    "Political": 9,
+    "Economic": 7,
+    "Total": 19,
+    "Status": "F"
+  },
+  "Japan": {
+    "country": "Japan",
+    "countryNameLegacy": "Japan",
+    "Year": 2017,
+    "Legal": 5,
+    "Political": 16,
+    "Economic": 6,
+    "Total": 27,
+    "Status": "F"
+  },
+  "Jordan": {
+    "country": "Jordan",
+    "countryNameLegacy": "Jordan",
+    "Year": 2017,
+    "Legal": 22,
+    "Political": 26,
+    "Economic": 20,
+    "Total": 68,
+    "Status": "NF"
+  },
+  "Kazakhstan": {
+    "country": "Kazakhstan",
+    "countryNameLegacy": "Kazakhstan",
+    "Year": 2017,
+    "Legal": 28,
+    "Political": 34,
+    "Economic": 23,
+    "Total": 85,
+    "Status": "NF"
+  },
+  "Kenya": {
+    "country": "Kenya",
+    "countryNameLegacy": "Kenya",
+    "Year": 2017,
+    "Legal": 17,
+    "Political": 24,
+    "Economic": 17,
+    "Total": 58,
+    "Status": "PF"
+  },
+  "Kiribati": {
+    "country": "Kiribati",
+    "countryNameLegacy": "Kiribati",
+    "Year": 2017,
+    "Legal": 6,
+    "Political": 10,
+    "Economic": 14,
+    "Total": 30,
+    "Status": "F"
+  },
+  "Kosovo": {
+    "country": "Kosovo",
+    "countryNameLegacy": "Kosovo",
+    "Year": 2017,
+    "Legal": 13,
+    "Political": 19,
+    "Economic": 16,
+    "Total": 48,
+    "Status": "PF"
+  },
+  "Kuwait": {
+    "country": "Kuwait",
+    "countryNameLegacy": "Kuwait",
+    "Year": 2017,
+    "Legal": 21,
+    "Political": 23,
+    "Economic": 16,
+    "Total": 60,
+    "Status": "PF"
+  },
+  "Kyrgyzstan": {
+    "country": "Kyrgyzstan",
+    "countryNameLegacy": "Kyrgyzstan",
+    "Year": 2017,
+    "Legal": 20,
+    "Political": 27,
+    "Economic": 20,
+    "Total": 67,
+    "Status": "NF"
+  },
+  "Laos": {
+    "country": "Laos",
+    "countryNameLegacy": "Laos",
+    "Year": 2017,
+    "Legal": 26,
+    "Political": 34,
+    "Economic": 25,
+    "Total": 85,
+    "Status": "NF"
+  },
+  "Latvia": {
+    "country": "Latvia",
+    "countryNameLegacy": "Latvia",
+    "Year": 2017,
+    "Legal": 7,
+    "Political": 8,
+    "Economic": 11,
+    "Total": 26,
+    "Status": "F"
+  },
+  "Lebanon": {
+    "country": "Lebanon",
+    "countryNameLegacy": "Lebanon",
+    "Year": 2017,
+    "Legal": 20,
+    "Political": 21,
+    "Economic": 15,
+    "Total": 56,
+    "Status": "PF"
+  },
+  "Lesotho": {
+    "country": "Lesotho",
+    "countryNameLegacy": "Lesotho",
+    "Year": 2017,
+    "Legal": 13,
+    "Political": 22,
+    "Economic": 16,
+    "Total": 51,
+    "Status": "PF"
+  },
+  "Liberia": {
+    "country": "Liberia",
+    "countryNameLegacy": "Liberia",
+    "Year": 2017,
+    "Legal": 17,
+    "Political": 22,
+    "Economic": 21,
+    "Total": 60,
+    "Status": "PF"
+  },
+  "Libya": {
+    "country": "Libya",
+    "countryNameLegacy": "Libya",
+    "Year": 2017,
+    "Legal": 22,
+    "Political": 35,
+    "Economic": 20,
+    "Total": 77,
+    "Status": "NF"
+  },
+  "Liechtenstein": {
+    "country": "Liechtenstein",
+    "countryNameLegacy": "Liechtenstein",
+    "Year": 2017,
+    "Legal": 2,
+    "Political": 5,
+    "Economic": 8,
+    "Total": 15,
+    "Status": "F"
+  },
+  "Lithuania": {
+    "country": "Lithuania",
+    "countryNameLegacy": "Lithuania",
+    "Year": 2017,
+    "Legal": 6,
+    "Political": 6,
+    "Economic": 9,
+    "Total": 21,
+    "Status": "F"
+  },
+  "Luxembourg": {
+    "country": "Luxembourg",
+    "countryNameLegacy": "Luxembourg",
+    "Year": 2017,
+    "Legal": 3,
+    "Political": 5,
+    "Economic": 6,
+    "Total": 14,
+    "Status": "F"
+  },
+  "Macedonia": {
+    "country": "Macedonia",
+    "countryNameLegacy": "Macedonia",
+    "Year": 2017,
+    "Legal": 19,
+    "Political": 25,
+    "Economic": 20,
+    "Total": 64,
+    "Status": "NF"
+  },
+  "Madagascar": {
+    "country": "Madagascar",
+    "countryNameLegacy": "Madagascar",
+    "Year": 2017,
+    "Legal": 19,
+    "Political": 23,
+    "Economic": 16,
+    "Total": 58,
+    "Status": "PF"
+  },
+  "Malawi": {
+    "country": "Malawi",
+    "countryNameLegacy": "Malawi",
+    "Year": 2017,
+    "Legal": 15,
+    "Political": 15,
+    "Economic": 15,
+    "Total": 45,
+    "Status": "PF"
+  },
+  "Malaysia": {
+    "country": "Malaysia",
+    "countryNameLegacy": "Malaysia",
+    "Year": 2017,
+    "Legal": 26,
+    "Political": 25,
+    "Economic": 18,
+    "Total": 69,
+    "Status": "NF"
+  },
+  "Maldives": {
+    "country": "Maldives",
+    "countryNameLegacy": "Maldives",
+    "Year": 2017,
+    "Legal": 21,
+    "Political": 25,
+    "Economic": 16,
+    "Total": 62,
+    "Status": "NF"
+  },
+  "Mali": {
+    "country": "Mali",
+    "countryNameLegacy": "Mali",
+    "Year": 2017,
+    "Legal": 8,
+    "Political": 19,
+    "Economic": 10,
+    "Total": 37,
+    "Status": "PF"
+  },
+  "Malta": {
+    "country": "Malta",
+    "countryNameLegacy": "Malta",
+    "Year": 2017,
+    "Legal": 5,
+    "Political": 9,
+    "Economic": 9,
+    "Total": 23,
+    "Status": "F"
+  },
+  "Marshall Islands": {
+    "country": "Marshall Islands",
+    "countryNameLegacy": "Marshall Islands",
+    "Year": 2017,
+    "Legal": 2,
+    "Political": 6,
+    "Economic": 9,
+    "Total": 17,
+    "Status": "F"
+  },
+  "Mauritania": {
+    "country": "Mauritania",
+    "countryNameLegacy": "Mauritania",
+    "Year": 2017,
+    "Legal": 17,
+    "Political": 20,
+    "Economic": 16,
+    "Total": 53,
+    "Status": "PF"
+  },
+  "Mauritius": {
+    "country": "Mauritius",
+    "countryNameLegacy": "Mauritius",
+    "Year": 2017,
+    "Legal": 6,
+    "Political": 10,
+    "Economic": 13,
+    "Total": 29,
+    "Status": "F"
+  },
+  "Mexico": {
+    "country": "Mexico",
+    "countryNameLegacy": "Mexico",
+    "Year": 2017,
+    "Legal": 19,
+    "Political": 31,
+    "Economic": 14,
+    "Total": 64,
+    "Status": "NF"
+  },
+  "Micronesia": {
+    "country": "Micronesia",
+    "countryNameLegacy": "Micronesia",
+    "Year": 2017,
+    "Legal": 2,
+    "Political": 8,
+    "Economic": 11,
+    "Total": 21,
+    "Status": "F"
+  },
+  "Moldova": {
+    "country": "Moldova",
+    "countryNameLegacy": "Moldova",
+    "Year": 2017,
+    "Legal": 17,
+    "Political": 21,
+    "Economic": 18,
+    "Total": 56,
+    "Status": "PF"
+  },
+  "Monaco": {
+    "country": "Monaco",
+    "countryNameLegacy": "Monaco",
+    "Year": 2017,
+    "Legal": 3,
+    "Political": 6,
+    "Economic": 7,
+    "Total": 16,
+    "Status": "F"
+  },
+  "Mongolia": {
+    "country": "Mongolia",
+    "countryNameLegacy": "Mongolia",
+    "Year": 2017,
+    "Legal": 13,
+    "Political": 12,
+    "Economic": 12,
+    "Total": 37,
+    "Status": "PF"
+  },
+  "Montenegro": {
+    "country": "Montenegro",
+    "countryNameLegacy": "Montenegro",
+    "Year": 2017,
+    "Legal": 13,
+    "Political": 19,
+    "Economic": 12,
+    "Total": 44,
+    "Status": "PF"
+  },
+  "Morocco": {
+    "country": "Morocco",
+    "countryNameLegacy": "Morocco",
+    "Year": 2017,
+    "Legal": 23,
+    "Political": 25,
+    "Economic": 18,
+    "Total": 66,
+    "Status": "NF"
+  },
+  "Mozambique": {
+    "country": "Mozambique",
+    "countryNameLegacy": "Mozambique",
+    "Year": 2017,
+    "Legal": 12,
+    "Political": 21,
+    "Economic": 15,
+    "Total": 48,
+    "Status": "PF"
+  },
+  "Myanmar": {
+    "country": "Myanmar",
+    "countryNameLegacy": "Myanmar",
+    "Year": 2017,
+    "Legal": 23,
+    "Political": 29,
+    "Economic": 21,
+    "Total": 73,
+    "Status": "NF"
+  },
+  "Namibia": {
+    "country": "Namibia",
+    "countryNameLegacy": "Namibia",
+    "Year": 2017,
+    "Legal": 9,
+    "Political": 13,
+    "Economic": 10,
+    "Total": 32,
+    "Status": "PF"
+  },
+  "Nauru": {
+    "country": "Nauru",
+    "countryNameLegacy": "Nauru",
+    "Year": 2017,
+    "Legal": 10,
+    "Political": 20,
+    "Economic": 16,
+    "Total": 46,
+    "Status": "PF"
+  },
+  "Nepal": {
+    "country": "Nepal",
+    "countryNameLegacy": "Nepal",
+    "Year": 2017,
+    "Legal": 16,
+    "Political": 21,
+    "Economic": 15,
+    "Total": 52,
+    "Status": "PF"
+  },
+  "Netherlands": {
+    "country": "Netherlands",
+    "countryNameLegacy": "Netherlands",
+    "Year": 2017,
+    "Legal": 2,
+    "Political": 5,
+    "Economic": 4,
+    "Total": 11,
+    "Status": "F"
+  },
+  "New Zealand": {
+    "country": "New Zealand",
+    "countryNameLegacy": "New Zealand",
+    "Year": 2017,
+    "Legal": 4,
+    "Political": 8,
+    "Economic": 7,
+    "Total": 19,
+    "Status": "F"
+  },
+  "Nicaragua": {
+    "country": "Nicaragua",
+    "countryNameLegacy": "Nicaragua",
+    "Year": 2017,
+    "Legal": 14,
+    "Political": 24,
+    "Economic": 17,
+    "Total": 55,
+    "Status": "PF"
+  },
+  "Niger": {
+    "country": "Niger",
+    "countryNameLegacy": "Niger",
+    "Year": 2017,
+    "Legal": 16,
+    "Political": 19,
+    "Economic": 17,
+    "Total": 52,
+    "Status": "PF"
+  },
+  "Nigeria": {
+    "country": "Nigeria",
+    "countryNameLegacy": "Nigeria",
+    "Year": 2017,
+    "Legal": 14,
+    "Political": 22,
+    "Economic": 15,
+    "Total": 51,
+    "Status": "PF"
+  },
+  "North Korea": {
+    "country": "North Korea",
+    "countryNameLegacy": "North Korea",
+    "Year": 2017,
+    "Legal": 30,
+    "Political": 39,
+    "Economic": 29,
+    "Total": 98,
+    "Status": "NF"
+  },
+  "Norway": {
+    "country": "Norway",
+    "countryNameLegacy": "Norway",
+    "Year": 2017,
+    "Legal": 2,
+    "Political": 3,
+    "Economic": 3,
+    "Total": 8,
+    "Status": "F"
+  },
+  "Oman": {
+    "country": "Oman",
+    "countryNameLegacy": "Oman",
+    "Year": 2017,
+    "Legal": 25,
+    "Political": 27,
+    "Economic": 19,
+    "Total": 71,
+    "Status": "NF"
+  },
+  "Pakistan": {
+    "country": "Pakistan",
+    "countryNameLegacy": "Pakistan",
+    "Year": 2017,
+    "Legal": 19,
+    "Political": 30,
+    "Economic": 16,
+    "Total": 65,
+    "Status": "NF"
+  },
+  "Palau": {
+    "country": "Palau",
+    "countryNameLegacy": "Palau",
+    "Year": 2017,
+    "Legal": 1,
+    "Political": 6,
+    "Economic": 8,
+    "Total": 15,
+    "Status": "F"
+  },
+  "Panama": {
+    "country": "Panama",
+    "countryNameLegacy": "Panama",
+    "Year": 2017,
+    "Legal": 17,
+    "Political": 15,
+    "Economic": 9,
+    "Total": 41,
+    "Status": "PF"
+  },
+  "Papua New Guinea": {
+    "country": "Papua New Guinea",
+    "countryNameLegacy": "Papua New Guinea",
+    "Year": 2017,
+    "Legal": 7,
+    "Political": 13,
+    "Economic": 9,
+    "Total": 29,
+    "Status": "F"
+  },
+  "Paraguay": {
+    "country": "Paraguay",
+    "countryNameLegacy": "Paraguay",
+    "Year": 2017,
+    "Legal": 16,
+    "Political": 24,
+    "Economic": 19,
+    "Total": 59,
+    "Status": "PF"
+  },
+  "Peru": {
+    "country": "Peru",
+    "countryNameLegacy": "Peru",
+    "Year": 2017,
+    "Legal": 14,
+    "Political": 19,
+    "Economic": 12,
+    "Total": 45,
+    "Status": "PF"
+  },
+  "Philippines": {
+    "country": "Philippines",
+    "countryNameLegacy": "Philippines",
+    "Year": 2017,
+    "Legal": 14,
+    "Political": 20,
+    "Economic": 10,
+    "Total": 44,
+    "Status": "PF"
+  },
+  "Poland": {
+    "country": "Poland",
+    "countryNameLegacy": "Poland",
+    "Year": 2017,
+    "Legal": 11,
+    "Political": 14,
+    "Economic": 9,
+    "Total": 34,
+    "Status": "PF"
+  },
+  "Portugal": {
+    "country": "Portugal",
+    "countryNameLegacy": "Portugal",
+    "Year": 2017,
+    "Legal": 4,
+    "Political": 7,
+    "Economic": 6,
+    "Total": 17,
+    "Status": "F"
+  },
+  "Qatar": {
+    "country": "Qatar",
+    "countryNameLegacy": "Qatar",
+    "Year": 2017,
+    "Legal": 21,
+    "Political": 27,
+    "Economic": 22,
+    "Total": 70,
+    "Status": "NF"
+  },
+  "Romania": {
+    "country": "Romania",
+    "countryNameLegacy": "Romania",
+    "Year": 2017,
+    "Legal": 9,
+    "Political": 16,
+    "Economic": 13,
+    "Total": 38,
+    "Status": "PF"
+  },
+  "Russia": {
+    "country": "Russia",
+    "countryNameLegacy": "Russia",
+    "Year": 2017,
+    "Legal": 25,
+    "Political": 34,
+    "Economic": 24,
+    "Total": 83,
+    "Status": "NF"
+  },
+  "Rwanda": {
+    "country": "Rwanda",
+    "countryNameLegacy": "Rwanda",
+    "Year": 2017,
+    "Legal": 23,
+    "Political": 34,
+    "Economic": 22,
+    "Total": 79,
+    "Status": "NF"
+  },
+  "Saint Kitts and Nevis": {
+    "country": "Saint Kitts and Nevis",
+    "countryNameLegacy": "Saint Kitts and Nevis",
+    "Year": 2017,
+    "Legal": 4,
+    "Political": 10,
+    "Economic": 7,
+    "Total": 21,
+    "Status": "F"
+  },
+  "Saint Lucia": {
+    "country": "Saint Lucia",
+    "countryNameLegacy": "Saint Lucia",
+    "Year": 2017,
+    "Legal": 3,
+    "Political": 10,
+    "Economic": 4,
+    "Total": 17,
+    "Status": "F"
+  },
+  "Saint Vincent and the Grenadines": {
+    "country": "Saint Vincent and the Grenadines",
+    "countryNameLegacy": "Saint Vincent and the Grenadines",
+    "Year": 2017,
+    "Legal": 5,
+    "Political": 9,
+    "Economic": 7,
+    "Total": 21,
+    "Status": "F"
+  },
+  "Samoa": {
+    "country": "Samoa",
+    "countryNameLegacy": "Samoa",
+    "Year": 2017,
+    "Legal": 7,
+    "Political": 13,
+    "Economic": 9,
+    "Total": 29,
+    "Status": "F"
+  },
+  "San Marino": {
+    "country": "San Marino",
+    "countryNameLegacy": "San Marino",
+    "Year": 2017,
+    "Legal": 4,
+    "Political": 6,
+    "Economic": 7,
+    "Total": 17,
+    "Status": "F"
+  },
+  "São Tomé and Príncipe": {
+    "country": "São Tomé and Príncipe",
+    "countryNameLegacy": "São Tomé and Príncipe",
+    "Year": 2017,
+    "Legal": 4,
+    "Political": 11,
+    "Economic": 13,
+    "Total": 28,
+    "Status": "F"
+  },
+  "Saudi Arabia": {
+    "country": "Saudi Arabia",
+    "countryNameLegacy": "Saudi Arabia",
+    "Year": 2017,
+    "Legal": 29,
+    "Political": 32,
+    "Economic": 25,
+    "Total": 86,
+    "Status": "NF"
+  },
+  "Senegal": {
+    "country": "Senegal",
+    "countryNameLegacy": "Senegal",
+    "Year": 2017,
+    "Legal": 18,
+    "Political": 15,
+    "Economic": 14,
+    "Total": 47,
+    "Status": "PF"
+  },
+  "Serbia": {
+    "country": "Serbia",
+    "countryNameLegacy": "Serbia",
+    "Year": 2017,
+    "Legal": 15,
+    "Political": 21,
+    "Economic": 13,
+    "Total": 49,
+    "Status": "PF"
+  },
+  "Serbia and Montenegro": {
+    "country": "Serbia and Montenegro",
+    "countryNameLegacy": "Serbia and Montenegro",
+    "Year": 2017,
+    "Legal": "na",
+    "Political": "na",
+    "Economic": "na",
+    "Total": "na",
+    "Status": "na"
+  },
+  "Seychelles": {
+    "country": "Seychelles",
+    "countryNameLegacy": "Seychelles",
+    "Year": 2017,
+    "Legal": 16,
+    "Political": 16,
+    "Economic": 17,
+    "Total": 49,
+    "Status": "PF"
+  },
+  "Sierra Leone": {
+    "country": "Sierra Leone",
+    "countryNameLegacy": "Sierra Leone",
+    "Year": 2017,
+    "Legal": 18,
+    "Political": 20,
+    "Economic": 16,
+    "Total": 54,
+    "Status": "PF"
+  },
+  "Singapore": {
+    "country": "Singapore",
+    "countryNameLegacy": "Singapore",
+    "Year": 2017,
+    "Legal": 24,
+    "Political": 22,
+    "Economic": 21,
+    "Total": 67,
+    "Status": "NF"
+  },
+  "Slovakia": {
+    "country": "Slovakia",
+    "countryNameLegacy": "Slovakia",
+    "Year": 2017,
+    "Legal": 8,
+    "Political": 9,
+    "Economic": 9,
+    "Total": 26,
+    "Status": "F"
+  },
+  "Slovenia": {
+    "country": "Slovenia",
+    "countryNameLegacy": "Slovenia",
+    "Year": 2017,
+    "Legal": 6,
+    "Political": 8,
+    "Economic": 9,
+    "Total": 23,
+    "Status": "F"
+  },
+  "Solomon Islands": {
+    "country": "Solomon Islands",
+    "countryNameLegacy": "Solomon Islands",
+    "Year": 2017,
+    "Legal": 5,
+    "Political": 11,
+    "Economic": 11,
+    "Total": 27,
+    "Status": "F"
+  },
+  "Somalia": {
+    "country": "Somalia",
+    "countryNameLegacy": "Somalia",
+    "Year": 2017,
+    "Legal": 25,
+    "Political": 34,
+    "Economic": 20,
+    "Total": 79,
+    "Status": "NF"
+  },
+  "Somaliland": {
+    "country": "Somaliland",
+    "countryNameLegacy": "Somaliland",
+    "Year": 2017,
+    "Legal": 13,
+    "Political": 21,
+    "Economic": 19,
+    "Total": 53,
+    "Status": "PF"
+  },
+  "South Africa": {
+    "country": "South Africa",
+    "countryNameLegacy": "South Africa",
+    "Year": 2017,
+    "Legal": 8,
+    "Political": 20,
+    "Economic": 10,
+    "Total": 38,
+    "Status": "PF"
+  },
+  "South Korea": {
+    "country": "South Korea",
+    "countryNameLegacy": "South Korea",
+    "Year": 2017,
+    "Legal": 11,
+    "Political": 14,
+    "Economic": 9,
+    "Total": 34,
+    "Status": "PF"
+  },
+  "South Sudan": {
+    "country": "South Sudan",
+    "countryNameLegacy": "South Sudan",
+    "Year": 2017,
+    "Legal": 19,
+    "Political": 33,
+    "Economic": 18,
+    "Total": 70,
+    "Status": "NF"
+  },
+  "Spain": {
+    "country": "Spain",
+    "countryNameLegacy": "Spain",
+    "Year": 2017,
+    "Legal": 6,
+    "Political": 14,
+    "Economic": 8,
+    "Total": 28,
+    "Status": "F"
+  },
+  "Sri Lanka": {
+    "country": "Sri Lanka",
+    "countryNameLegacy": "Sri Lanka",
+    "Year": 2017,
+    "Legal": 17,
+    "Political": 25,
+    "Economic": 19,
+    "Total": 61,
+    "Status": "NF"
+  },
+  "Sudan": {
+    "country": "Sudan",
+    "countryNameLegacy": "Sudan",
+    "Year": 2017,
+    "Legal": 26,
+    "Political": 36,
+    "Economic": 24,
+    "Total": 86,
+    "Status": "NF"
+  },
+  "Suriname": {
+    "country": "Suriname",
+    "countryNameLegacy": "Suriname",
+    "Year": 2017,
+    "Legal": 8,
+    "Political": 13,
+    "Economic": 7,
+    "Total": 28,
+    "Status": "F"
+  },
+  "Swaziland": {
+    "country": "Swaziland",
+    "countryNameLegacy": "Swaziland",
+    "Year": 2017,
+    "Legal": 26,
+    "Political": 30,
+    "Economic": 27,
+    "Total": 83,
+    "Status": "NF"
+  },
+  "Sweden": {
+    "country": "Sweden",
+    "countryNameLegacy": "Sweden",
+    "Year": 2017,
+    "Legal": 2,
+    "Political": 5,
+    "Economic": 4,
+    "Total": 11,
+    "Status": "F"
+  },
+  "Switzerland": {
+    "country": "Switzerland",
+    "countryNameLegacy": "Switzerland",
+    "Year": 2017,
+    "Legal": 4,
+    "Political": 4,
+    "Economic": 5,
+    "Total": 13,
+    "Status": "F"
+  },
+  "Syria": {
+    "country": "Syria",
+    "countryNameLegacy": "Syria",
+    "Year": 2017,
+    "Legal": 29,
+    "Political": 38,
+    "Economic": 23,
+    "Total": 90,
+    "Status": "NF"
+  },
+  "Taiwan": {
+    "country": "Taiwan",
+    "countryNameLegacy": "Taiwan",
+    "Year": 2017,
+    "Legal": 9,
+    "Political": 8,
+    "Economic": 8,
+    "Total": 25,
+    "Status": "F"
+  },
+  "Tajikistan": {
+    "country": "Tajikistan",
+    "countryNameLegacy": "Tajikistan",
+    "Year": 2017,
+    "Legal": 28,
+    "Political": 33,
+    "Economic": 26,
+    "Total": 87,
+    "Status": "NF"
+  },
+  "Tanzania": {
+    "country": "Tanzania",
+    "countryNameLegacy": "Tanzania",
+    "Year": 2017,
+    "Legal": 21,
+    "Political": 22,
+    "Economic": 15,
+    "Total": 58,
+    "Status": "PF"
+  },
+  "Thailand": {
+    "country": "Thailand",
+    "countryNameLegacy": "Thailand",
+    "Year": 2017,
+    "Legal": 27,
+    "Political": 33,
+    "Economic": 17,
+    "Total": 77,
+    "Status": "NF"
+  },
+  "Gambia": {
+    "country": "Gambia",
+    "countryNameLegacy": "The Gambia",
+    "Year": 2017,
+    "Legal": 29,
+    "Political": 35,
+    "Economic": 23,
+    "Total": 87,
+    "Status": "NF"
+  },
+  "Timor-Leste": {
+    "country": "Timor-Leste",
+    "countryNameLegacy": "Timor-Leste",
+    "Year": 2017,
+    "Legal": 11,
+    "Political": 11,
+    "Economic": 13,
+    "Total": 35,
+    "Status": "PF"
+  },
+  "Togo": {
+    "country": "Togo",
+    "countryNameLegacy": "Togo",
+    "Year": 2017,
+    "Legal": 18,
+    "Political": 19,
+    "Economic": 20,
+    "Total": 57,
+    "Status": "PF"
+  },
+  "Tonga": {
+    "country": "Tonga",
+    "countryNameLegacy": "Tonga",
+    "Year": 2017,
+    "Legal": 10,
+    "Political": 10,
+    "Economic": 10,
+    "Total": 30,
+    "Status": "F"
+  },
+  "Trinidad and Tobago": {
+    "country": "Trinidad and Tobago",
+    "countryNameLegacy": "Trinidad and Tobago",
+    "Year": 2017,
+    "Legal": 7,
+    "Political": 11,
+    "Economic": 7,
+    "Total": 25,
+    "Status": "F"
+  },
+  "Tunisia": {
+    "country": "Tunisia",
+    "countryNameLegacy": "Tunisia",
+    "Year": 2017,
+    "Legal": 18,
+    "Political": 18,
+    "Economic": 18,
+    "Total": 54,
+    "Status": "PF"
+  },
+  "Turkey": {
+    "country": "Turkey",
+    "countryNameLegacy": "Turkey",
+    "Year": 2017,
+    "Legal": 27,
+    "Political": 33,
+    "Economic": 16,
+    "Total": 76,
+    "Status": "NF"
+  },
+  "Turkmenistan": {
+    "country": "Turkmenistan",
+    "countryNameLegacy": "Turkmenistan",
+    "Year": 2017,
+    "Legal": 30,
+    "Political": 38,
+    "Economic": 30,
+    "Total": 98,
+    "Status": "NF"
+  },
+  "Tuvalu": {
+    "country": "Tuvalu",
+    "countryNameLegacy": "Tuvalu",
+    "Year": 2017,
+    "Legal": 3,
+    "Political": 11,
+    "Economic": 13,
+    "Total": 27,
+    "Status": "F"
+  },
+  "Uganda": {
+    "country": "Uganda",
+    "countryNameLegacy": "Uganda",
+    "Year": 2017,
+    "Legal": 18,
+    "Political": 25,
+    "Economic": 15,
+    "Total": 58,
+    "Status": "PF"
+  },
+  "Ukraine": {
+    "country": "Ukraine",
+    "countryNameLegacy": "Ukraine",
+    "Year": 2017,
+    "Legal": 13,
+    "Political": 25,
+    "Economic": 15,
+    "Total": 53,
+    "Status": "PF"
+  },
+  "United Arab Emirates": {
+    "country": "United Arab Emirates",
+    "countryNameLegacy": "United Arab Emirates",
+    "Year": 2017,
+    "Legal": 25,
+    "Political": 30,
+    "Economic": 23,
+    "Total": 78,
+    "Status": "NF"
+  },
+  "United Kingdom": {
+    "country": "United Kingdom",
+    "countryNameLegacy": "United Kingdom",
+    "Year": 2017,
+    "Legal": 9,
+    "Political": 9,
+    "Economic": 7,
+    "Total": 25,
+    "Status": "F"
+  },
+  "United States": {
+    "country": "United States",
+    "countryNameLegacy": "United States",
+    "Year": 2017,
+    "Legal": 6,
+    "Political": 12,
+    "Economic": 5,
+    "Total": 23,
+    "Status": "F"
+  },
+  "Uruguay": {
+    "country": "Uruguay",
+    "countryNameLegacy": "Uruguay",
+    "Year": 2017,
+    "Legal": 6,
+    "Political": 10,
+    "Economic": 8,
+    "Total": 24,
+    "Status": "F"
+  },
+  "Uzbekistan": {
+    "country": "Uzbekistan",
+    "countryNameLegacy": "Uzbekistan",
+    "Year": 2017,
+    "Legal": 30,
+    "Political": 37,
+    "Economic": 28,
+    "Total": 95,
+    "Status": "NF"
+  },
+  "Vanuatu": {
+    "country": "Vanuatu",
+    "countryNameLegacy": "Vanuatu",
+    "Year": 2017,
+    "Legal": 6,
+    "Political": 11,
+    "Economic": 8,
+    "Total": 25,
+    "Status": "F"
+  },
+  "Venezuela": {
+    "country": "Venezuela",
+    "countryNameLegacy": "Venezuela",
+    "Year": 2017,
+    "Legal": 26,
+    "Political": 31,
+    "Economic": 24,
+    "Total": 81,
+    "Status": "NF"
+  },
+  "Vietnam": {
+    "country": "Vietnam",
+    "countryNameLegacy": "Vietnam",
+    "Year": 2017,
+    "Legal": 30,
+    "Political": 33,
+    "Economic": 21,
+    "Total": 84,
+    "Status": "NF"
+  },
+  "Yemen": {
+    "country": "Yemen",
+    "countryNameLegacy": "Yemen",
+    "Year": 2017,
+    "Legal": 26,
+    "Political": 36,
+    "Economic": 23,
+    "Total": 85,
+    "Status": "NF"
+  },
+  "Zambia": {
+    "country": "Zambia",
+    "countryNameLegacy": "Zambia",
+    "Year": 2017,
+    "Legal": 19,
+    "Political": 24,
+    "Economic": 20,
+    "Total": 63,
+    "Status": "NF"
+  },
+  "Zimbabwe": {
+    "country": "Zimbabwe",
+    "countryNameLegacy": "Zimbabwe",
+    "Year": 2017,
+    "Legal": 24,
+    "Political": 25,
+    "Economic": 25,
+    "Total": 74,
+    "Status": "NF"
+  }
+}
