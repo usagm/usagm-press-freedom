@@ -11,7 +11,6 @@ url_base: ""
 
 # ADD A WARNING FLAG AND DISABLE METRICS
 development_mode: true
-development_warning: This site is currently under active development.
 
 
 # Build settings
@@ -50,10 +49,11 @@ credit_default: (VOA News)
 
 site_info__object:
   english:
-    title: Assault on the Press | Coming soon
-    title_short: Assault on the Press
-    title_short_pretty: Assault</br>on the Press
-    title_tagline: Coming soon
+    title: The Fight For Press Freedom | USAGM Covers Mounting Threats to News Media Worldwide
+    title_short: The Fight For Press Freedom
+    title_short_pretty: The Fight For <span class="usagm__no-break--medium ">Press Freedom</span>
+    title_tagline: USAGM Covers Mounting Threats to News Media Worldwide
+    about: <a href="__site-url__/">'The Fight for Press Freedom'</a> highlights coverage of journalists, news media and the global environment for press freedom as reported by USAGM sister news organizations. It is a joint initiative of Radio Free Europe/Radio Liberty, Middle East Broadcasting Networks, Voice of America, Radio Free Asia and the Office of Cuba Broadcasting. Send tips or comments to info@usagm.gov.
     navbar_label: Press Freedom
     language_analytics: english
     keywords: press freedom, journalism, media, censorship, journalists
@@ -89,6 +89,7 @@ entities:
     twitter: VOAnews
     url: https://www.voanews.com
     urlPretty: voanews.com
+    urlPressFreedom: https://www.voanews.com/p/7061.html?nocache=1&design=1&liveview=1&r=0.672366232746987
     description: >
       <a href="https://www.voanews.com/">Voice of America</a> provides trusted and objective news and information in 45 languages to a measured weekly audience of more than 236.8 million people around the world.  For over 75 years, VOA journalists have told American stories and supplied content that many people cannot get locally: objective news and information about the US, their specific region and the world.
   rferl: 

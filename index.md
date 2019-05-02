@@ -1,6 +1,6 @@
 ---
 title: USAGM Press Freedom Project
-layout: empty
+layout: home
 ---
 
 <div style="max-width: 640px; margin: 0 auto; padding: 20px;">
