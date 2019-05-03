@@ -21,6 +21,8 @@ var currentYear = "y2017";
 var country;
 var simplifiedName = "";
 
+var currentHistory = [];
+var graphicWidth = 250;
 
 
 
@@ -450,6 +452,9 @@ function drawVectorMap(){
 	function fillCard(country, zoom = false){
 		resetCountries();
 
+		graphicWidth = Math.round( $("#mapDescription").width() );
+		console.log("graphic width: " + graphicWidth);
+
 		var simplifiedName = simplifyName(country);
 		$("#" + simplifiedName ).addClass("selected");
 
@@ -557,6 +562,18 @@ function drawVectorMap(){
 
 				$("#mapInsetTable").html(marriageTable);
 
+				// Adding graphic
+				var initialYear = 2002;
+				currentHistory = [];
+				for (var n = 0; n < 16; n++ ){
+					currentHistory[n] = {};
+					currentHistory[n].year = initialYear + n;
+					currentHistory[n].score = layer.feature.properties.pressfreedom["y" + (initialYear + n)].total
+				}
+
+
+				drawGraph(currentHistory);
+
 				$("#mapInset").addClass("show");
 
 			} else {
@@ -637,6 +654,101 @@ function drawVectorMap(){
 
 
 
+function drawGraph(data){
+
+	// Remove previous graphic
+	if ($("#history").length){
+		d3.select("#history").remove();
+	}
+
+	//Width and height
+	var padding = 30;
+	var w = graphicWidth + 5;
+	var h = 200;
+
+
+	var xScale = d3.scaleLinear().range([padding, w - padding]);
+	var yScale = d3.scaleLinear().range([h - padding, 5]);
+
+
+	// Scale the range of the data
+	xScale.domain(d3.extent(data,
+	    function (d) { return d.year; }));
+	yScale.domain([ 0, 100 ]);
+
+
+	var formatAsYear = d3.format("0");
+
+	var xAxis = d3.axisBottom()
+		.scale(xScale)
+		.tickValues([2002,2010,2017])
+		.tickFormat(formatAsYear);
+
+	var yAxis = d3.axisLeft()
+		.scale(yScale)
+		.tickValues([0,30,60,100]);
+
+
+
+	var valueline = d3.line()
+		.x(function (d) { return xScale(d.year) })
+		.y(function (d) { return yScale(d.score) });
+
+	var svg = d3.select("#svgContainer")
+		.append("svg")
+		.attr("id", "history")
+		.attr("width", w)
+		.attr("height", h)
+		.append("g");
+
+	svg.append("path") // Add the valueline path.
+		.attr("d", valueline(data));
+
+
+
+	//Create axes
+	svg.append("g")
+		.attr("class", "axis")
+		.attr("transform", "translate(0," + (h - padding) + ")")
+		.call(xAxis);
+	svg.append("g")
+		.attr("class", "axis yAxis")
+		.attr("transform", "translate(" + padding + ",0)")
+		.call(yAxis);
+
+
+
+	//Draw guidelines
+	svg.append("line")
+		.attr("class", "line notFree")
+		.attr("x1", padding)
+		.attr("x2", w - padding)
+		.attr("y1", yScale(60))
+		.attr("y2", yScale(60));
+	svg.append("line")
+		.attr("class", "line partiallyFree")
+		.attr("x1", padding)
+		.attr("x2", w - padding)
+		.attr("y1", yScale(30))
+		.attr("y2", yScale(30));
+
+
+	// Add circles
+	svg.selectAll("circle")
+		.data(data)
+		.enter()
+		.append("circle")
+		.attr("cx", function(d){
+			return xScale(d.year)
+		})
+		.attr("cy", function(d){
+			return yScale(d.score)
+		})
+		.attr("r", 3);
+
+}
+
+
 
 
 $(document).ready(function(){
@@ -699,6 +811,8 @@ $(document).ready(function(){
 			geojson = data;
 
 			drawVectorMap();
+
+
 		});
 
 	}
@@ -768,6 +882,11 @@ $(document).ready(function(){
 	function resized(){
 		logger("resized();")
 		windowSize = window.innerWidth;
+
+		if ($("#history").length){
+			graphicWidth = Math.round( $("#mapDescription").width() );
+			drawGraph(currentHistory);
+		}
 	}
 
 	$(window).resize(resized);

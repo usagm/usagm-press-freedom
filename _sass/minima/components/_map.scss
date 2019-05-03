@@ -276,3 +276,40 @@ table.usagm__map-key__table__swatches {
 
 
 }
+
+
+.usagm__history-chart {
+
+	path {
+		fill: none;
+		stroke: #CCC;
+		stroke-width: 2;
+	}
+
+	.axis path, .axis line {
+		fill: none;
+		shape-rendering: crispEdges;
+		stroke: #BBB;
+		stroke-width: 1;
+	}
+
+	line.notFree {
+		stroke: $color__data__high;
+		stroke-dasharray: 2, 3;
+	}
+	line.partiallyFree {
+		stroke:  $color__data__low;
+		stroke-dasharray: 2, 3;
+	}
+
+	.axis text {
+		fill: #766;
+		font-family: Arial, sans-serif;
+		font-size: 14px;
+	}
+	.yAxis .domain {
+		display: none;
+	}
+	
+}
+
