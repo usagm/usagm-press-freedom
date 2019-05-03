@@ -1,6 +1,6 @@
 # usagm-press-freedom
 
-'Assault on the Press' highlights coverage of journalists, news media and the global environment for press freedom as reported by USAGM sister news organizations. It is a joint initiative of Radio Free Europe/Radio Liberty, Middle East Broadcasting Networks, Voice of America, Radio Free Asia and the Office of Cuba Broadcasting. Send tips or comments to info@usagm.gov.
+'The Fight for Press Freedom' highlights coverage of journalists, news media and the global environment for press freedom as reported by USAGM sister news organizations. It is a joint initiative of Radio Free Europe/Radio Liberty, Middle East Broadcasting Networks, Voice of America, Radio Free Asia and the Office of Cuba Broadcasting. Send tips or comments to info@usagm.gov.
 
 
 ### About USAGM ###

@@ -4,7 +4,7 @@
 # (USE THE PATH WHERE IT'LL BE HOSTED)
 url_base: ""
 # url_base: "https://pressfreedom.news"
-
+url_base_social: "https://pressfreedom.news"
 
 # ADD A WARNING FLAG AND DISABLE METRICS
 development_mode: false
