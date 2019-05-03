@@ -1,5 +1,5 @@
 ---
-title: USAGM Press Freedom Project
+title: Radio Free Asia (RFA)
 layout: category-spreadsheet
 entity-short: rfa
 category: rfa

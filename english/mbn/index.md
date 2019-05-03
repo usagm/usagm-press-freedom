@@ -1,5 +1,5 @@
 ---
-title: USAGM Press Freedom Project
+title: Middle East Broadcasting Network (MBN)
 layout: category
 entity-short: mbn
 category: mbn

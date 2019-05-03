@@ -55,7 +55,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 	<meta property="og:image" content="{% if page.image %}{% if page.image contains 'https://gdb.voanews.com/' %}{{ page.image }}{% else %}{{ site.url_base_social }}{{ page.image }}{% endif %}{% else %}{{ site.banner }}{% endif %}" />
 
-	<meta property="og:url" content="{{ site.url_base }}{{ page.url | replace:'index.html',''}}" />
+	<meta property="og:url" content="{{ site.url_base_social }}{{ page.url | replace:'index.html',''}}" />
 	<meta property="og:description" content="{{ page.summary | default: site_info.title_tagline | strip_html | normalize_whitespace | truncate: 225 | escape }}" />
 
 
@@ -66,13 +66,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	<meta property="twitter:title" content="{% if page.title %}{{ site_info.title_short }} | {{ page.title }}{% else %}{{ site_info.title }}{% endif %}">
 	<meta property="twitter:description" content="{{ page.summary | default: site_info.title_tagline | strip_html | normalize_whitespace | truncate: 225 | escape }}">
 	<meta property="twitter:image" content="{% if page.image %}{% if page.image contains 'https://gdb.voanews.com/' %}{{ page.image }}{% else %}{{ site.url_base_social }}{{ page.image }}{% endif %}{% else %}{{ site.banner }}{% endif %}">
-    <meta name="twitter:url" content="{{ site.url_base }}{{ page.url | replace:'index.html',''}}" />
+    <meta name="twitter:url" content="{{ site.url_base_social }}{{ page.url | replace:'index.html',''}}" />
 
 
 	<link rel="stylesheet" type="text/css" href="{{site.url_base}}/assets/main.css?{{ random }}">
 	<link href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:700" rel="stylesheet">
 
 
-	<link rel="canonical" href="{{ site.url_base }}{{ page.url | replace:'index.html',''}}">
+	<link rel="canonical" href="{{ site.url_base_social }}{{ page.url | replace:'index.html',''}}">
 
 </head>
