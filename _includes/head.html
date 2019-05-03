@@ -40,7 +40,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	<link rel="icon" sizes="192x192" href="{{ site.url_base }}/img/webApp/ico-192x192.png" />
 	<link rel="icon" sizes="128x128" href="{{ site.url_base }}/img/webApp/ico-128x128.png" />
 
-    <link rel="image_src" href="{% if page.image %}{% if page.image contains 'https://gdb.voanews.com/' %}{{ page.image }}{% else %}{{ site.url_base }}/img/{{ page.image }}{% endif %}{% else %}{{ site.banner }}{% endif %}" />
+    <link rel="image_src" href="{% if page.image %}{% if page.image contains 'https://gdb.voanews.com/' %}{{ page.image }}{% else %}{{ site.url_base_social }}/img/{{ page.image }}{% endif %}{% else %}{{ site.banner }}{% endif %}" />
 
 
 	<!-- for Google -->
@@ -53,7 +53,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	<meta property="og:title" content="{% if page.title %}{{ site_info.title_short }} | {{ page.title }}{% else %}{{ site_info.title }}{% endif %}" />
 	<meta property="og:type" content="website" />
 
-	<meta property="og:image" content="{% if page.image %}{% if page.image contains 'https://gdb.voanews.com/' %}{{ page.image }}{% else %}{{ site.url_base }}{{ page.image }}{% endif %}{% else %}{{ site.banner }}{% endif %}" />
+	<meta property="og:image" content="{% if page.image %}{% if page.image contains 'https://gdb.voanews.com/' %}{{ page.image }}{% else %}{{ site.url_base_social }}{{ page.image }}{% endif %}{% else %}{{ site.banner }}{% endif %}" />
 
 	<meta property="og:url" content="{{ site.url_base }}{{ page.url | replace:'index.html',''}}" />
 	<meta property="og:description" content="{{ page.summary | default: site_info.title_tagline | strip_html | normalize_whitespace | truncate: 225 | escape }}" />
@@ -65,7 +65,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	<meta name="twitter:creator" content="@USAGM">
 	<meta property="twitter:title" content="{% if page.title %}{{ site_info.title_short }} | {{ page.title }}{% else %}{{ site_info.title }}{% endif %}">
 	<meta property="twitter:description" content="{{ page.summary | default: site_info.title_tagline | strip_html | normalize_whitespace | truncate: 225 | escape }}">
-	<meta property="twitter:image" content="{% if page.image %}{% if page.image contains 'https://gdb.voanews.com/' %}{{ page.image }}{% else %}{{ site.url_base }}{{ page.image }}{% endif %}{% else %}{{ site.banner }}{% endif %}">
+	<meta property="twitter:image" content="{% if page.image %}{% if page.image contains 'https://gdb.voanews.com/' %}{{ page.image }}{% else %}{{ site.url_base_social }}{{ page.image }}{% endif %}{% else %}{{ site.banner }}{% endif %}">
     <meta name="twitter:url" content="{{ site.url_base }}{{ page.url | replace:'index.html',''}}" />
 
 
