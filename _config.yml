@@ -1,11 +1,8 @@
-# Welcome to Jekyll!
 # Site settings
-
 
 # EDIT FOR DEPLOYING IN A SUB FOLDER
 # (USE THE PATH WHERE IT'LL BE HOSTED)
 url_base: ""
-# url_base: "usagm.github.io/usagm-press-freedom"
 # url_base: "https://pressfreedom.news"
 
 
