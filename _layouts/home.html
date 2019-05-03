@@ -36,34 +36,29 @@ date: 2018-10-22
 
 
 
-{% assign sorted-posts = site.posts | where: "categories","intro" %}
-{% assign sorted-posts-language = sorted-posts | where: "categories",current_language %}
-{% for post in sorted-posts-language limit: 1 %}
 
-		<section class="usagm__section usagm__border-sides" style="">
+	<section class="usagm__section usagm__border-sides" style="">
 
-			<div class="usagm__grid__full " style="margin-top: 43px;">
+		<div class="usagm__grid__full " style="margin-top: 43px;">
 
-				<div class="usagm__grid__full"> 
+			<div class="usagm__grid__full"> 
 
-					<div class="usagm__grid" style="text-align: center;">
-						<h1 class="usagm__project-title">{% if site_info.title_short_pretty %}{{ site_info.title_short_pretty }}{% else %}{{ site_info.title_short }}{% endif %}</h1>
-						<div class="usagm__project-intro">
-							
-							{{ post.content }}
-
-						</div>
+				<div class="usagm__grid" style="text-align: center;">
+					<h1 class="usagm__project-title">{% if site_info.title_short_pretty %}{{ site_info.title_short_pretty }}{% else %}{{ site_info.title_short }}{% endif %}</h1>
+					<div class="usagm__project-intro">
+						
+						<p>{{ site_info.title_tagline }}</p>
 
 					</div>
-
 
 				</div>
 
 			</div>
 
-		</section>
+		</div>
 
-{% endfor %}
+	</section>
+
 
 
 
@@ -219,9 +214,10 @@ date: 2018-10-22
 {% endfor %}
 							</div><!--
 							--><div class="usagm__grid__one-third" style="margin-right: 0;">
+								{% assign current_tweet = site.tweet  | downcase %}
 								{% include social-tweet-embed.html 
 
-									tweet="1109081794740211715"
+									tweet=current_tweet
 
 								%}
 							</div>
