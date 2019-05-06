@@ -61,7 +61,7 @@ layout: default
 								<source srcset="{{ page.image | replace: '_w1023', '_w1280_h480' }}" media="(min-width: 992px)">
 								<source srcset="{{ page.image | replace: '_w1023', '_w992_h400' }}" media="(min-width: 640px)">
 								<source srcset="{{ page.image | replace: '_w1023', '_w640_h480' }}" media="(min-width: 420px)">
-								<img src="{{ page.image | replace: '_w1023', '_w420_h420' }}" alt="{{ page.alt }}" style="display: block; width: 100%; max-width: none;" />
+								<img src="{{ page.image | replace: '_w1023', '_w420_h420' }}" style="display: block; width: 100%; max-width: none;" alt="Photo of {{ page.title }}, {{ page.entity }}"/>
 							</picture>
 
 		{% else %}
@@ -92,7 +92,7 @@ layout: default
 
 									<div class="usagm__obituary__mini-bio">
 
-										<img src="{{ page.mugshot }}" class="usagm__wiki__bio__mugshot">
+										<img src="{{ page.mugshot }}" class="usagm__wiki__bio__mugshot" alt="Portrait of {{ page.title }}">
 
 										<div class="usagm__wiki__bio__head-text" style="">
 

@@ -3,7 +3,8 @@ title: Uganda Censors Target 39 for Reporting on Bobi Wine
 entity: voa
 entity-short: voa
 image: https://gdb.voanews.com/9DC90721-E0C7-4D65-BB4D-520E48371EE0_w1023_r1_s.jpg
-cutline: Supporters of Ugandan musician turned politician Robert Kyagulanyi, commonly known as Bobi Wine, run away from a water cannon as they gather at Busabala, where he was planning to hold a news conference, April 22, 2019. 
+cutline: Supporters of Ugandan musician turned politician Robert Kyagulanyi, commonly known as Bobi Wine, run away from a water cannon as they gather at Busabala, where he was planning to hold a news conference, April 22, 2019.
+alt: "Supporters of Ugandan musician turned politician Robert Kyagulanyi, commonly known as Bobi Wine, run away from a water cannon as they gather at Busabala, where he was planning to hold a news conference." 
 credit: AFP
 
 byline: Doug Bernard, VOA press freedom editor

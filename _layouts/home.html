@@ -89,7 +89,7 @@ date: 2018-10-22
 							<source srcset="{{ story.image | replace: '_w1023', '_w1280_h720'}}" media="(min-width: 992px)">
 							<source srcset="{{ story.image | replace: '_w1023', '_w920_h640'}}" media="(min-width: 640px)">
 							<source srcset="{{ story.image | replace: '_w1023', '_w640_h640'}}" media="(min-width: 420px)">
-							<img src="{{ story.image | replace: '_w1023', '_w420_h500'}}" style="margin-bottom: 20px;">
+							<img src="{{ story.image | replace: '_w1023', '_w420_h500'}}" style="margin-bottom: 20px;" {% if story.alt !="" %}alt="{{ story.alt }}"{% endif %}>
 						</picture>
 
 						<div class="usagm__content-width">
@@ -150,7 +150,7 @@ date: 2018-10-22
 									<picture>
 										<source srcset="{{ story.image | replace: '_w1023', '_w420_h240'}}" media="(min-width: 992px)">
 										<source srcset="{{ story.image | replace: '_w1023', '_w320_h240'}}" media="(min-width: 640px)">
-										<img src="{{ story.image | replace: '_w1023', '_w240_h240'}}" style="">
+										<img src="{{ story.image | replace: '_w1023', '_w240_h240'}}" {% if story.alt !="" %}alt="{{ story.alt }}"{% endif %}>
 									</picture>
 
 
@@ -203,7 +203,7 @@ date: 2018-10-22
 											<source srcset="{{ post.image | replace: '_w1023', '_w740_h416'}}" media="(min-width: 992px)">
 											<source srcset="{{ post.image | replace: '_w1023', '_w740_h518'}}" media="(min-width: 800px)">
 											<source srcset="{{ post.image | replace: '_w1023', '_w640_h640'}}" media="(min-width: 420px)">
-											<img src="{{ post.image | replace: '_w1023', '_w420_h420'}}" style="max-width: none; width: 100%;">
+											<img src="{{ post.image | replace: '_w1023', '_w420_h420'}}" style="max-width: none; width: 100%;" {% if post.alt !="" %}alt="{{ post.alt }}"{% endif %}>
 										</picture>
 										<div class="usagm__blogpost__text">
 											<h2>{{ post.title }}</h2>
@@ -292,7 +292,7 @@ date: 2018-10-22
 {% for post in sorted-posts %}
 						--><div class="usagm__grid__one-half usagm__journalist">
 							<a href="{{ site.url_base }}/english/journalist/jailed/{{ post.title | replace: ' ','-' | downcase }}.html">
-								<img class="usagm__journalist__mugshot" src="{{post.mugshot}}"/>
+								<img class="usagm__journalist__mugshot" src="{{post.mugshot}}" alt="Portrait of {{ post.title }}"/>
 								<h4 class="usagm__journalist__name">{{ post.title }}</h4>
 								<h5 class="usagm__journalist__entity">{{ post.entity }}</h5>
 								<p>{{ post.excerpt | truncatewords: 40 | remove: '<p>' | remove: '</p>' }}</p>
@@ -322,7 +322,7 @@ date: 2018-10-22
 {% for post in sorted-posts %}
 						--><div class="usagm__grid__one-half usagm__journalist">
 							<a href="{{ site.url_base }}/english/journalist/missing/{{ post.title | replace: '(','' | replace: ')','' | replace: ' ','-' | downcase }}.html">
-								<img class="usagm__journalist__mugshot" src="{{post.mugshot}}"/>
+								<img class="usagm__journalist__mugshot" src="{{post.mugshot}}" alt="Portrait of {{ post.title }}"/>
 								<h4 class="usagm__journalist__name">{{ post.title }}</h4>
 								<h5 class="usagm__journalist__entity">{{ post.entity }}</h5>
 								<p>{{ post.excerpt | truncatewords: 40 | remove: '<p>' | remove: '</p>' }}</p>
@@ -368,7 +368,7 @@ date: 2018-10-22
 					{% for post in sorted-posts %}
 							--><div class="usagm__grid__profile-mugshot">
 								<a href="{{ site.url_base }}{{ post.url | relative }}">
-									<img class="" src="{{ post.mugshot }}" />
+									<img class="" src="{{ post.mugshot }}" alt="Portrait of {{ post.title }}"/>
 									<div class="usagm__grid__profile__text">
 										<h4 class="usagm__grid__profile__name" style="">{{ post.title }}</h4>
 										<p style="">{{ post.date | date: '%B %d, %Y' }}<br/>{{ post.entity }}</p>
@@ -378,12 +378,6 @@ date: 2018-10-22
 					{% endfor %}
 					-->
 					</div>
-					<!--
-					<div style="margin-top: 30px; padding-top: 20px;text-align: center;">
-						<h4 style="color: #777; font-size: 20px; font-weight: normal; margin-bottom: 10px;">“Where press is free … all is safe.”</h4>
-						<h5 style="color: #666; font-weight: normal;" >— Thomas Jefferson</h5>
-					</div>
-					-->
 
 				</div>
 
