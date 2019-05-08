@@ -465,9 +465,32 @@ function drawVectorMap(){
 
 				layer.bringToFront();
 
+
 				if (zoom){
-					map.panTo(layer.getBounds().getCenter());
-					//map.setView(layer.getBounds().getCenter(),4);
+					//map.panTo(layer.getBounds().getCenter());
+
+					if (country == "Russia") {
+						map.fitBounds(boundsRussia);
+
+					} else if (country == "United States") {
+						map.fitBounds(boundsUSA);
+
+					} else if (country == "France") {
+						map.fitBounds(boundsFrance);
+
+					} else if (country == "Denmark") {
+						map.fitBounds(boundsDenmark);
+
+					} else {
+
+						var currentZoom =  map.getZoom();
+						if (currentZoom < 4){
+							currentZoom = 4;
+						}
+
+						map.setView(layer.getBounds().getCenter(),currentZoom);
+
+					}
 				}
 
 				var targetRegion = layer.feature.properties.continent;
