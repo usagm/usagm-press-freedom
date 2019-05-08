@@ -3,8 +3,8 @@ title: Sabawoon Kakar
 entity: RFE/RL
 entity-short: rferl
 mugshot: https://www.usagm.gov/wp-content/uploads/2018/05/sabawoon-profile-e1525207821138-200x200.jpg
-image: https://gdb.voanews.com/FC5E37B3-A262-4FA6-8AC3-CE4B140945F0_cy3_w1023.jpg
-image-old: https://www.usagm.gov/wp-content/uploads/2018/05/abadullah-cover-photo-2.jpg
+image: 2018__sabawoon-kakar__w1023.jpg
+image-old: https://gdb.voanews.com/FC5E37B3-A262-4FA6-8AC3-CE4B140945F0_cy3_w1023.jpg
 original-link: https://www.usagm.gov/news-and-information/threats-to-press/sabawoon-kakar/
 
 coordinates: 34.5342, 69.1971

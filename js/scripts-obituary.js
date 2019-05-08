@@ -144,7 +144,7 @@ $(document).ready(function(){
 			if (data[i].nameShort == journalistName){
 				popupWindowMarkup = "<h3>" + data[i].name + "</h3><p>" + data[i].type + " " + data[i].date + "</p>";
 			} else {
-				popupWindowMarkup = "<a href='" + data[i].link +"'><img src='" + data[i].mugshot +"' style='max-width: 100%;'/><h3>" + data[i].name + "</h3></a><p>" + data[i].type + " " + data[i].date + "</p>";;
+				popupWindowMarkup = "<a href='" + data[i].link +"'><img src='" + data[i].mugshot +"' style='max-width: 100%;'/><h3>" + data[i].name + "</h3></a><p>" + data[i].type + " " + data[i].date +"<br/>" + data[i].entity + "</p>";;
 			}
 
 			// Define the marker

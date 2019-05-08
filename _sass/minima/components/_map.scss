@@ -9,7 +9,10 @@
 	}
 
 	img {
+		float: left;
+		margin-right: 10px;
 		max-width: none;
+		width: 60px;
 	}
 
 	.leaflet-tile-pane {
@@ -64,8 +67,8 @@
 
 
 .leaflet-popup-content {
-	max-width: 120px !important;
-	width: 120px;
+	max-width: 220px !important; //120px !important;
+	width: 220px; //120px;
 }
 
 

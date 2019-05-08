@@ -3,7 +3,8 @@ title: Bashar Fahmi
 entity: Alhurra TV
 entity-short: mbn
 mugshot: https://www.usagm.gov/wp-content/uploads/2012/08/BasharFahmi1-e1500409276761-200x200.png
-image: https://www.usagm.gov/wp-content/uploads/2015/07/BasharFahmiFlakJacket.jpeg
+image: 2012__bashar-fahmi__w1023.jpg
+image-old: https://www.usagm.gov/wp-content/uploads/2015/07/BasharFahmiFlakJacket.jpeg
 original-link: https://www.usagm.gov/news-and-information/threats-to-press/bashar-fahmi/
 
 coordinates: 36.202106, 37.134258

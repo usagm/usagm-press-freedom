@@ -4,7 +4,8 @@ excerpt: Truong Duy Nhat, a weekly contributor for RFA’s Vietnamese Service’
 entity: RFA Vietnamese Service
 entity-short: rfa
 mugshot: https://www.usagm.gov/wp-content/uploads/2019/02/Truong-Duy-Nhat-e1549390966537-200x200.jpeg
-image: https://www.usagm.gov/wp-content/uploads/2019/02/thumbnail_170f5532-d32b-4148-ba3c-f913eb0603ff.jpg
+image: 2017__truong-duy-nhat__w1023.jpg
+image-old: https://www.usagm.gov/wp-content/uploads/2019/02/thumbnail_170f5532-d32b-4148-ba3c-f913eb0603ff.jpg
 original-link: https://www.usagm.gov/news-and-information/threats-to-press/truong-duy-nhat/
 
 coordinates: 13.764310, 100.507880

@@ -56,7 +56,10 @@ layout: default
 
 	
 						<div style="position: relative;">
-		{% if page.image contains "https://gdb.voanews.com/" %}
+		{% if page.image contains "_w1023" %}
+
+			{% if page.image contains "https://gdb." %}
+
 							<picture>
 								<source srcset="{{ page.image | replace: '_w1023', '_w1280_h480' }}" media="(min-width: 992px)">
 								<source srcset="{{ page.image | replace: '_w1023', '_w992_h400' }}" media="(min-width: 640px)">
@@ -64,8 +67,17 @@ layout: default
 								<img src="{{ page.image | replace: '_w1023', '_w420_h420' }}" style="display: block; width: 100%; max-width: none;" alt="Photo of {{ page.title }}, {{ page.entity }}"/>
 							</picture>
 
+			{% else %}
+							<picture>
+								<source srcset="{{site.url_base}}/img/journalists/{{ page.image | replace: '_w1023', '_w1280_h480' }}" media="(min-width: 992px)">
+								<source srcset="{{site.url_base}}/img/journalists/{{ page.image | replace: '_w1023', '_w992_h400' }}" media="(min-width: 640px)">
+								<source srcset="{{site.url_base}}/img/journalists/{{ page.image | replace: '_w1023', '_w640_h480' }}" media="(min-width: 420px)">
+								<img src="{{site.url_base}}/img/journalists/{{ page.image | replace: '_w1023', '_w420_h420' }}" style="display: block; width: 100%; max-width: none;" alt="Photo of {{ page.title }}, {{ page.entity }}"/>
+							</picture>
+			{% endif %}
+
 		{% else %}
-							<img src="{{ page.image }}" alt="{{ page.alt }}" style="display: block; max-width: none; width: 100%;"/>
+							<img src="{{ page.image }}" alt="Photo of {{ page.title }}, {{ page.entity }}" style="display: block; max-width: none; width: 100%;"/>
 		{% endif %}
 
 		{% if page.cutline %}
@@ -174,6 +186,7 @@ var mapMarkerData = [
 		"name": "{{ post.title }}",
 		"nameShort": "{{ post.title | replace: ' ', '' }}",
 		"mugshot": "{{ post.mugshot }}",// "mugshot__{{ post.title | replace: ' ','-' | downcase }}.jpg",
+		"entity": "{{ post.entity }}",
 		"coordinates": [{{ coordinates[0] }}, {{ coordinates[1] }}],
 		"zoom": {{ post.zoom | default: 6}},
 		"type": "Killed",
@@ -187,6 +200,7 @@ var mapMarkerData = [
 		"nameShort": "{{ post.title | replace: ' ', '' }}",
 		"mugshot": "{{ post.mugshot }}",// "mugshot__{{ post.title | replace: ' ','-' | downcase }}.jpg",
 		"coordinates": [{{ coordinates[0] }}, {{ coordinates[1] }}],
+		"entity": "{{ post.entity }}",
 		"zoom": {{ post.zoom | default: 6}},
 		"type": "Jailed",
 		"date": "{{ post.date | date: '%B %Y' }}",
@@ -199,6 +213,7 @@ var mapMarkerData = [
 		"nameShort": "{{ post.title | replace: ' ', '' }}",
 		"mugshot": "{{ post.mugshot }}",// "mugshot__{{ post.title | replace: ' ','-' | downcase }}.jpg",
 		"coordinates": [{{ coordinates[0] }}, {{ coordinates[1] }}],
+		"entity": "{{ post.entity }}",
 		"zoom": {{ post.zoom | default: 6}},
 		"type": "Missing",
 		"date": "{{ post.date | date: '%B %Y' }}",

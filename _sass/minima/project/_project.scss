@@ -578,7 +578,14 @@ body.no-scroll {
 			img {
 				float: left;
 				margin-right: 10px;
-				max-width: 50%;
+				width: 100px;
+				max-width: 40%;
+			}
+
+			.usagm__wiki__bio__head-text {
+				border-bottom: 1px dotted #CCC;
+				margin-bottom: 20px;
+				padding-left: 110px;
 			}
 
 			.usagm__obituary__name {
@@ -608,6 +615,11 @@ body.no-scroll {
 					z-index: 9999;
 				}
 
+				.usagm__wiki__bio__head-text {
+					border-bottom: none;
+					padding-left: 0;
+				}
+
 				.usagm__obituary__name {
 					font-size: 24px;
 				}
@@ -625,6 +637,10 @@ body.no-scroll {
 		}
 
 		.usagm__obituary__story {
+			p {
+				line-height: 1.4;
+			}
+
 			@media only screen and (min-width: $media__medium) {
 				display: inline-block;
 			    max-width: 640px;
@@ -640,6 +656,7 @@ body.no-scroll {
 					}
 				}
 			}
+
 			@media only screen and (min-width: $media__large) {
 				padding-top: 20px;
 				padding-bottom: 40px;

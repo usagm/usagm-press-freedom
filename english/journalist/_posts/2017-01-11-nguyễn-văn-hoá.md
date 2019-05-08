@@ -4,7 +4,8 @@ excerpt: Nguyễn Văn Hoá, a citizen journalist who has worked with RFA’s Vi
 entity: RFA Vietnamese Service
 entity-short: rfa
 mugshot: https://www.usagm.gov/wp-content/uploads/2017/05/Nguyen-Van-Hoa_400x400-200x200.png
-image: https://www.usagm.gov/wp-content/uploads/2017/11/RFA_Threats_Nguyen-Van-Hoa_AP17331291938228.jpg
+image: 2017__nguyen-van-hoa__w1023.jpg
+image-old: https://www.usagm.gov/wp-content/uploads/2017/11/RFA_Threats_Nguyen-Van-Hoa_AP17331291938228.jpg
 original-link: https://www.usagm.gov/news-and-information/threats-to-press/nguyen-van-hoa/
 
 coordinates: 18.342, 105.905
