@@ -1692,7 +1692,53 @@ body.no-scroll {
 			}
 		}
 	}
+	.usagm__headline-box {
+		border-top: 1px solid #CCC;
+		padding: 15px 0;
 
+		@media only screen and (min-width: $media__medium) {
+			border: 1px solid #CCC;
+			border-radius: 4px;
+			padding: 15px;
+		}
+	}
+	.usagm__headlines {
+		padding-left: 0;
+
+		li {
+			border-top: 1px dotted #CCC;
+			&:first-of-type {
+				border-top: none;
+				padding-top: 0;
+			}
+
+			font-family: Arial, sans-serif;
+			font-size: 14px;
+			list-style: none;
+			margin-bottom: 12px;
+			padding-top: 8px;
+
+			a {
+				color: #2b7bb9;
+				font-weight: bold;
+				text-decoration: none;
+
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+
+			img {
+				margin-bottom: 5px;
+			}
+
+			p {
+				margin-top: 0;
+				padding-top: 5px;
+				padding-bottom: 15px;
+			}
+		}
+	}
 
 
 }				

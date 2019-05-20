@@ -1,5 +1,5 @@
 //Grab the spreadsheet KEY from the URL bar (NOT from the published window)
-var public_spreadsheet_url;// = '1C0idKR40Bf04-9x1BHTdDwmfojShT1NrnRFyfw-KuuI';// candidates and religions 
+var public_spreadsheet_url = '1xSiFtSZ-lLiOtLYa_05KCSBOE6wBOd0d6Y3K-X6lsPc';// headlines 
 var currentLanguage = "english"; // replaced in the html
 
 //var loadedData;
@@ -9,6 +9,7 @@ var currentVariable = "";
 var dataSample = {};
 var names = [];
 
+var headlineCount = 4;
 //var loadDataFromSheets = true;
 
 
@@ -60,7 +61,7 @@ function loadSpreadsheet() {
 	if ( mode == "editing") {
 		Tabletop.init( { key: public_spreadsheet_url,
 		 	callback: showInfo,
-		 	wanted: [ "profiles" ] } )
+		 	wanted: [ "english" ] } )
 	} else {
 		logger("You need to define the 'mode' ('editing' or 'production')");
 	}
@@ -69,8 +70,36 @@ function loadSpreadsheet() {
 
 function showInfo(data) {
 
-	logger(data.profiles);
+	var dataHeadlines = data.english.elements;
+	console.log(dataHeadlines);
 
+	var headlines = "";
+	var counter = 0;
+	console.log("test" + dataHeadlines.length)
+	for (var i = dataHeadlines.length-1; i >= 0; i--){
+		if (dataHeadlines[i].publish == "TRUE"){
+
+			if (counter == 0){
+
+				var photo = "";
+
+				if (dataHeadlines[i].image != ""){
+					var imagePath = dataHeadlines[i].image;
+
+					imagePath = imagePath.replace("_w1023", "_w420")
+
+					photo = "<img src='" + imagePath + "' style='width: 100%; max-width: none;'/>"
+				}
+
+				headlines += "<li><a href='" + dataHeadlines[i].link + "'>" + photo + dataHeadlines[i].title + "</a><p>" + dataHeadlines[i].description + " <span style='color: #999;'>(" + dataHeadlines[i].entity + ")</span></p></li>";
+			} else if (counter < headlineCount){
+				headlines += "<li><a href='" + dataHeadlines[i].link + "'>" + dataHeadlines[i].title + "</a> <span style='color: #999;'>(" + dataHeadlines[i].entity + "<span>)</li>";
+			}
+
+			counter++
+		}
+	}
+	$("#usagmHeadlines").html(headlines);
 
 }
 
@@ -89,11 +118,7 @@ $(document).ready(function(){
 	// =====================================
 	// |  load spreadsheet via tabletopJS  |
 	// =====================================
-	if (loadDataFromSheets){
-		currentLanguage = language;
-		currentStories = language;
-		loadSpreadsheet();
-	}
+	loadSpreadsheet();
 
 	// ===================
 	// |  Dropdown menu  |

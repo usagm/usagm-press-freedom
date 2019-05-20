@@ -214,12 +214,21 @@ date: 2018-10-22
 {% endfor %}
 							</div><!--
 							--><div class="usagm__grid__one-third" style="margin-right: 0;">
-								{% assign current_tweet = site.tweet  | downcase %}
-								{% include social-tweet-embed.html 
+								{% if site.tweet and site.tweet != "" %}
+									{% assign current_tweet = site.tweet  | downcase %}
+									{% include social-tweet-embed.html 
 
-									tweet=current_tweet
+										tweet=current_tweet
 
-								%}
+									%}
+								{% else %}
+								<div class="usagm__headline-box">
+									<h3 class="usagm__label small">Headlines</h3>
+									<ul id="usagmHeadlines" class="usagm__headlines">
+										
+									</ul>
+								</div>
+								{% endif %}
 							</div>
 						</div>
 					</div>
@@ -391,5 +400,5 @@ date: 2018-10-22
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <script type="text/javascript" src="https://projects.voanews.com/js/resources/jquery.smartmenus.min.js"></script>
 <script type="text/javascript" src="{{site.url_base}}/js/scripts.js?{{ random }}"></script>
-
+<script type="text/javascript" src='https://projects.voanews.com/js/resources/tabletop.js'></script>
 
