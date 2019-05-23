@@ -1,5 +1,5 @@
 ---
-title: What Happened to Azory Gwanda
+title: What Happened to Azory Gwanda?
 entity: voa
 entity-short: voa
 image: https://gdb.voanews.com/D73F167C-CE16-4672-BA88-DE0C4526D454_w1023_r1_s.jpg
