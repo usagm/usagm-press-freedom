@@ -22,6 +22,19 @@ Aseyev, 27, who has referred to his efforts to chronicle daily life under condit
 
 Former Member of Parliament Yehor Firsov, a long-time acquaintance of Aseyev’s, alleged in a June 6 Facebook post that Aseyev had been seized in Donetsk and forcibly held by Russia-backed separatist forces controlling the region, information he repeated in a June 7 Facebook post and a June 10 “Українська правда” (Ukrayinska Pravda) blog post, citing “unofficial sources.”
 
+
+
+
+
+
+{% include video.html 
+
+youtube="KzXpSGJfMUU"
+
+%}
+
+
+
 On July 16, Firsov shared on Facebook that a group of Russia-backed separatists in Ukraine’s war-torn eastern Donetsk region confirmed that they were holding the blogger from eastern Ukraine. Aseyev’s mother was given written confirmation, according to the post, and was allowed to visit him in separatist custody. Firsov also wrote that the separatists have accused Aseyev of espionage and threatened him with up to 14 years in prison. “His only hope is the exchange of prisoners,” he said. The separatists, who control parts of the Donetsk and Luhansk regions, have repeatedly denied having any information about Aseyev.
 
 The Committee to Protect Journalists (CPJ) and Human Rights Watch both report that, according to their sources, Aseyev was detained by the self-proclaimed Donetsk People’s Republic (DNR). CPJ reported that the head of a volunteer group that works to release political prisoners in Ukraine told an independent broadcaster that the separatists detained Aseyev for his “pro-Ukrainian stance” and for “spreading information about the so-called DNR, which in militants’ opinion, is not true.”
