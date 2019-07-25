@@ -92,7 +92,7 @@ entities:
     twitter: VOAnews
     url: https://www.voanews.com
     urlPretty: voanews.com
-    urlPressFreedom: https://www.voanews.com/p/press-freedom.html
+    urlPressFreedom: https://www.voanews.com/press-freedom
     description: >
       <a href="https://www.voanews.com/">Voice of America</a> provides trusted and objective news and information in 45 languages to a measured weekly audience of more than 236.8 million people around the world.  For over 75 years, VOA journalists have told American stories and supplied content that many people cannot get locally: objective news and information about the US, their specific region and the world.
   rferl: 
