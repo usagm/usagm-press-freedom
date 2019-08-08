@@ -50,7 +50,7 @@ layout: default
 
 {% if page.image %}
 
-	{% if page.image contains "https://gdb." %}
+	{% if page.image contains "_w1023" %}
 							<picture>
 								<source srcset="{{ page.image | replace: '_w1023', '_w1280' }}" media="(min-width: 992px)">
 								<source srcset="{{ page.image | replace: '_w1023', '_w992' }}" media="(min-width: 640px)">
