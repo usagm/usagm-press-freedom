@@ -181,8 +181,13 @@ $(document).ready(function(){
 // ====================================================================================================
 // |                        BUILD AFTER ALL IMAGES LOADED                             |
 // ====================================================================================================
-/*
-$(window).on("load", function() {
+window.onload = function(){
+	function loadVideo(){
+		$( ".usagm__video-card" ).each(function( index ) {
 
-});
-*/
+			var file = $(this).data("file");
+			$(this).attr("src", file);
+		});
+	}
+	loadVideo();
+}

@@ -199,15 +199,22 @@ date: 2018-10-22
 {% for post in sorted-posts limit: 1 %}
 									<h3 class="usagm__label small">Press freedom notebook</h3>
 									<a href="{{ site.url_base }}{{ post.url | relative }}">
+										{% if post.animation %}
+										<video playsinline autoplay muted loop id="videoCard" class="usagm__video-card" poster="{{ post.animation | replace: '.mp4', '__poster.jpg' }}" style="display: block; width:100%; margin-bottom: 10px;" data-file="{{ post.animation }}">
+											<source type="video/mp4">
+											Your browser does not support the video tag.
+										</video>
+										{% else %}
 										<picture>
 											<source srcset="{{ post.image | replace: '_w1023', '_w740_h416'}}" media="(min-width: 992px)">
 											<source srcset="{{ post.image | replace: '_w1023', '_w740_h518'}}" media="(min-width: 800px)">
 											<source srcset="{{ post.image | replace: '_w1023', '_w640_h640'}}" media="(min-width: 420px)">
 											<img src="{{ post.image | replace: '_w1023', '_w420_h420'}}" style="max-width: none; width: 100%;" {% if post.alt !="" %}alt="{{ post.alt }}"{% endif %}>
 										</picture>
+										{% endif %}
 										<div class="usagm__blogpost__text">
 											<h2>{{ post.title }}</h2>
-											<p>{{ post.excerpt }}</p>
+											<p>{% if post.summary %}{{ post.summary }}{%else %}{{ post.excerpt }}{% endif %}</p>
 										</div>
 									</a>
 								</div>
