@@ -118,19 +118,19 @@ layout: default
 		<div class="usagm__grid" style="margin: 0 auto 10px auto;">
 			<div class="usagm__featured-post">
 				
-				<a class="post-link" href="{{ site.url_base }}" style=" text-decoration: none;">
+				<a class="post-link" href="{{ site.url_base }}{{ post.url | relative_url }}" style=" text-decoration: none;">
 
-		{% if site.categories[current_language][0].image %}
-					<img src="{{ site.url_base }}{{ site.categories[current_language][0].image }}" alt="{{ site.categories[current_language][0].cutline }}" style="max-width: none; width: 100%;">
-		{% else %}
-					<img src="https://placehold.it/1280x720">
-		{% endif %}
+			{% if post.thumbnail %}
+					<img src="{{ site.url_base }}/img/{{ post.thumbnail }}" alt="{%if post.cutline%}{{ post.cutline }} {% endif %}"/>
+			{% else %}
+					<img src="{{ site.url_base }}{{ post.image }}">
+			{% endif %}
 
 					<h2 class="usagm__featured-post__title">
-					  {{site.categories[current_language][0].title }}
+					  {{ post.title }}
 					</h2>
 				</a>
-				<p style="">{{site.categories[current_language][0].summary | strip_html }}</p>
+				<p>{{ post.summary | strip_html }}</p>
 			</div>
 		</div>
 	{% elsif counter == 1 %}
