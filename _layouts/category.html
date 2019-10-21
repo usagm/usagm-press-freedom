@@ -111,16 +111,20 @@ layout: default
 {% else %}
 
 
-
+{% assign counter = 0 %}
+{% assign sorted-posts = site.posts | where: "categories","blog" %}
+{% for post in sorted-posts %}
+	{% if counter == 0 %}
 		<div class="usagm__grid" style="margin: 0 auto 10px auto;">
 			<div class="usagm__featured-post">
 				
 				<a class="post-link" href="{{ site.url_base }}" style=" text-decoration: none;">
-	{% if site.categories[current_language][0].image %}
+
+		{% if site.categories[current_language][0].image %}
 					<img src="{{ site.url_base }}{{ site.categories[current_language][0].image }}" alt="{{ site.categories[current_language][0].cutline }}" style="max-width: none; width: 100%;">
-	{% else %}
+		{% else %}
 					<img src="https://placehold.it/1280x720">
-	{% endif %}
+		{% endif %}
 
 					<h2 class="usagm__featured-post__title">
 					  {{site.categories[current_language][0].title }}
@@ -129,14 +133,19 @@ layout: default
 				<p style="">{{site.categories[current_language][0].summary | strip_html }}</p>
 			</div>
 		</div>
+	{% elsif counter == 1 %}
 	<div class="usagm__grid" style="margin: 0 auto 10px auto;">
-<!--
-{% assign counter = 0 %}
-{% for post in site.categories[current_language] %}
-
-	{% if post.categories.last != "biography" and post.categories.last != "credits" and post.categories.last != "video" %}
-
-		{% if counter >0 %}
+		<div class="usagm__grid__element usagm__portfolio-grid__item">
+				<a class="post-link" href="{{ site.url_base }}{{ post.url | relative_url }}">
+			{% if post.thumbnail %}
+					<img src="{{ site.url_base }}/img/{{ post.thumbnail }}" alt="{%if post.cutline%}{{ post.cutline }} {% endif %}"/>
+			{% else %}
+					<img src="{{ site.url_base }}{{ post.image }}">
+			{% endif %}
+					<h3>{{ post.title | escape }} </h3>
+				</a>
+			</div><!--
+	{% else %}
 		 --><div class="usagm__grid__element usagm__portfolio-grid__item">
 				<a class="post-link" href="{{ site.url_base }}{{ post.url | relative_url }}">
 			{% if post.thumbnail %}
@@ -147,19 +156,14 @@ layout: default
 					<h3>{{ post.title | escape }} </h3>
 				</a>
 			</div><!--
-		{% endif %}
 	{% endif %}
 	{% assign counter = counter | plus: 1 %}
 {% endfor %}
 		  -->
 
-{% endif %}
-
-
-
-
 		</div>
 	</div>
+{% endif %}
 
 <script type="text/javascript">
 	var mode = "production";//"editing"; //"production";
