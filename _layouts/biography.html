@@ -118,6 +118,8 @@ layout: default
 	{% assign label="Missing" %}
 {% elsif page.categories.last == "jailed" %}
 	{% assign label="Jailed" %}
+{% elsif page.categories.last == "released" %}
+	{% assign label="Released" %}
 {% endif %}
 
 											<p class="font-family: Arial, sans-serif; color: #999;"><strong>{{ label }}:</strong> {{ page.date | date: "%B %-d, %Y" }}</p>

@@ -12,8 +12,8 @@ var app = express();
 var entities = ["english"];//, "spanish" //sheet names
 
 var datasets = [
-	{"name": "stories", "url": "1zc4p0tJv7fiPLzf6pAzbn6FjhOnUupV1fQ8hyBuaETM", "location": "../../data/"},// For client-side.
-	{"name": "stories", "url": "1zc4p0tJv7fiPLzf6pAzbn6FjhOnUupV1fQ8hyBuaETM", "location": "../../_data/"}// For build.
+	{"name": "stories", "url": "1zc4p0tJv7fiPLzf6pAzbn6FjhOnUupV1fQ8hyBuaETM", "location": "../data/"},// For client-side.
+	{"name": "stories", "url": "1zc4p0tJv7fiPLzf6pAzbn6FjhOnUupV1fQ8hyBuaETM", "location": "../_data/"}// For build.
 ];
 
 

@@ -328,6 +328,37 @@ date: 2018-10-22
 					<div class="usagm__grid">
 						<div class="usagm__grid__full" style="margin-top: 40px;">
 							<div class="usagm__kicker__container">
+								<h3 id="missing" class="usagm__kicker small">RECENTLY RELEASED JOURNALISTS</h3>
+							</div>
+						</div>
+					</div>
+					<div class="usagm__grid"><!--
+{% assign sorted-posts = site.posts | where: "categories","released" %}
+{% assign sorted-posts-language = sorted-posts | where: "categories",current_language %}
+{% for post in sorted-posts %}
+						--><div class="usagm__grid__one-half usagm__journalist">
+							<a href="{{ site.url_base }}/english/journalist/released/{{ post.title | replace: '(','' | replace: ')','' | replace: ' ','-' | downcase }}.html">
+								<img class="usagm__journalist__mugshot" src="{{post.mugshot}}" alt="Portrait of {{ post.title }}"/>
+								<h4 class="usagm__journalist__name">{{ post.title }}</h4>
+								<h5 class="usagm__journalist__entity">{{ post.entity }}</h5>
+								<p>{{ post.excerpt | truncatewords: 40 | remove: '<p>' | remove: '</p>' }}</p>
+							</a>
+						</div><!--
+{% endfor %}
+-->
+					</div>
+				</div>
+
+			</div>
+
+
+			<div class="usagm__content-width">
+
+				<div class="usagm__grid__full">
+					
+					<div class="usagm__grid">
+						<div class="usagm__grid__full" style="margin-top: 40px;">
+							<div class="usagm__kicker__container">
 								<h3 id="missing" class="usagm__kicker small">MISSING JOURNALISTS</h3>
 							</div>
 						</div>
@@ -350,6 +381,7 @@ date: 2018-10-22
 				</div>
 
 			</div>
+
 
 		</div>
 
